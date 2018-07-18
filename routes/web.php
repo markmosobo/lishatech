@@ -1,6 +1,8 @@
 <?php
 Route::get('/','FrontEndCOntroller@index');
 Route::get('/event-list','FrontEndCOntroller@eventList');
+Route::get('/single/{id}','FrontEndCOntroller@singleEvent');
+
 Route::get('/login','HomeController@index');
 
 Auth::routes();

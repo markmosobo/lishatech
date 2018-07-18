@@ -40,6 +40,7 @@ class Event extends Model
         'body_image',
         'description',
         'location',
+        'category_id',
     ];
 
     /**

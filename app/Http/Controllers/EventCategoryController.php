@@ -18,6 +18,7 @@ class EventCategoryController extends AppBaseController
 
     public function __construct(EventCategoryRepository $eventCategoryRepo)
     {
+        $this->middleware('auth');
         $this->eventCategoryRepository = $eventCategoryRepo;
     }
 
@@ -77,7 +78,7 @@ class EventCategoryController extends AppBaseController
             return redirect(route('eventCategories.index'));
         }
 
-        return view('event_categories.show')->with('eventCategory', $eventCategory);
+        return response()->json($eventCategory);
     }
 
     /**

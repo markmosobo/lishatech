@@ -2412,7 +2412,7 @@ ul.blog-classic-listing strong.post-title{
 	padding-top:30px;
 }
 .page-header-overlay{
-	opacity:.1;
+	opacity:1.1;
 	width:100%;
 	height:100%;
 	position:absolute;

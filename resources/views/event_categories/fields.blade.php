@@ -7,9 +7,9 @@
 <!-- Status Field -->
 <div class="form-group col-sm-12">
     {!! Form::label('status', 'Status:') !!}
-    <label class="checkbox-inline">
-        {!! Form::hidden('status', false) !!}
-        {!! Form::checkbox('status', '1', null) !!} 1
-    </label>
+    <select name="status" class="form-control select2" id="status">
+        <option value="1">Active</option>
+        <option value="0">In active</option>
+    </select>
 </div>
 

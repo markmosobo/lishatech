@@ -6,6 +6,7 @@ use App\DataTables\EventDataTable;
 use App\Http\Requests;
 use App\Http\Requests\CreateEventRequest;
 use App\Http\Requests\UpdateEventRequest;
+use App\Models\EventCategory;
 use App\Repositories\EventRepository;
 use Flash;
 use App\Http\Controllers\AppBaseController;
@@ -30,7 +31,9 @@ class EventController extends AppBaseController
      */
     public function index(EventDataTable $eventDataTable)
     {
-        return $eventDataTable->render('events.index');
+        return $eventDataTable->render('events.index',[
+            'categories'=>EventCategory::all()
+        ]);
     }
 
     /**

@@ -1,8 +1,21 @@
 <!-- Title Field -->
 <div class="form-group col-sm-12">
+    <label >Event Category</label>
+    <select name="category_id" class="select2 form-control" required>
+        <option value="">Select Category</option>
+        @if(count($categories))
+            @foreach($categories as $category)
+                <option value="{{ $category->id  }}">{{ $category->name }}</option>
+                @endforeach
+            @endif
+    </select>
+</div>
+
+<div class="form-group col-sm-12">
     {!! Form::label('title', 'Title:') !!}
     {!! Form::text('title', null, ['class' => 'form-control','required']) !!}
 </div>
+
 <div class="form-group col-sm-12">
     {!! Form::label('venue', 'Venue:') !!}
     {!! Form::text('location', null, ['class' => 'form-control','required']) !!}
