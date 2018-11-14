@@ -1,7 +1,7 @@
 <?php
-Route::get('/','FrontEndCOntroller@index');
-Route::get('/event-list','FrontEndCOntroller@eventList');
-Route::get('/single/{id}','FrontEndCOntroller@singleEvent');
+Route::get('/','FrontEndController@index');
+Route::get('/event-list','FrontEndController@eventList');
+Route::get('/single/{id}','FrontEndController@singleEvent');
 
 Route::get('/login','HomeController@index');
 
@@ -67,3 +67,7 @@ Route::get('eSchedule/{id}','EventScheduleController@index');
 
 
 Route::resource('eventCategories', 'EventCategoryController');
+
+Route::resource('slides', 'SlideController');
+
+Route::resource('slides', 'SlideController');

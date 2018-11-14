@@ -109,85 +109,85 @@
                 </div>
                 @endif
                 <hr class="fw">
-                <div class="row">
-                    <div class="col-md-8">
-                        <h3>From our blog</h3>
-                        <hr class="sm">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="very-latest-post format-standard">
-                                    <div class="title-row">
-                                        <a href="blog-post.html#comments" class="comments-go" title="10 comments"><i class="icon-dialogue-text"></i></a>
-                                        <h4>Very latest</h4>
-                                    </div>
-                                    <a href="blog-post.html" class="media-box post-thumb">
-                                        <img src="http://placehold.it/800x500&amp;text=IMAGE+PLACEHOLDER" alt="">
-                                    </a>
-                                    <h3 class="post-title"><a href="blog-post.html">Don't run behind the charm</a></h3>
-                                    <div class="meta-data">by <a href="#">imithemes</a> on 25th August, 2014 in <a href="#">General</a></div>
-                                    <p>Nulla consequat massa quis enim.Donec pede justo, fringilla vel, aliquet nec, vulputate eget...</p>
-                                    <p><a href="blog-post.html" class="basic-link">Continue reading</a></p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <ul class="blog-classic-listing">
-                                    <li>
-                                        <a href="blog-post.html"><strong class="post-title">Hear my people’s cry for peace</strong></a>
-                                        <div class="meta-data">by <a href="#">imithemes</a> on 25th August, 2014 in <a href="#">General</a></div>
-                                        <p>Nulla consequat massa quis enim.Donec pede justo, fringilla vel, aliquet nec, vulputate eget...</p>
-                                        <p><a href="blog-post.html" class="basic-link">Continue reading</a></p>
-                                    </li>
-                                    <li>
-                                        <a href="blog-post.html"><strong class="post-title">Robin Williams: The death of our captain</strong></a>
-                                        <div class="meta-data">by <a href="#">imithemes</a> on 12th August, 2014 in <a href="#">General</a></div>
-                                        <p>Nulla consequat massa quis enim.Donec pede justo, fringilla vel, aliquet nec, vulputate eget...</p>
-                                        <p><a href="blog-post.html" class="basic-link">Continue reading</a></p>
-                                    </li>
-                                    <li>
-                                        <a href="blog-post.html"><strong class="post-title">EPPN: It’s Time For Prison Reform</strong></a>
-                                        <div class="meta-data">by <a href="#">imithemes</a> on 31st July, 2014 in <a href="#">General</a></div>
-                                        <p>Nulla consequat massa quis enim.Donec pede justo, fringilla vel, aliquet nec, vulputate eget...</p>
-                                        <p><a href="blog-post.html" class="basic-link">Continue reading</a></p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="widget latest_sermons_widget">
-                            <ul>
-                                <li class="most-recent-sermon clearfix">
-                                    <h3>Recent Sermons</h3>
-                                    <hr class="sm">
-                                    <div class="latest-sermon-video fw-video">
-                                        <iframe src="https://player.vimeo.com/video/37540860?title=0&amp;byline=0&amp;portrait=0" width="500" height="281"></iframe>
-                                    </div>
-                                    <div class="latest-sermon-content">
-                                        <h4><a href="single-sermon.html">Rushing wind</a></h4>
-                                        <div class="meta-data">by <a href="#">Chris Hodges</a></div>
-                                        <p>Nulla consequat massa quis enim, aliquet nec nulla consequat massa quis enim, vulputate eget...</p>
-                                    </div>
-                                    <div class="sermon-links">
-                                        <ul class="action-buttons">
-                                            <li><a href="single-sermon.html" data-toggle="tooltip" data-placement="right" data-original-title="Watch Video"><i class="icon-video-cam"></i></a></li>
-                                            <li><a href="single-sermon.html" data-toggle="tooltip" data-placement="right" data-original-title="Listen Audio"><i class="icon-headphones"></i></a></li>
-                                            <li><a href="single-sermon.html" data-toggle="tooltip" data-placement="right" data-original-title="Download Audio"><i class="icon-cloud-download"></i></a></li>
-                                            <li><a href="single-sermon.html" data-toggle="tooltip" data-placement="right" data-original-title="Download PDF"><i class="icon-download-folder"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a href="single-sermon.html"><strong class="post-title">Worship God’s Way</strong></a>
-                                    <div class="meta-data">by <a href="#">Dino Rizzo</a></div>
-                                </li>
-                                <li>
-                                    <a href="single-sermon.html"><strong class="post-title">What God Really Wants</strong></a>
-                                    <div class="meta-data">by <a href="#">Chris Hodges</a></div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                {{--<div class="row">--}}
+                    {{--<div class="col-md-8">--}}
+                        {{--<h3>From our blog</h3>--}}
+                        {{--<hr class="sm">--}}
+                        {{--<div class="row">--}}
+                            {{--<div class="col-md-6">--}}
+                                {{--<div class="very-latest-post format-standard">--}}
+                                    {{--<div class="title-row">--}}
+                                        {{--<a href="blog-post.html#comments" class="comments-go" title="10 comments"><i class="icon-dialogue-text"></i></a>--}}
+                                        {{--<h4>Very latest</h4>--}}
+                                    {{--</div>--}}
+                                    {{--<a href="blog-post.html" class="media-box post-thumb">--}}
+                                        {{--<img src="http://placehold.it/800x500&amp;text=IMAGE+PLACEHOLDER" alt="">--}}
+                                    {{--</a>--}}
+                                    {{--<h3 class="post-title"><a href="blog-post.html">Don't run behind the charm</a></h3>--}}
+                                    {{--<div class="meta-data">by <a href="#">imithemes</a> on 25th August, 2014 in <a href="#">General</a></div>--}}
+                                    {{--<p>Nulla consequat massa quis enim.Donec pede justo, fringilla vel, aliquet nec, vulputate eget...</p>--}}
+                                    {{--<p><a href="blog-post.html" class="basic-link">Continue reading</a></p>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                            {{--<div class="col-md-6">--}}
+                                {{--<ul class="blog-classic-listing">--}}
+                                    {{--<li>--}}
+                                        {{--<a href="blog-post.html"><strong class="post-title">Hear my people’s cry for peace</strong></a>--}}
+                                        {{--<div class="meta-data">by <a href="#">imithemes</a> on 25th August, 2014 in <a href="#">General</a></div>--}}
+                                        {{--<p>Nulla consequat massa quis enim.Donec pede justo, fringilla vel, aliquet nec, vulputate eget...</p>--}}
+                                        {{--<p><a href="blog-post.html" class="basic-link">Continue reading</a></p>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<a href="blog-post.html"><strong class="post-title">Robin Williams: The death of our captain</strong></a>--}}
+                                        {{--<div class="meta-data">by <a href="#">imithemes</a> on 12th August, 2014 in <a href="#">General</a></div>--}}
+                                        {{--<p>Nulla consequat massa quis enim.Donec pede justo, fringilla vel, aliquet nec, vulputate eget...</p>--}}
+                                        {{--<p><a href="blog-post.html" class="basic-link">Continue reading</a></p>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<a href="blog-post.html"><strong class="post-title">EPPN: It’s Time For Prison Reform</strong></a>--}}
+                                        {{--<div class="meta-data">by <a href="#">imithemes</a> on 31st July, 2014 in <a href="#">General</a></div>--}}
+                                        {{--<p>Nulla consequat massa quis enim.Donec pede justo, fringilla vel, aliquet nec, vulputate eget...</p>--}}
+                                        {{--<p><a href="blog-post.html" class="basic-link">Continue reading</a></p>--}}
+                                    {{--</li>--}}
+                                {{--</ul>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<div class="col-md-4">--}}
+                        {{--<div class="widget latest_sermons_widget">--}}
+                            {{--<ul>--}}
+                                {{--<li class="most-recent-sermon clearfix">--}}
+                                    {{--<h3>Recent Sermons</h3>--}}
+                                    {{--<hr class="sm">--}}
+                                    {{--<div class="latest-sermon-video fw-video">--}}
+                                        {{--<iframe src="https://player.vimeo.com/video/37540860?title=0&amp;byline=0&amp;portrait=0" width="500" height="281"></iframe>--}}
+                                    {{--</div>--}}
+                                    {{--<div class="latest-sermon-content">--}}
+                                        {{--<h4><a href="single-sermon.html">Rushing wind</a></h4>--}}
+                                        {{--<div class="meta-data">by <a href="#">Chris Hodges</a></div>--}}
+                                        {{--<p>Nulla consequat massa quis enim, aliquet nec nulla consequat massa quis enim, vulputate eget...</p>--}}
+                                    {{--</div>--}}
+                                    {{--<div class="sermon-links">--}}
+                                        {{--<ul class="action-buttons">--}}
+                                            {{--<li><a href="single-sermon.html" data-toggle="tooltip" data-placement="right" data-original-title="Watch Video"><i class="icon-video-cam"></i></a></li>--}}
+                                            {{--<li><a href="single-sermon.html" data-toggle="tooltip" data-placement="right" data-original-title="Listen Audio"><i class="icon-headphones"></i></a></li>--}}
+                                            {{--<li><a href="single-sermon.html" data-toggle="tooltip" data-placement="right" data-original-title="Download Audio"><i class="icon-cloud-download"></i></a></li>--}}
+                                            {{--<li><a href="single-sermon.html" data-toggle="tooltip" data-placement="right" data-original-title="Download PDF"><i class="icon-download-folder"></i></a></li>--}}
+                                        {{--</ul>--}}
+                                    {{--</div>--}}
+                                {{--</li>--}}
+                                {{--<li>--}}
+                                    {{--<a href="single-sermon.html"><strong class="post-title">Worship God’s Way</strong></a>--}}
+                                    {{--<div class="meta-data">by <a href="#">Dino Rizzo</a></div>--}}
+                                {{--</li>--}}
+                                {{--<li>--}}
+                                    {{--<a href="single-sermon.html"><strong class="post-title">What God Really Wants</strong></a>--}}
+                                    {{--<div class="meta-data">by <a href="#">Chris Hodges</a></div>--}}
+                                {{--</li>--}}
+                            {{--</ul>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
             </div>
         </div>
     </div>

@@ -72,4 +72,8 @@ class Event extends Model
     {
         return $this->hasMany(\App\Models\EventSchedule::class);
     }
+
+    public function category(){
+        return $this->belongsTo(EventCategory::class,'category_id');
+    }
 }

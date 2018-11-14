@@ -62,6 +62,22 @@ class RoutesTableSeeder extends Seeder
         $cChild->roles()->attach($admin);
 
 
+        #### events
+        $parent = Route::create([
+            'route_name'=>"Sections",
+            'url'=> '#',
+            'icon'=> 'fa-volume-up',
+            'sequence'=>3
+        ]);
+
+        $cChild = Route::create([
+            'route_name'=> 'Home Slides',
+            'parent_route'=> $parent->id,
+            'url'=>'slides',
+        ]);
+        $cChild->roles()->attach($admin);
+
+
         #### user management
         $user_mngt = new Route();
         $user_mngt->route_name = 'User Manager';

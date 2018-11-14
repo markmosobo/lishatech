@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Event;
+use App\Models\EventCategory;
 use App\Models\EventSchedule;
 use Illuminate\Http\Request;
 
@@ -16,7 +17,10 @@ class FrontEndController extends Controller
     }
 
     public function eventList(){
-        return view('front.event-list');
+        return view('front.event-list',[
+            'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
+            'categories' => EventCategory::all()
+        ]);
     }
 
     public function singleEvent($id){

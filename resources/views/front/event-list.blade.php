@@ -41,121 +41,47 @@
                             <div class="events-listing-header">
                                 <ul class="sort-source" data-sort-id="events" data-option-key="filter">
                                     <li data-option-value="*" class="active"><a href="#">Show All</a></li>
-                                    <li data-option-value=".fests"><a href="#">Fests</a></li>
-                                    <li data-option-value=".meetings"><a href="#">Meetings</a></li>
-                                    <li data-option-value=".prayers"><a href="#">Prayers</a></li>
-                                    <li data-option-value=".celebrations"><a href="#">Celebrations</a></li>
+                                    @if(count($categories))
+                                        @foreach($categories as $category)
+                                            <li data-option-value=".{{ $category->name }}"><a href="#">{{ $category->name }}</a></li>
+                                            @endforeach
+                                        @endif
                                 </ul>
                             </div>
                             <ul class="events-listing-content sort-destination isotope-events" data-sort-id="events">
-                                <li class="event-list-item event-dynamic grid-item prayers celebrations">
-                                    <div class="event-list-item-date">
+                                @if(count($events))
+                                    @foreach($events as $event)
+                                        <li class="event-list-item event-dynamic grid-item {{ $event->category->name }} ">
+                                            <div class="event-list-item-date">
                                     	<span class="event-date">
-                                        	<span class="event-day">22</span>
-                                        	<span class="event-month">Sep, 14</span>
+                                        	<span class="event-day">{{ \Carbon\Carbon::parse($event->event_date)->day }}</span>
+                                        	<span class="event-month">{{ \Carbon\Carbon::parse($event->event_date)->format('M') }},{{ \Carbon\Carbon::parse($event->event_date)->year }}</span>
                                         </span>
-                                    </div>
-                                    <div class="event-list-item-info">
-                                        <div class="lined-info">
-                                            <h4><a href="single-event.html" class="event-title">Water Baptism</a></h4>
-                                        </div>
-                                        <div class="lined-info">
-                                            <span class="meta-data"><i class="fa fa-clock-o"></i> Monday, <span class="event-time">10:00 AM</span></span>
-                                        </div>
-                                        <div class="lined-info event-location">
-                                            <span class="meta-data"><i class="fa fa-map-marker"></i> <span class="event-location-address">State Route, Madison US</span></span>
-                                        </div>
-                                    </div>
-                                    <div class="event-list-item-actions">
-                                        <a href="#" class="btn btn-default btn-transparent event-tickets event-register-button">Register</a>
-                                        <ul class="action-buttons">
-                                            <li title="Share event"><a href="#" data-trigger="focus" data-placement="top" data-content="" data-toggle="popover" data-original-title="Share Event" class="event-share-link"><i class="icon-share"></i></a></li>
-                                            <li title="Get directions" class="hidden-xs"><a href="#" class="cover-overlay-trigger event-direction-link"><i class="icon-compass"></i></a></li>
-                                            <li title="Contact event manager"><a href="#" data-toggle="modal" data-target="#Econtact" class="event-contact-link"><i class="icon-mail"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="event-list-item event-dynamic grid-item meetings">
-                                    <div class="event-list-item-date">
-                                    	<span class="event-date">
-                                        	<span class="event-day">27</span>
-                                        	<span class="event-month">Sep, 14</span>
-                                        </span>
-                                    </div>
-                                    <div class="event-list-item-info">
-                                        <div class="lined-info">
-                                            <h4><a href="single-event.html" class="event-title">Sunday Meet Up</a></h4>
-                                        </div>
-                                        <div class="lined-info">
-                                            <span class="meta-data"><i class="fa fa-clock-o"></i> Sunday, <span class="event-time">05:00 PM</span></span>
-                                        </div>
-                                        <div class="lined-info event-location">
-                                            <span class="meta-data"><i class="fa fa-map-marker"></i> <span class="event-location-address">55 Warren Street, New York</span></span>
-                                        </div>
-                                    </div>
-                                    <div class="event-list-item-actions">
-                                        <a href="#" class="btn btn-default btn-transparent event-tickets event-register-button">Register</a>
-                                        <ul class="action-buttons">
-                                            <li title="Share event"><a href="#" data-trigger="focus" data-placement="top" data-content="" data-toggle="popover" data-original-title="Share Event" class="event-share-link"><i class="icon-share"></i></a></li>
-                                            <li title="Get directions" class="hidden-xs"><a href="#" class="cover-overlay-trigger event-direction-link"><i class="icon-compass"></i></a></li>
-                                            <li title="Contact event manager"><a href="#" data-toggle="modal" data-target="#Econtact" class="event-contact-link"><i class="icon-mail"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="event-list-item event-dynamic grid-item prayers">
-                                    <div class="event-list-item-date">
-                                    	<span class="event-date">
-                                        	<span class="event-day">06</span>
-                                        	<span class="event-month">Feb, 15</span>
-                                        </span>
-                                    </div>
-                                    <div class="event-list-item-info">
-                                        <div class="lined-info">
-                                            <h4><a href="single-event.html" class="event-title">Holy shift: Strategic think</a></h4>
-                                        </div>
-                                        <div class="lined-info">
-                                            <span class="meta-data"><i class="fa fa-clock-o"></i> Monday, <span class="event-time">10:00 AM</span></span>
-                                        </div>
-                                        <div class="lined-info event-location">
-                                            <span class="meta-data"><i class="fa fa-map-marker"></i> <span class="event-location-address">123 Broadway, New York, NY</span></span>
-                                        </div>
-                                    </div>
-                                    <div class="event-list-item-actions">
-                                        <a href="#" class="btn btn-default btn-transparent event-tickets event-register-button">Register</a>
-                                        <ul class="action-buttons">
-                                            <li title="Share event"><a href="#" data-trigger="focus" data-placement="top" data-content="" data-toggle="popover" data-original-title="Share Event" class="event-share-link"><i class="icon-share"></i></a></li>
-                                            <li title="Get directions" class="hidden-xs"><a href="#" class="cover-overlay-trigger event-direction-link"><i class="icon-compass"></i></a></li>
-                                            <li title="Contact event manager"><a href="#" data-toggle="modal" data-target="#Econtact" class="event-contact-link"><i class="icon-mail"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="event-list-item event-dynamic grid-item fests">
-                                    <div class="event-list-item-date">
-                                    	<span class="event-date">
-                                        	<span class="event-day">22</span>
-                                        	<span class="event-month">Sep, 14</span>
-                                        </span>
-                                    </div>
-                                    <div class="event-list-item-info">
-                                        <div class="lined-info">
-                                            <h4><a href="single-event.html" class="event-title">Water Baptism</a></h4>
-                                        </div>
-                                        <div class="lined-info">
-                                            <span class="meta-data"><i class="fa fa-clock-o"></i> Monday, <span class="event-time">10:00 AM</span></span>
-                                        </div>
-                                        <div class="lined-info event-location">
-                                            <span class="meta-data"><i class="fa fa-map-marker"></i> <span class="event-location-address">State Route, Madison US</span></span>
-                                        </div>
-                                    </div>
-                                    <div class="event-list-item-actions">
-                                        <a href="#" class="btn btn-default btn-transparent event-tickets event-register-button">Register</a>
-                                        <ul class="action-buttons">
-                                            <li title="Share event"><a href="#" data-trigger="focus" data-placement="top" data-content="" data-toggle="popover" data-original-title="Share Event" class="event-share-link"><i class="icon-share"></i></a></li>
-                                            <li title="Get directions" class="hidden-xs"><a href="#" class="cover-overlay-trigger event-direction-link"><i class="icon-compass"></i></a></li>
-                                            <li title="Contact event manager"><a href="#" data-toggle="modal" data-target="#Econtact" class="event-contact-link"><i class="icon-mail"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </li>
+                                            </div>
+                                            <div class="event-list-item-info">
+                                                <div class="lined-info">
+                                                    <h4><a href="{{ url('single/'.$event->id) }}" class="event-title">{{ $event->title }}</a></h4>
+                                                </div>
+                                                <div class="lined-info">
+                                                    <span class="meta-data"><i class="fa fa-clock-o"></i> {{ \Carbon\Carbon::parse($event->event_date)->format('D') }} {{--<span class="event-time">10:00 AM</span>--}}</span>
+                                                </div>
+                                                <div class="lined-info event-location">
+                                                    <span class="meta-data"><i class="fa fa-map-marker"></i> <span class="event-location-address">{{ $event->location }}</span></span>
+                                                </div>
+                                            </div>
+                                            <div class="event-list-item-actions">
+                                                {{--<a href="#" class="btn btn-default btn-transparent event-tickets event-register-button">Register</a>--}}
+                                                <ul class="action-buttons">
+                                                    <li title="{{ $event->title }}"><a href="#" data-trigger="focus" data-placement="top" data-content="" data-toggle="popover" data-original-title="Share Event" class="event-share-link"><i class="icon-share"></i></a></li>
+
+                                                    {{--<li title="Get directions" class="hidden-xs"><a href="#" class="cover-overlay-trigger event-direction-link"><i class="icon-compass"></i></a></li>--}}
+                                                    {{--<li title="Contact event manager"><a href="#" data-toggle="modal" data-target="#Econtact" class="event-contact-link"><i class="icon-mail"></i></a></li>--}}
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        @endforeach
+                                @endif
+
                             </ul>
                         </div>
                     </div>
