@@ -16,6 +16,27 @@ class FrontEndController extends Controller
         ]);
     }
 
+    public function about(){
+        return view('front.about',[
+            'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
+            'categories' => EventCategory::all()
+        ]);
+    }
+
+    public function new_here(){
+        return view('front.new_here',[
+            'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
+            'categories' => EventCategory::all()
+        ]);
+    }
+
+    public function staff(){
+        return view('front.staff',[
+            'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
+            'categories' => EventCategory::all()
+        ]);
+    }
+
     public function eventList(){
         return view('front.event-list',[
             'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
