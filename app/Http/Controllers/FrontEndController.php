@@ -23,8 +23,8 @@ class FrontEndController extends Controller
         ]);
     }
 
-    public function new_here(){
-        return view('front.new_here',[
+    public function newHere(){
+        return view('front.new-here',[
             'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
             'categories' => EventCategory::all()
         ]);
@@ -57,6 +57,32 @@ class FrontEndController extends Controller
             'categories' => EventCategory::all()
         ]);
     }
+
+    public function sermonList(){
+        return view('front.sermon-list',[
+            'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
+            'categories' => EventCategory::all()
+        ]);
+    }
+
+    public function sermonSeries(){
+        return view('front.sermon-series',[
+            'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
+            'categories' => EventCategory::all()
+        ]);
+    }
+
+    public function gallery(){
+        return view('front.gallery',[
+            'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
+            'categories' => EventCategory::all()
+        ]);
+    }
+
+//    public function singleSermon($id){
+//        $event =Event::find($id);
+//        return view('front.single-sermon');
+//    }
 
     public function contact(){
         return view('front.contact',[

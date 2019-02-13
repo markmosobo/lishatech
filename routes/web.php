@@ -5,10 +5,14 @@ Route::get('/event-list','FrontEndController@eventList');
 Route::get('/event-calendar','FrontEndController@eventCalendar');
 Route::get('/event-grid','FrontEndController@eventGrid');
 Route::get('/single/{id}','FrontEndController@singleEvent');
-Route::get('/new_here','FrontEndController@new_here');
+Route::get('/new-here','FrontEndController@newHere');
 Route::get('/staff','FrontEndController@staff');
 Route::get('/donate','FrontEndController@donate');
 Route::get('/contact','FrontEndController@contact');
+Route::get('/sermon-list','FrontEndController@sermonList');
+Route::get('/sermon-series','FrontEndController@sermonSeries');
+Route::get('/single-sermon','FrontEndController@singleSermon');
+Route::get('/gallery','FrontEndController@gallery');
 
 Route::get('/login','HomeController@index');
 

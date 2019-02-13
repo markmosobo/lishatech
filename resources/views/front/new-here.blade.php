@@ -1,61 +1,23 @@
-<!DOCTYPE HTML>
-<html class="no-js">
-<head>
-    <!-- Basic Page Needs
-      ================================================== -->
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>{{ config('app.name') }}</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content=" Alex Munyua">
-    <!-- Mobile Specific Metas
-      ================================================== -->
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-    <meta name="format-detection" content="telephone=no">
-    <!-- CSS
-      ================================================== -->
-    <link href="{{  asset('front/css/bootstrap.css')}} " rel="stylesheet" type="text/css">
-    <link href="{{  asset('front/css/bootstrap-theme.css')}} " rel="stylesheet" type="text/css">
-    <link href="{{  asset('front/css/style.css')}} " rel="stylesheet" type="text/css">
-    <link href="{{  asset('front/vendor/prettyphoto/css/prettyPhoto.css')}} " rel="stylesheet" type="text/css">
-    <link href="{{  asset('front/vendor/mediaelement/mediaelementplayer.css')}} " rel="stylesheet" type="text/css">
-    <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="{{  asset('front/css/ie.css')}} " media="screen" /><![endif]-->
-    <link href="{{  asset('front/css/custom.css')}} " rel="stylesheet" type="text/css"><!-- CUSTOM STYLESHEET FOR STYLING -->
-    <!-- Color Style -->
-    <link href="{{  asset('front/colors/color1.css')}} " rel="stylesheet" type="text/css">
-    <!-- SCRIPTS
-      ================================================== -->
-    <script src="{{  asset('front/js/modernizr.js') }}"></script><!-- Modernizr -->
-</head>
-<body class="home">
-<!--[if lt IE 7]>
-<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
-<![endif]-->
-<div class="body">
-    <!-- Start Site Header -->
-@include('front.layouts.header')
-<!-- End Site Header -->
-    <!-- Start Hero Slider -->
-    <!-- End Hero Slider -->
-    <!-- Lead Content -->
+@extends('front.layouts.app')
+@section('title','Visitors Tab')
 @yield('content')
-<!-- End Body Content -->
-    <div class="page-header parallax clearfix" style="background-image:
-    url(images/slide7.jpg); background-color:; height:px;">
-        <div class="title-subtitle-holder">
-            <div class="title-subtitle-holder-inner">
-                <h2>I'm New Here</h2>
-            </div>
-        </div>    </div>    <!-- End Page Header -->    <!-- Breadcrumbs -->
-    <div class="lgray-bg breadcrumb-cont">
-        <div class="container">
-
-            <ol class="breadcrumb">
-                <!-- Breadcrumb NavXT 6.2.1 -->
-                <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Adore Church." href="{{url('/')}}" class="home"><span property="name">{{config('app.name')}}</span></a><meta property="position" content="1"></span> &gt; <span property="itemListElement" typeof="ListItem"><span property="name">I'm New Here</span><meta property="position" content="2"></span>          	</ol>
-
+<div class="page-header parallax clearfix" style="background-image:url({{ asset('images/default-event-list-img.jpg') }});">
+    <div class="title-subtitle-holder">
+        <div class="title-subtitle-holder-inner">
+            <h2>@yield('title')</h2>
         </div>
     </div>
+</div>
+<!-- End Page Header -->
+<!-- Breadcrumbs -->
+<div class="lgray-bg breadcrumb-cont">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li><a href="{{url('/')}}">Home</a></li>
+            <li class="active">@yield('title')</li>
+        </ol>
+    </div>
+</div>
     <!-- Start Body Content -->
     <div class="main" role="main">
         <div id="content" class="content full">

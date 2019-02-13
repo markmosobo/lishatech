@@ -1,4 +1,5 @@
 @extends('front.layouts.app')
+@section('title','Home')
 @section('content')
     @include('front.parallax')
 
@@ -9,23 +10,23 @@
                     <div class="col-md-4 col-sm-4 featured-block">
                         <h3>Our Community</h3>
                         <figure>
-                            <a href="about.html"><img src="http://placehold.it/800x500&amp;text=IMAGE+PLACEHOLDER" alt="Our Community"></a>
+                            <a href="{{url('/about')}}"><img src="http://placehold.it/800x500&amp;text=IMAGE+PLACEHOLDER" alt="Our Community"></a>
                         </figure>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra.</p>
+                        <p>about us...</p>
                     </div>
                     <div class="col-md-4 col-sm-4 featured-block">
                         <h3>Church Mission</h3>
                         <figure>
-                            <a href="donate.html"><img src="http://placehold.it/800x500&amp;text=IMAGE+PLACEHOLDER" alt="Our Community"></a>
+                            <a href="{{url('/donate')}}"><img src="http://placehold.it/800x500&amp;text=IMAGE+PLACEHOLDER" alt="Our Community"></a>
                         </figure>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra.</p>
+                        <p>more donation...</p>
                     </div>
                     <div class="col-md-4 col-sm-4 featured-block">
                         <h3>Join a Group</h3>
                         <figure>
-                            <a href="new-here.html"><img src="http://placehold.it/800x500&amp;text=IMAGE+PLACEHOLDER" alt="Our Community"></a>
+                            <a href="{{url('/new-here')}}"><img src="http://placehold.it/800x500&amp;text=IMAGE+PLACEHOLDER" alt="Our Community"></a>
                         </figure>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra.</p>
+                        <p>new-here...</p>
                     </div>
                 </div>
             </div>

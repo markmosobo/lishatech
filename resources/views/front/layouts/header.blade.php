@@ -2,7 +2,7 @@
     <div class="container for-navi">
         <div class="site-logo">
             <h1>
-                <a href="index.html">
+                <a href="{{url('/')}}">
                     <span class="logo-icon"><i class="fa fa-heart"></i></span>
                     <span class="logo-text">PCEA <span>Gitangu Church</span></span>
                     <span class="logo-tagline"></span>
@@ -16,7 +16,7 @@
                 <li><a href="javascript:void(0)">About us</a>
                     <ul class="dropdown">
                         <li><a href="{{url('about')}}">Overview</a></li>
-                        <li><a href="{{url('new_here')}}">New Here?</a></li>
+                        <li><a href="{{url('new-here')}}">New Here?</a></li>
                         <li><a href="{{url('staff')}}">Our Staff</a></li>
                         <li><a href="{{url('donate')}}">Donate now</a></li>
                     </ul>
@@ -25,12 +25,12 @@
                     <ul class="dropdown">
                         <li><a href="#">Sermons</a>
                             <ul class="dropdown">
-                                <li><a href="{{url('sermon_series')}}">Sermons Series</a></li>
-                                <li><a href="{{url('sermon_list')}}">Sermons List</a></li>
+                                <li><a href="{{url('sermon-series')}}">Sermons Series</a></li>
+                                <li><a href="{{url('sermon-list')}}">Past Sermons</a></li>
                                 {{--<li><a href="{{url('/singleSermon/{id')}}">Single Sermon</a></li>--}}
                             </ul>
                         </li>
-                        <li><a href="javascript:void(0)">Gallery</a>
+                        <li><a href="{{url('gallery')}}">Gallery</a>
                             {{--<ul class="dropdown">--}}
                                 {{--<li><a href="gallery-2cols-filter.html">With Filter</a>--}}
                                     {{--<ul class="dropdown">--}}
@@ -54,8 +54,7 @@
                 <li><a href="javascript:void(0)">Events</a>
                     <ul class="dropdown">
                         <li><a href="{{url('/event-list')}}">Events List</a></li>
-                        <li><a href="{{url('/event-calendar')}}">Events Calendar</a></li>
-                        {{--<li><a href="{{url('/events_grid')}}">Events Grid</a></li>--}}
+                        <li><a href="{{url('/events_calendar')}}">Recent/Past Events</a></li>
                         {{--<li><a href="{{url('/single/{id}')}}">Single Event</a></li>--}}
                     </ul>
                 </li>
@@ -70,7 +69,7 @@
                                             <iframe src="https://player.vimeo.com/video/37540860?title=0&amp;byline=0&amp;portrait=0" width="500" height="281"></iframe>
                                         </div>
                                     </div>
-                                    <div class="col-md-5"> <span class="megamenu-sub-title">Use for some content</span>
+                                    <div class="col-md-5"> <span class="megamenu-sub-title">About Us</span>
                                         <p>Nulla consequat massa quis enim.Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.</p>
                                     </div>
                                     <div class="col-md-3"> <span class="megamenu-sub-title">Use Custom Menus</span>
@@ -87,13 +86,13 @@
                         </li>
                     </ul>
                 </li>
-                <li><a href="javascript:void(0)">Blog</a>
-                    <ul class="dropdown">
-                        <li><a href="blog-standard.html">Standard Blog</a></li>
-                        <li><a href="blog-masonry.html">Masonry Blog</a></li>
-                        <li><a href="blog-post.html">Single Post</a></li>
-                    </ul>
-                </li>
+                {{--<li><a href="javascript:void(0)">Blog</a>--}}
+                    {{--<ul class="dropdown">--}}
+                        {{--<li><a href="blog-standard.html">Standard Blog</a></li>--}}
+                        {{--<li><a href="blog-masonry.html">Masonry Blog</a></li>--}}
+                        {{--<li><a href="blog-post.html">Single Post</a></li>--}}
+                    {{--</ul>--}}
+                {{--</li>--}}
                 <li><a href="{{url('/contact')}}">Contact</a></li>
             </ul>
         </nav>
