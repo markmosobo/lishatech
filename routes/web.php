@@ -7,6 +7,8 @@ Route::get('/event-grid','FrontEndController@eventGrid');
 Route::get('/single/{id}','FrontEndController@singleEvent');
 Route::get('/new_here','FrontEndController@new_here');
 Route::get('/staff','FrontEndController@staff');
+Route::get('/donate','FrontEndController@donate');
+Route::get('/contact','FrontEndController@contact');
 
 Route::get('/login','HomeController@index');
 

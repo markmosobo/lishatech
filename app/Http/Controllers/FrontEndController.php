@@ -37,8 +37,29 @@ class FrontEndController extends Controller
         ]);
     }
 
+    public function donate(){
+        return view('front.donate',[
+            'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
+            'categories' => EventCategory::all()
+        ]);
+    }
+
     public function eventList(){
         return view('front.event-list',[
+            'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
+            'categories' => EventCategory::all()
+        ]);
+    }
+
+    public function eventCalendar(){
+        return view('front.event-calendar',[
+            'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
+            'categories' => EventCategory::all()
+        ]);
+    }
+
+    public function contact(){
+        return view('front.contact',[
             'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
             'categories' => EventCategory::all()
         ]);

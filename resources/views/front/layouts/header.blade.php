@@ -25,9 +25,9 @@
                     <ul class="dropdown">
                         <li><a href="#">Sermons</a>
                             <ul class="dropdown">
-                                <li><a href="{{url('sermons_series')}}">Sermons Series</a></li>
-                                <li><a href="{{url('sermons_list')}}">Sermons List</a></li>
-                                <li><a href="{{url('/singleSermon/{id')}}">Single Sermon</a></li>
+                                <li><a href="{{url('sermon_series')}}">Sermons Series</a></li>
+                                <li><a href="{{url('sermon_list')}}">Sermons List</a></li>
+                                {{--<li><a href="{{url('/singleSermon/{id')}}">Single Sermon</a></li>--}}
                             </ul>
                         </li>
                         <li><a href="javascript:void(0)">Gallery</a>
@@ -54,9 +54,9 @@
                 <li><a href="javascript:void(0)">Events</a>
                     <ul class="dropdown">
                         <li><a href="{{url('/event-list')}}">Events List</a></li>
-                        <li><a href="{{url('/events-calendar')}}">Events Calendar</a></li>
-                        <li><a href="{{url('/events_grid')}}">Events Grid</a></li>
-                        <li><a href="{{url('/single/{id}')}}">Single Event</a></li>
+                        <li><a href="{{url('/event-calendar')}}">Events Calendar</a></li>
+                        {{--<li><a href="{{url('/events_grid')}}">Events Grid</a></li>--}}
+                        {{--<li><a href="{{url('/single/{id}')}}">Single Event</a></li>--}}
                     </ul>
                 </li>
                 <li class="megamenu"><a href="javascript:void(0)">Mega Menu</a>

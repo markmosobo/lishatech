@@ -52,7 +52,8 @@
 
             <ol class="breadcrumb">
                 <!-- Breadcrumb NavXT 6.2.1 -->
-                <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Adore Church." href="https://demo.imithemes.com/adore-church-wp" class="home"><span property="name">Adore Church</span></a><meta property="position" content="1"></span> &gt; <span property="itemListElement" typeof="ListItem"><span property="name">About our church</span><meta property="position" content="2"></span>          	</ol>
+                <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to PCEA Church." href="{{url('/')}}" class="home">
+                        <span property="name">{{ config('app.name') }}</span></a><meta property="position" content="1"></span> &gt; <span property="itemListElement" typeof="ListItem"><span property="name">About our church</span><meta property="position" content="2"></span>          	</ol>
 
         </div>
     </div>
@@ -62,7 +63,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12" id="content-col">
-                        <h2 class="">Welcome to Adore Church</h2>
+                        <h2 class="">Welcome to {{ config('app.name') }} Church</h2>
                         <hr class="sm">
                         <h4 class="">Aenean vulputate eleifend tellus</h4>
                         <p class="">Nulla consequat massa quis enim.Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.Aenean vulputate eleifend tellus. Nulla consequat massa quis enim.Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.</p>

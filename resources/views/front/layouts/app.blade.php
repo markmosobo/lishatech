@@ -41,35 +41,35 @@
    @yield('content')
     <!-- End Body Content -->
     <!-- Gallery updates -->
-    <div class="gallery-updates cols5 clearfix">
-        <ul>
-            <li class="format-image"><a href="http://placehold.it/600x600&amp;text=IMAGE+PLACEHOLDER" data-rel="prettyPhoto" class="media-box"><img src="http://placehold.it/600x600&amp;text=IMAGE+PLACEHOLDER" alt=""></a></li>
-            <li class="format-standard">
-                <div class="flexslider galleryflex" data-autoplay="yes" data-pagination="yes" data-arrows="no" data-style="slide" data-pause="yes">
-                    <ul class="slides">
-                        <li class="item"><a href="http://placehold.it/600x600&amp;text=IMAGE+PLACEHOLDER" data-rel="prettyPhoto[postname1]"><img src="http://placehold.it/600x600&amp;text=IMAGE+PLACEHOLDER" alt=""></a></li>
-                        <li class="item"><a href="http://placehold.it/800x500&amp;text=IMAGE+PLACEHOLDER" data-rel="prettyPhoto[postname1]"><img src="http://placehold.it/600x600&amp;text=IMAGE+PLACEHOLDER" alt=""></a></li>
-                    </ul>
-                </div>
-            </li>
-            <li class="format-image"><a href="http://placehold.it/600x600&amp;text=IMAGE+PLACEHOLDER" data-rel="prettyPhoto" class="media-box"><img src="http://placehold.it/600x600&amp;text=IMAGE+PLACEHOLDER" alt=""></a></li>
-            <li class="format-standard">
-                <div class="flexslider galleryflex" data-autoplay="yes" data-pagination="yes" data-arrows="no" data-style="fade" data-speed="4000" data-pause="yes">
-                    <ul class="slides">
-                        <li class="item"><a href="http://placehold.it/600x600&amp;text=IMAGE+PLACEHOLDER" data-rel="prettyPhoto[postname2]"><img src="http://placehold.it/600x600&amp;text=IMAGE+PLACEHOLDER" alt=""></a></li>
-                        <li class="item"><a href="http://placehold.it/400x400&amp;text=IMAGE+PLACEHOLDER" data-rel="prettyPhoto[postname2]"><img src="http://placehold.it/600x600&amp;text=IMAGE+PLACEHOLDER" alt=""></a></li>
-                    </ul>
-                </div>
-            </li>
-            <li class="format-video"><a href="http://vimeo.com/37540860" data-rel="prettyPhoto" class="media-box"><img src="http://placehold.it/600x600&amp;text=IMAGE+PLACEHOLDER" alt=""></a></li>
-        </ul>
-        <div class="gallery-updates-overlay">
-            <div class="container">
-                <i class="icon-multiple-image"></i>
-                <h2>Updates from our gallery</h2>
-            </div>
-        </div>
-    </div>
+    {{--<div class="gallery-updates cols5 clearfix">--}}
+        {{--<ul>--}}
+            {{--<li class="format-image"><a href="http://placehold.it/600x600&amp;text=IMAGE+PLACEHOLDER" data-rel="prettyPhoto" class="media-box"><img src="http://placehold.it/600x600&amp;text=IMAGE+PLACEHOLDER" alt=""></a></li>--}}
+            {{--<li class="format-standard">--}}
+                {{--<div class="flexslider galleryflex" data-autoplay="yes" data-pagination="yes" data-arrows="no" data-style="slide" data-pause="yes">--}}
+                    {{--<ul class="slides">--}}
+                        {{--<li class="item"><a href="http://placehold.it/600x600&amp;text=IMAGE+PLACEHOLDER" data-rel="prettyPhoto[postname1]"><img src="http://placehold.it/600x600&amp;text=IMAGE+PLACEHOLDER" alt=""></a></li>--}}
+                        {{--<li class="item"><a href="http://placehold.it/800x500&amp;text=IMAGE+PLACEHOLDER" data-rel="prettyPhoto[postname1]"><img src="http://placehold.it/600x600&amp;text=IMAGE+PLACEHOLDER" alt=""></a></li>--}}
+                    {{--</ul>--}}
+                {{--</div>--}}
+            {{--</li>--}}
+            {{--<li class="format-image"><a href="http://placehold.it/600x600&amp;text=IMAGE+PLACEHOLDER" data-rel="prettyPhoto" class="media-box"><img src="http://placehold.it/600x600&amp;text=IMAGE+PLACEHOLDER" alt=""></a></li>--}}
+            {{--<li class="format-standard">--}}
+                {{--<div class="flexslider galleryflex" data-autoplay="yes" data-pagination="yes" data-arrows="no" data-style="fade" data-speed="4000" data-pause="yes">--}}
+                    {{--<ul class="slides">--}}
+                        {{--<li class="item"><a href="http://placehold.it/600x600&amp;text=IMAGE+PLACEHOLDER" data-rel="prettyPhoto[postname2]"><img src="http://placehold.it/600x600&amp;text=IMAGE+PLACEHOLDER" alt=""></a></li>--}}
+                        {{--<li class="item"><a href="http://placehold.it/400x400&amp;text=IMAGE+PLACEHOLDER" data-rel="prettyPhoto[postname2]"><img src="http://placehold.it/600x600&amp;text=IMAGE+PLACEHOLDER" alt=""></a></li>--}}
+                    {{--</ul>--}}
+                {{--</div>--}}
+            {{--</li>--}}
+            {{--<li class="format-video"><a href="http://vimeo.com/37540860" data-rel="prettyPhoto" class="media-box"><img src="http://placehold.it/600x600&amp;text=IMAGE+PLACEHOLDER" alt=""></a></li>--}}
+        {{--</ul>--}}
+        {{--<div class="gallery-updates-overlay">--}}
+            {{--<div class="container">--}}
+                {{--<i class="icon-multiple-image"></i>--}}
+                {{--<h2>Updates from our gallery</h2>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
     <!-- Start site footer -->
     <footer class="site-footer">
         <div class="container">
