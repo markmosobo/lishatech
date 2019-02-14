@@ -6,7 +6,7 @@ Route::get('/event-calendar','FrontEndController@eventCalendar');
 Route::get('/event-grid','FrontEndController@eventGrid');
 Route::get('/single/{id}','FrontEndController@singleEvent');
 Route::get('/new-here','FrontEndController@newHere');
-Route::get('/staff','FrontEndController@staff');
+Route::get('/church-staff','FrontEndController@churchStaff');
 Route::get('/donate','FrontEndController@donate');
 Route::get('/contact','FrontEndController@contact');
 Route::get('/sermon-list','FrontEndController@sermonList');
@@ -82,3 +82,37 @@ Route::resource('eventCategories', 'EventCategoryController');
 Route::resource('slides', 'SlideController');
 
 Route::resource('slides', 'SlideController');
+
+
+
+
+
+
+
+
+
+
+
+
+
+Route::resource('staffPositions', 'staffPositionController');
+
+Route::resource('staffPositions', 'staffPositionController');
+
+Route::resource('sermons', 'SermonController');
+
+Route::resource('sermonCategories', 'SermonCategoryController');
+
+Route::resource('sermonSpeakers', 'SermonSpeakerController');
+
+Route::resource('members', 'MembersController');
+
+Route::resource('sermons', 'SermonController');
+
+Route::resource('churchGroups', 'churchGroupController');
+
+Route::resource('churchGroupMembers', 'churchGroupMemberController');
+
+Route::resource('blogCategories', 'blogCategoryController');
+
+Route::resource('blogs', 'BlogController');

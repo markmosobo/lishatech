@@ -30,8 +30,8 @@ class FrontEndController extends Controller
         ]);
     }
 
-    public function staff(){
-        return view('front.staff',[
+    public function churchStaff(){
+        return view('front.church-staff',[
             'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
             'categories' => EventCategory::all()
         ]);

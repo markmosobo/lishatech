@@ -64,16 +64,92 @@ class RoutesTableSeeder extends Seeder
 
         #### events
         $parent = Route::create([
-            'route_name'=>"Sections",
+        'route_name'=>"Sections",
+        'url'=> '#',
+        'icon'=> 'fa-volume-up',
+        'sequence'=>3
+    ]);
+
+        $cChild = Route::create([
+            'route_name'=> 'Home Slides',
+            'parent_route'=> $parent->id,
+            'url'=>'slides',
+        ]);
+        $cChild->roles()->attach($admin);
+
+        ####church members
+        $parent = Route::create([
+            'route_name'=>"Church Members",
             'url'=> '#',
             'icon'=> 'fa-volume-up',
             'sequence'=>3
         ]);
 
         $cChild = Route::create([
-            'route_name'=> 'Home Slides',
+            'route_name'=> 'All Church Members',
             'parent_route'=> $parent->id,
-            'url'=>'slides',
+            'url'=>'members',
+        ]);
+        $cChild->roles()->attach($admin);
+        ;
+
+        #### sermons
+        $parent = Route::create([
+            'route_name'=>"Sermons",
+            'url'=> '#',
+            'icon'=> 'fa-volume-up',
+            'sequence'=>3
+        ]);
+
+        $cChild = Route::create([
+            'route_name'=> 'Sermons',
+            'parent_route'=> $parent->id,
+            'url'=>'sermons',
+        ]);
+        $cChild->roles()->attach($admin);
+
+        #### church groups
+        $parent = Route::create([
+            'route_name'=>"Manage Church Groups",
+            'url'=> '#',
+            'icon'=> 'fa-volume-up',
+            'sequence'=>3
+        ]);
+
+        $cChild = Route::create([
+            'route_name'=> 'Church Groups',
+            'parent_route'=> $parent->id,
+            'url'=>'churchGroups',
+        ]);
+        $cChild->roles()->attach($admin);
+
+        $cChild = Route::create([
+            'route_name'=> 'Church Group Members',
+            'parent_route'=> $parent->id,
+            'url'=>'churchGroupMembers',
+        ]);
+        $cChild->roles()->attach($admin);
+
+
+        #### blog
+        $parent = Route::create([
+            'route_name'=>"Manage Blogs",
+            'url'=> '#',
+            'icon'=> 'fa-volume-up',
+            'sequence'=>3
+        ]);
+
+        $cChild = Route::create([
+            'route_name'=> 'Blog Categories',
+            'parent_route'=> $parent->id,
+            'url'=>'blogCategories',
+        ]);
+        $cChild->roles()->attach($admin);
+
+        $cChild = Route::create([
+            'route_name'=> 'All Blogs',
+            'parent_route'=> $parent->id,
+            'url'=>'blogs',
         ]);
         $cChild->roles()->attach($admin);
 

@@ -17,7 +17,7 @@
                     <ul class="dropdown">
                         <li><a href="{{url('about')}}">Overview</a></li>
                         <li><a href="{{url('new-here')}}">New Here?</a></li>
-                        <li><a href="{{url('staff')}}">Our Staff</a></li>
+                        <li><a href="{{url('church-staff')}}">Our Staff</a></li>
                         <li><a href="{{url('donate')}}">Donate now</a></li>
                     </ul>
                 </li>

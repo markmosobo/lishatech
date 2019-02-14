@@ -78,7 +78,7 @@
                     <div class="col-md-4 widget footer_widget text_widget">
                         <h4>About our church</h4>
                         <hr class="sm">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra.</p>
+                        <p>Lorem ipsum dolor sit amet,</p>
                     </div>
                     <div class="col-md-4 widget footer_widget twitter_widget">
                         <h4>Twitter feeds</h4>

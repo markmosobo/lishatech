@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSermonsTable extends Migration
+class CreateChurchGroupsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class CreateSermonsTable extends Migration
      */
     public function up()
     {
-        Schema::create('sermons', function (Blueprint $table) {
+        Schema::create('church_groups', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title')->nullable();
-            $table->string('speaker')->nullable();
-            $table->integer('category_id')->unsigned();
-            $table->dateTime('sermon_date')->nullable();
-            $table->longText('body')->nullable();
+            $table->string('name')->nullable();
+            $table->boolean('status')->default(true);
+            $table->string('description')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
@@ -32,6 +30,6 @@ class CreateSermonsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sermons');
+        Schema::dropIfExists('church_groups');
     }
 }
