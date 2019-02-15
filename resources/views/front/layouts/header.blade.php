@@ -88,9 +88,9 @@
                 </li>
                 <li><a href="javascript:void(0)">Blog</a>
                     <ul class="dropdown">
-                        <li><a href="blog-standard.html">Standard Blog</a></li>
-                        <li><a href="blog-masonry.html">Masonry Blog</a></li>
-                        <li><a href="blog-post.html">Single Post</a></li>
+                        <li><a href="{{url('recent-blog')}}">Recent Blogs</a></li>
+                        <li><a href="{{url('past-blog')}}">Past Blogs</a></li>
+                        {{--<li><a href="blog-post.html">Single Post</a></li>--}}
                     </ul>
                 </li>
                 <li><a href="{{url('/contact')}}">Contact</a></li>

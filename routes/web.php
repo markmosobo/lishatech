@@ -13,6 +13,8 @@ Route::get('/sermon-list','FrontEndController@sermonList');
 Route::get('/sermon-series','FrontEndController@sermonSeries');
 Route::get('/single-sermon','FrontEndController@singleSermon');
 Route::get('/gallery','FrontEndController@gallery');
+Route::get('/recent-blog','FrontEndController@recentBlog');
+Route::get('/past-blog','FrontEndController@pastBlog');
 
 Route::get('/login','HomeController@index');
 

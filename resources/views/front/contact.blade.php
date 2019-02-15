@@ -1,22 +1,22 @@
 @extends('front.layouts.app')
 @section('content')
-    <div class="page-header parallax clearfix" style="background-image:url({{ asset('images/default-event-list-img.jpg') }});">
-        <div class="title-subtitle-holder">
-            <div class="title-subtitle-holder-inner">
-                <h2>Contact</h2>
+        <div class="page-header parallax clearfix" style="background-image:url({{ asset('images/default-event-list-img.jpg') }});">
+            <div class="title-subtitle-holder">
+                <div class="title-subtitle-holder-inner">
+                    <h2>Contact</h2>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- End Page Header -->
-    <!-- Breadcrumbs -->
-    <div class="lgray-bg breadcrumb-cont">
-        <div class="container">
-            <ol class="breadcrumb">
-                <li><a href="index.html">Home</a></li>
-                <li class="active">Contact Us</li>
-            </ol>
+        <!-- End Page Header -->
+        <!-- Breadcrumbs -->
+        <div class="lgray-bg breadcrumb-cont">
+            <div class="container">
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">Contact Us</li>
+                </ol>
+            </div>
         </div>
-    </div>
     <!-- Start Body Content -->
     <div class="main" role="main">
         <div id="content" class="content full">

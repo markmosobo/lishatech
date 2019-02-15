@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use App\Models\Event;
 use App\Models\EventCategory;
 use App\Models\EventSchedule;
@@ -89,6 +90,26 @@ class FrontEndController extends Controller
             'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
             'categories' => EventCategory::all()
         ]);
+    }
+
+    public function recentBlog(){
+        return view('front.recent-blog',[
+            'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
+            'categories' => EventCategory::all(),
+            'blog'=>Blog::all()
+        ]);
+    }
+
+    public function pastBlog(){
+        return view('front.past-blog',[
+            'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
+            'categories' => EventCategory::all()
+        ]);
+    }
+
+    public function singleBlog($id){
+        $blog=Blog::find($id);
+        return view('front.past-blog')->withBlog($blog);
     }
 
     public function singleEvent($id){
