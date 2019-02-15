@@ -49,7 +49,7 @@
                                 </div></div>
                         </div>
                         <hr class="fw">
-                        <h3>Our Staff</h3>
+                        <h3>Our Members</h3>
                         <hr class="sm">
                         <div class="row">
                            <!--staff details go here-->

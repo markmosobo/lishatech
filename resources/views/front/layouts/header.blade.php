@@ -17,15 +17,15 @@
                     <ul class="dropdown">
                         <li><a href="{{url('about')}}">Overview</a></li>
                         <li><a href="{{url('new-here')}}">New Here?</a></li>
-                        <li><a href="{{url('church-staff')}}">Our Staff</a></li>
+                        <li><a href="{{url('church-staff')}}">Our Members</a></li>
                         <li><a href="{{url('donate')}}">Donate now</a></li>
                     </ul>
                 </li>
-                <li><a href="javascript:void(0)">Media</a>
+                <li><a href="javascript:void(0)">Sermons</a>
                     <ul class="dropdown">
                         <li><a href="#">Sermons</a>
                             <ul class="dropdown">
-                                <li><a href="{{url('sermon-series')}}">Sermons Series</a></li>
+                                <li><a href="{{url('sermon-series')}}">Sermon Series</a></li>
                                 <li><a href="{{url('sermon-list')}}">Past Sermons</a></li>
                                 {{--<li><a href="{{url('/singleSermon/{id')}}">Single Sermon</a></li>--}}
                             </ul>
@@ -53,7 +53,7 @@
                 </li>
                 <li><a href="javascript:void(0)">Events</a>
                     <ul class="dropdown">
-                        <li><a href="{{url('/event-list')}}">Events List</a></li>
+                        <li><a href="{{url('/event-list')}}">Upcoming Events</a></li>
                         <li><a href="{{url('/events_calendar')}}">Recent/Past Events</a></li>
                         {{--<li><a href="{{url('/single/{id}')}}">Single Event</a></li>--}}
                     </ul>
@@ -86,13 +86,13 @@
                         </li>
                     </ul>
                 </li>
-                {{--<li><a href="javascript:void(0)">Blog</a>--}}
-                    {{--<ul class="dropdown">--}}
-                        {{--<li><a href="blog-standard.html">Standard Blog</a></li>--}}
-                        {{--<li><a href="blog-masonry.html">Masonry Blog</a></li>--}}
-                        {{--<li><a href="blog-post.html">Single Post</a></li>--}}
-                    {{--</ul>--}}
-                {{--</li>--}}
+                <li><a href="javascript:void(0)">Blog</a>
+                    <ul class="dropdown">
+                        <li><a href="blog-standard.html">Standard Blog</a></li>
+                        <li><a href="blog-masonry.html">Masonry Blog</a></li>
+                        <li><a href="blog-post.html">Single Post</a></li>
+                    </ul>
+                </li>
                 <li><a href="{{url('/contact')}}">Contact</a></li>
             </ul>
         </nav>
