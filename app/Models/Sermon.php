@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class Sermon
  * @package App\Models
- * @version February 14, 2019, 9:51 am EAT
+ * @version February 17, 2019, 1:15 am EAT
  *
  * @property \App\Models\Member member
  * @property \Illuminate\Database\Eloquent\Collection churchGroupMembers
@@ -18,6 +18,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property string title
  * @property string|\Carbon\Carbon sermon_date
  * @property integer member_id
+ * @property string description
  * @property string body
  */
 class Sermon extends Model
@@ -37,6 +38,7 @@ class Sermon extends Model
         'title',
         'sermon_date',
         'member_id',
+        'description',
         'body'
     ];
 
@@ -49,6 +51,7 @@ class Sermon extends Model
         'id' => 'integer',
         'title' => 'string',
         'member_id' => 'integer',
+        'description' => 'string',
         'body' => 'string'
     ];
 

@@ -11,7 +11,7 @@ Route::get('/donate','FrontEndController@donate');
 Route::get('/contact','FrontEndController@contact');
 Route::get('/sermon-list','FrontEndController@sermonList');
 Route::get('/sermon-series','FrontEndController@sermonSeries');
-Route::get('/single-sermon','FrontEndController@singleSermon');
+Route::get('single-sermon/{id}','FrontEndController@singleSermon');
 Route::get('/gallery','FrontEndController@gallery');
 Route::get('/recent-blog','FrontEndController@recentBlog');
 Route::get('/past-blog','FrontEndController@pastBlog');
@@ -101,7 +101,7 @@ Route::resource('staffPositions', 'staffPositionController');
 
 Route::resource('staffPositions', 'staffPositionController');
 
-Route::resource('sermons', 'SermonController');
+
 
 Route::resource('sermonCategories', 'SermonCategoryController');
 
@@ -109,7 +109,7 @@ Route::resource('sermonSpeakers', 'SermonSpeakerController');
 
 Route::resource('members', 'MembersController');
 
-Route::resource('sermons', 'SermonController');
+
 
 Route::resource('churchGroups', 'churchGroupController');
 
@@ -118,3 +118,5 @@ Route::resource('churchGroupMembers', 'churchGroupMemberController');
 Route::resource('blogCategories', 'blogCategoryController');
 
 Route::resource('blogs', 'BlogController');
+
+Route::resource('sermons', 'SermonController');

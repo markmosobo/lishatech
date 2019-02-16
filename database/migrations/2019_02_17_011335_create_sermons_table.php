@@ -18,6 +18,7 @@ class CreateSermonsTable extends Migration
             $table->string('title')->nullable();
             $table->dateTime('sermon_date')->nullable();
             $table->integer('member_id')->unsigned()->nullable();
+            $table->longText('description')->nullable();
             $table->longText('body')->nullable();
             $table->foreign('member_id')->references('id')->on('members')
                 ->onUpdate('cascade')->onDelete('no action');

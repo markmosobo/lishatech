@@ -6,6 +6,7 @@ use App\Models\Blog;
 use App\Models\Event;
 use App\Models\EventCategory;
 use App\Models\EventSchedule;
+use App\Models\Sermon;
 use Illuminate\Http\Request;
 
 class FrontEndController extends Controller
@@ -62,7 +63,8 @@ class FrontEndController extends Controller
     public function sermonList(){
         return view('front.sermon-list',[
             'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
-            'categories' => EventCategory::all()
+            'categories' => EventCategory::all(),
+            'sermons'=> Sermon::orderByDesc('id')->take(3)->get()
         ]);
     }
 
@@ -71,6 +73,11 @@ class FrontEndController extends Controller
             'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
             'categories' => EventCategory::all()
         ]);
+    }
+
+    public function singleSermon($id){
+        $sermon=Sermon::find($id);
+        return view('front.single-sermon')->withSermon($sermon);
     }
 
     public function gallery(){

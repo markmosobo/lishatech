@@ -8,7 +8,7 @@ use InfyOm\Generator\Common\BaseRepository;
 /**
  * Class SermonRepository
  * @package App\Repositories
- * @version February 14, 2019, 9:51 am EAT
+ * @version February 17, 2019, 1:15 am EAT
  *
  * @method Sermon findWithoutFail($id, $columns = ['*'])
  * @method Sermon find($id, $columns = ['*'])
@@ -23,6 +23,7 @@ class SermonRepository extends BaseRepository
         'title',
         'sermon_date',
         'member_id',
+        'description',
         'body'
     ];
 

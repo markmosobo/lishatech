@@ -21,35 +21,48 @@
     </div>
 
 
-
+@if(count($sermons))
+    @foreach($sermons as $sermon)
     <!-- Start Body Content -->
     <div class="main" role="main">
         <div id="content" class="content full">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-9 col-sm-9" id="content-col">
-                        <span class="label label-primary">March 5, 2015 – March 16, 2015</span>                        <div class="sermon-series-description">
-                            <h2 style="text-transform:uppercase;">Sermon Category</h2>
-                            <p> <p>sermon body goes here... </p>
+
+
+
+                        <div class="col-md-9 col-sm-9" id="content-col">
+                        <span class="label label-primary">{{date('M',strtotime($sermon->sermon_date))}}
+                            {{\Carbon\Carbon::parse($sermon->sermon_date)->day}},
+                            {{\Carbon\Carbon::parse($sermon->sermon_date)->year}} – {{date('M',strtotime($sermon->sermon_date))}}
+                            {{\Carbon\Carbon::parse($sermon->sermon_date)->day + 7}},
+                            {{\Carbon\Carbon::parse($sermon->sermon_date)->year}}</span>                        <div class="sermon-series-description">
+                            <h2 style="text-transform:uppercase;">{{$sermon->title}}</h2>
+                            <p> <p>{{$sermon->description}} </p>
                             </p>
                         </div>
                         <ul class="sermons-list">
                             <li class="sermon-item format-standard">
                                 <div class="row">
                                     <div class="col-md-5">
-                                        <a href="{{url('single-sermon/{id}')}}" class="media-box"><img src="../../../../2ysft2ywl8l3ofc6s43cyjwf-wpengine.netdna-ssl.com/adore-church-wp/wp-content/uploads/sites/13/2015/01/echo-hereweare-600x360.jpg" class="attachment-600x400 size-600x400 wp-post-image" alt="" /></a>                                        <a href="../../index40c6.html?sermon=the-difference-maker" class="basic-link">Watch Sermon</a>
+                                        <a href="{{url('single-sermon/'.$sermon->id)}}" class="media-box"><img src="../../../../2ysft2ywl8l3ofc6s43cyjwf-wpengine.netdna-ssl.com/adore-church-wp/wp-content/uploads/sites/13/2015/01/echo-hereweare-600x360.jpg" class="attachment-600x400 size-600x400 wp-post-image" alt="" /></a>
+                                        <a href="{{url('single-sermon/'.$sermon->id)}}" class="basic-link">Read More</a>
                                     </div>
                                     <div class="col-md-7">
-                                        <h3><a href="{{url('single-sermon/{id}')}}">Sermon Title</a></h3>
-                                        <span class="meta-data"><i class="fa fa-calendar"></i> January 24, 2018</span>
-                                        <p>sermon substring...</p>                                    </div>
+                                        <h3><a href="{{url('single-sermon/'.$sermon->id)}}">{{$sermon->title}}</a></h3>
+                                        <span class="meta-data"><i class="fa fa-calendar"></i> {{date('M',strtotime($sermon->sermon_date))}}
+                                            {{\Carbon\Carbon::parse($sermon->sermon_date)->day}}, {{\Carbon\Carbon::parse($sermon->sermon_date)->year}}</span>
+                                        <p>{{substr(strip_tags($sermon->body),0,150)}}{{strlen($sermon->body) > 100 ? "..." : ""}}.</p>                                    </div>
                                 </div>
                             </li>
                         </ul>
-                    </div>
+                        </div>
+
+
+
                     <div class="col-md-3 col-sm-3 sidebar" id="sidebar-col">
                         <div class="sermon-pastors sidebar-widget widget">
-                            <h3>Speakers</h3>
+                            <h3>Speaker</h3>
                             <hr class="sm">
                             <ul class="members-list">
                                 <li>
@@ -60,7 +73,7 @@
                                            https://2ysft2ywl8l3ofc6s43cyjwf-wpengine.netdna-ssl.com/adore-church-wp/wp-content/uploads/sites/13/2015/01/staff2-210x210.jpg 210w,
                                             https://2ysft2ywl8l3ofc6s43cyjwf-wpengine.netdna-ssl.com/adore-church-wp/wp-content/uploads/sites/13/2015/01/staff2-180x180.jpg 180w,
                                              https://2ysft2ywl8l3ofc6s43cyjwf-wpengine.netdna-ssl.com/adore-church-wp/wp-content/uploads/sites/13/2015/01/staff2-300x300.jpg 300w"
-                                            sizes="(max-width: 100px) 100vw, 100px" /><h5>Brandon Dean</h5><span class="meta-data">Pastor</span></li>
+                                            sizes="(max-width: 100px) 100vw, 100px" /><h5>{{$sermon->member_id}}</h5><span class="meta-data">Pastor</span></li>
                             </ul>
                         </div>
                     </div>
@@ -69,4 +82,6 @@
         </div>
     </div>
     <!-- End Body Content -->
+    @endforeach
+    @endif
 @stop

@@ -67,6 +67,7 @@ class SermonDataTable extends DataTable
             'title',
             'sermon_date',
             'member_id',
+            'description',
             'body'
         ];
     }

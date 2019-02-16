@@ -6,6 +6,7 @@ use App\DataTables\SermonDataTable;
 use App\Http\Requests;
 use App\Http\Requests\CreateSermonRequest;
 use App\Http\Requests\UpdateSermonRequest;
+use App\Models\Members;
 use App\Repositories\SermonRepository;
 use Flash;
 use App\Http\Controllers\AppBaseController;
@@ -29,7 +30,7 @@ class SermonController extends AppBaseController
      */
     public function index(SermonDataTable $sermonDataTable)
     {
-        return $sermonDataTable->render('sermons.index');
+        return $sermonDataTable->render('sermons.index',['members'=>Members::all()]);
     }
 
     /**
@@ -77,7 +78,7 @@ class SermonController extends AppBaseController
             return redirect(route('sermons.index'));
         }
 
-        return view('sermons.show')->with('sermon', $sermon);
+        return response()->json($sermon);
     }
 
     /**

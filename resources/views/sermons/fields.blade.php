@@ -13,7 +13,20 @@
 <!-- Member Id Field -->
 <div class="form-group col-sm-12">
     {!! Form::label('member_id', 'Member Id:') !!}
-    {!! Form::number('member_id', null, ['class' => 'form-control']) !!}
+    <select name="member_id" class="select2 form-control" id="member_id" required>
+        <option value="">select member</option>
+        @if(count($members))
+            @foreach($members as $member)
+                <option value="{{ $member->id }}">{{ $member->full_name }}</option>
+            @endforeach
+        @endif
+    </select>
+</div>
+
+<!-- Description Field -->
+<div class="form-group col-sm-12 col-lg-12">
+    {!! Form::label('description', 'Description:') !!}
+    {!! Form::textarea('description', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Body Field -->
