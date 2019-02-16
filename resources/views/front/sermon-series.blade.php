@@ -1,4 +1,4 @@
-@section('title', 'Sermon Series')
+@section('title', 'Recent Sermons')
 @extends('front.layouts.app')
 @section('content')
 

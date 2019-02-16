@@ -1,4 +1,4 @@
-@section('title', 'Sermons List')
+@section('title', 'Past Sermons')
 @extends('front.layouts.app')
 @section('content')
 
@@ -19,6 +19,8 @@
             </ol>
         </div>
     </div>
+
+
 
     <!-- Start Body Content -->
     <div class="main" role="main">

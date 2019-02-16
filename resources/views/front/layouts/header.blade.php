@@ -25,7 +25,7 @@
                     <ul class="dropdown">
                         <li><a href="#">Sermons</a>
                             <ul class="dropdown">
-                                <li><a href="{{url('sermon-series')}}">Sermon Series</a></li>
+                                <li><a href="{{url('sermon-series')}}">Recent Sermons</a></li>
                                 <li><a href="{{url('sermon-list')}}">Past Sermons</a></li>
                                 {{--<li><a href="{{url('/singleSermon/{id')}}">Single Sermon</a></li>--}}
                             </ul>
