@@ -71,13 +71,19 @@ class FrontEndController extends Controller
     public function sermonSeries(){
         return view('front.sermon-series',[
             'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
-            'categories' => EventCategory::all()
+            'categories' => EventCategory::all(),
+            'sermons'=>Sermon::orderByDesc('sermon_date')->take(6)->get()
         ]);
     }
 
-    public function singleSermon($id){
+    public function recentSermon($id){
         $sermon=Sermon::find($id);
-        return view('front.single-sermon')->withSermon($sermon);
+        return view('front.recent-sermon')->withSermon($sermon);
+    }
+
+    public function pastSermon($id){
+        $sermon=Sermon::find($id);
+        return view('front.past-sermon')->withSermon($sermon);
     }
 
     public function gallery(){

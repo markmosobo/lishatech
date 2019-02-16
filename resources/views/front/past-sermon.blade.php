@@ -15,6 +15,7 @@
         <div class="container">
             <ol class="breadcrumb">
                 <li><a href="{{url('/')}}">Home</a></li>
+                <li><a href="{{url('/sermon-list')}}">Past Sermons</a></li>
                 <li class="active">{{$sermon->title}}</li>
             </ol>
         </div>
@@ -27,7 +28,7 @@
                 <div class="row">
                     <div class="col-md-9 col-sm-9" id="content-col">
                         <span class="label label-primary">{{date('M',strtotime($sermon->sermon_date))}}
-                           {{\Carbon\Carbon::parse($sermon->sermon_date)->day}},
+                            {{\Carbon\Carbon::parse($sermon->sermon_date)->day}},
                             {{date('Y',strtotime($sermon->sermon_date))}} –
                             {{date('M',strtotime($sermon->sermon_date))}}
                             {{\Carbon\Carbon::parse($sermon->sermon_date)->day + 7}},
