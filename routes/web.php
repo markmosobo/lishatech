@@ -15,7 +15,9 @@ Route::get('recent-sermon/{id}','FrontEndController@recentSermon');
 Route::get('past-sermon/{id}','FrontEndController@pastSermon');
 Route::get('/gallery','FrontEndController@gallery');
 Route::get('/recent-blog','FrontEndController@recentBlog');
+Route::get('/single-recent-blog','FrontEndController@single_recentBlog');
 Route::get('/past-blog','FrontEndController@pastBlog');
+Route::get('/single-past-blog','FrontEndController@single_pastBlog');
 
 Route::get('/login','HomeController@index');
 

@@ -19,7 +19,14 @@
 <!-- Blog Category Id Field -->
 <div class="form-group col-sm-12">
     {!! Form::label('blog_category_id', 'Blog Category Id:') !!}
-    {!! Form::number('blog_category_id', null, ['class' => 'form-control']) !!}
+    <select name="blog_category_id" class="select2 form-control" id="blog_category_id" required>
+        <option value="">select blog</option>
+        @if(count($blogcategories))
+            @foreach($blogcategories as $blogcategory)
+                <option value="{{ $blogcategory->id }}">{{ $blogcategory->full_name }}</option>
+            @endforeach
+        @endif
+    </select>
 </div>
 
 <!-- Image Path Field -->

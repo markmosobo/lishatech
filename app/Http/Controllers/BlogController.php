@@ -29,7 +29,7 @@ class BlogController extends AppBaseController
      */
     public function index(BlogDataTable $blogDataTable)
     {
-        return $blogDataTable->render('blogs.index');
+        return $blogDataTable->render('blogs.index',['blogcategories'=>blogCategoryController::all()]);
     }
 
     /**
@@ -77,7 +77,7 @@ class BlogController extends AppBaseController
             return redirect(route('blogs.index'));
         }
 
-        return view('blogs.show')->with('blog', $blog);
+        return response()->json($blog);
     }
 
     /**

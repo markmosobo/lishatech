@@ -109,20 +109,32 @@ class FrontEndController extends Controller
         return view('front.recent-blog',[
             'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
             'categories' => EventCategory::all(),
-            'blog'=>Blog::all()
+            'blogs'=>Blog::all()
+        ]);
+    }
+
+    public function single_recentBlog(){
+        return view('front.single-recent-blog',[
+            'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
+            'categories' => EventCategory::all(),
+            'blogs'=>Blog::all()
         ]);
     }
 
     public function pastBlog(){
         return view('front.past-blog',[
             'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
-            'categories' => EventCategory::all()
+            'categories' => EventCategory::all(),
+            'blogs'=>Blog::all()
         ]);
     }
 
-    public function singleBlog($id){
-        $blog=Blog::find($id);
-        return view('front.past-blog')->withBlog($blog);
+    public function single_pastBlog(){
+        return view('front.single-past-blog',[
+            'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
+            'categories' => EventCategory::all(),
+            'blogs'=>Blog::all()
+        ]);
     }
 
     public function singleEvent($id){
