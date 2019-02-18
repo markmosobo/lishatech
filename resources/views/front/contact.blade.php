@@ -24,16 +24,18 @@
                 <div class="row">
                     <!-- Sidebar -->
                     <div class="col-md-4" id="sidebar-col">
-                        <div id="text-1" class="widget sidebar-widget widget_text">			<div class="textwidget"><h2>Our Locations</h2>
+                        <div id="text-1" class="widget sidebar-widget widget_text">
+                            <div class="textwidget"><h2>Our Locations</h2>
                                 <hr class="sm">
                                 <h4 class="short accent-color">Texas, Unites States</h4>
                                 <p>777, path to God<br>1800-989-990<br><a href="mailto:us@adorechurch.com">us@adorechurch.com</a></p>
-                                <hr class="fw cont">
-                                <h4 class="short accent-color">London</h4>
-                                <p>777, path to God<br>1800-989-990<br><a href="mailto:uk@adorechurch.com">uk@adorechurch.com</a></p>
-                                <hr class="fw cont">
-                                <h4 class="short accent-color">Toronto</h4>
-                                <p>777, path to God<br>1800-989-990<br><a href="mailto:ca@adorechurch.com">ca@adorechurch.com</a></p></div>
+                                {{--<hr class="fw cont">--}}
+                                {{--<h4 class="short accent-color">London</h4>--}}
+                                {{--<p>777, path to God<br>1800-989-990<br><a href="mailto:uk@adorechurch.com">uk@adorechurch.com</a></p>--}}
+                                {{--<hr class="fw cont">--}}
+                                {{--<h4 class="short accent-color">Toronto</h4>--}}
+                                {{--<p>777, path to God<br>1800-989-990<br><a href="mailto:ca@adorechurch.com">ca@adorechurch.com</a></p>--}}
+                            </div>
                         </div>                    </div>
                     <div class="col-md-8 col-sm-6" id="content-col">
                         <form method="post" id="contactform" name="contactform" class="contact-form clearfix" action="https://demo.imithemes.com/adore-church-wp/wp-content/themes/AdoreChurch/mail/contact.php">

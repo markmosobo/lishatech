@@ -38,6 +38,41 @@ class RoutesTableSeeder extends Seeder
         $analytics_dash->save();
         $analytics_dash->roles()->attach($admin);
 
+        #### configurations
+        $configurations = Route::create([
+            'route_name'=>"Configurations",
+            'url'=> '#',
+            'icon'=> 'fa-volume-up',
+            'sequence'=>3
+        ]);
+
+        $cChild = Route::create([
+            'route_name'=> 'Services',
+            'parent_route'=> $configurations->id,
+            'url'=>'services',
+        ]);
+        $cChild->roles()->attach($admin);
+
+        $cChild = Route::create([
+            'route_name'=> 'PCEA Contact Info',
+            'parent_route'=> $configurations->id,
+            'url'=>'contacts',
+        ]);
+        $cChild->roles()->attach($admin);
+
+        $cChild = Route::create([
+            'route_name'=> 'PCEA Location',
+            'parent_route'=> $configurations->id,
+            'url'=>'locations',
+        ]);
+        $cChild->roles()->attach($admin);
+
+        $cChild = Route::create([
+            'route_name'=> 'Common Questions',
+            'parent_route'=> $configurations->id,
+            'url'=>'commonQuestions',
+        ]);
+        $cChild->roles()->attach($admin);
 
         #### events
         $configurations = Route::create([

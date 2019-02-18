@@ -123,3 +123,11 @@ Route::resource('blogCategories', 'blogCategoryController');
 Route::resource('blogs', 'BlogController');
 
 Route::resource('sermons', 'SermonController');
+
+Route::resource('services', 'ServiceController');
+
+Route::resource('contacts', 'ContactController');
+
+Route::resource('commonQuestions', 'CommonQuestionController');
+
+Route::resource('locations', 'LocationController');

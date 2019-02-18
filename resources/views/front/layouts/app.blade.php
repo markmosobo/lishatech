@@ -103,23 +103,29 @@
                     <div class="row">
                         <div class="col-md-3 col-sm-6">
                             <h4><i class="fa fa-clock-o"></i> Service Times</h4>
-                            <p>Sundays @ 10:00 am<br>Starting October 1</p>
+                            @foreach($services as $service)
+                            <p>{{$service->service_name}} @ {{$service->service_start_time}} am<br></p>
+                            @endforeach
                         </div>
                         <div class="col-md-3 col-sm-6">
                             <h4><i class="fa fa-map-marker"></i> Our Location</h4>
-                            <p>777, Path to God<br>United States of America</p>
+                            @foreach($locations as $location)
+                            <p>{{$location->ward}}, {{$location->county}}<br>{{$location->web_address}}</p>
+                             @endforeach
                         </div>
                         <div class="col-md-3 col-sm-6">
                             <h4><i class="fa fa-envelope"></i> Contact Info</h4>
-                            <p>11 - 00 - 653240<br>email@adorechurch.com</p>
+                            @foreach($contacts as $contact)
+                            <p>{{$contact->church_phone_number}}<br>{{$contact->church_email}}</p>
+                            @endforeach
                         </div>
                         <div class="col-md-3 col-sm-6">
                             <h4><i class="fa fa-clock-o"></i> Socialize with us</h4>
                             <ul class="social-icons-colored inversed">
                                 <li class="facebook"><a href="http://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
-                                <li class="vimeo"><a href="http://www.vimeo.com/"><i class="fa fa-vimeo-square"></i></a></li>
+                                {{--<li class="vimeo"><a href="http://www.vimeo.com/"><i class="fa fa-vimeo-square"></i></a></li>--}}
                                 <li class="twitter"><a href="http://twitter.com/"><i class="fa fa-twitter"></i></a></li>
-                                <li class="googleplus"><a href="http://plus.google.com/"><i class="fa fa-google-plus"></i></a></li>
+                                {{--<li class="googleplus"><a href="http://plus.google.com/"><i class="fa fa-google-plus"></i></a></li>--}}
                             </ul>
                         </div>
                     </div>
@@ -127,15 +133,15 @@
                 <div class="site-footer-bottom">
                     <div class="row">
                         <div class="col-md-6 col-sm-6 copyrights-coll">
-                            &copy; 2014 Adore Church. All Rights Reserved
+                            &copy; {{\Carbon\Carbon::now()->year}} {{config('app.name')}} Church. All Rights Reserved
                         </div>
                         <div class="col-md-6 col-sm-6 copyrights-colr">
                             <nav class="footer-nav" role="navigation">
                                 <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="donate.html">Donate now</a></li>
-                                    <li><a href="new-here.html">New here?</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="{{url('/')}}">Home</a></li>
+                                    <li><a href="{{url('donate')}}">Donate now</a></li>
+                                    <li><a href="{{url('new-here')}}">Join Us</a></li>
+                                    <li><a href="{{url('contact')}}">Contact</a></li>
                                 </ul>
                             </nav>
                         </div>

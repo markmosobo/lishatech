@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\Contact;
 use App\Models\Event;
 use App\Models\EventCategory;
 use App\Models\EventSchedule;
+use App\Models\Location;
 use App\Models\Sermon;
+use App\Models\Service;
 use Illuminate\Http\Request;
 
 class FrontEndController extends Controller
@@ -15,48 +18,69 @@ class FrontEndController extends Controller
         return view('front.index',[
             'latestEvent'=>Event::query()->orderByDesc('event_date')->first(),
             'events'=>Event::query()->orderByDesc('event_date')->get(),
+            'contacts'=>Contact::all(),
+            'services'=>Service::orderByDesc('service_start_time')->take(2)->get(),
+            'locations'=>Location::orderByDesc('id')->take(1)->get()
         ]);
     }
 
     public function about(){
         return view('front.about',[
             'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
-            'categories' => EventCategory::all()
+            'categories' => EventCategory::all(),
+            'contacts'=>Contact::all(),
+            'services'=>Service::orderByDesc('service_start_time')->take(2)->get(),
+            'locations'=>Location::orderByDesc('id')->take(1)->get()
         ]);
     }
 
     public function newHere(){
         return view('front.new-here',[
             'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
-            'categories' => EventCategory::all()
+            'categories' => EventCategory::all(),
+            'contacts'=>Contact::all(),
+            'services'=>Service::orderByDesc('service_start_time')->take(2)->get(),
+            'locations'=>Location::orderByDesc('id')->take(1)->get()
         ]);
     }
 
     public function churchStaff(){
         return view('front.church-staff',[
             'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
-            'categories' => EventCategory::all()
+            'categories' => EventCategory::all(),
+            'contacts'=>Contact::all(),
+            'services'=>Service::orderByDesc('service_start_time')->take(2)->get(),
+            'locations'=>Location::orderByDesc('id')->take(1)->get()
         ]);
     }
 
     public function donate(){
         return view('front.donate',[
             'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
-            'categories' => EventCategory::all()
+            'categories' => EventCategory::all(),
+            'contacts'=>Contact::all(),
+            'services'=>Service::orderByDesc('service_start_time')->take(2)->get(),
+            'locations'=>Location::orderByDesc('id')->take(1)->get()
         ]);
     }
 
     public function eventList(){
         return view('front.event-list',[
             'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
-            'categories' => EventCategory::all()
+            'categories' => EventCategory::all(),
+            'contacts'=>Contact::all(),
+            'services'=>Service::orderByDesc('service_start_time')->take(2)->get(),
+            'locations'=>Location::orderByDesc('id')->take(1)->get()
         ]);
     }
 
     public function eventCalendar(){
         return view('front.event-calendar',[
             'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
-            'categories' => EventCategory::all()
+            'categories' => EventCategory::all(),
+            'contacts'=>Contact::all(),
+            'services'=>Service::orderByDesc('service_start_time')->take(2)->get(),
+            'locations'=>Location::orderByDesc('id')->take(1)->get()
         ]);
     }
 
@@ -64,7 +88,10 @@ class FrontEndController extends Controller
         return view('front.sermon-list',[
             'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
             'categories' => EventCategory::all(),
-            'sermons'=> Sermon::orderByDesc('id')->take(3)->get()
+            'sermons'=> Sermon::orderByDesc('id')->take(3)->get(),
+            'contacts'=>Contact::all(),
+            'services'=>Service::orderByDesc('service_start_time')->take(2)->get(),
+            'locations'=>Location::orderByDesc('id')->take(1)->get()
         ]);
     }
 
@@ -72,24 +99,34 @@ class FrontEndController extends Controller
         return view('front.sermon-series',[
             'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
             'categories' => EventCategory::all(),
-            'sermons'=>Sermon::orderByDesc('sermon_date')->take(6)->get()
+            'sermons'=>Sermon::orderByDesc('sermon_date')->take(6)->get(),
+            'contacts'=>Contact::all(),
+            'services'=>Service::orderByDesc('service_start_time')->take(2)->get(),
+            'locations'=>Location::orderByDesc('id')->take(1)->get()
         ]);
     }
 
     public function recentSermon($id){
         $sermon=Sermon::find($id);
-        return view('front.recent-sermon')->withSermon($sermon);
+        return view('front.recent-sermon',['contacts'=>Contact::all(),
+            'services'=>Service::orderByDesc('service_start_time')->take(2)->get(),
+            'locations'=>Location::orderByDesc('id')->take(1)->get()])->withSermon($sermon);
     }
 
     public function pastSermon($id){
         $sermon=Sermon::find($id);
-        return view('front.past-sermon')->withSermon($sermon);
+        return view('front.past-sermon',['contacts'=>Contact::all(),
+            'services'=>Service::orderByDesc('service_start_time')->take(2)->get(),
+            'locations'=>Location::orderByDesc('id')->take(1)->get()])->withSermon($sermon);
     }
 
     public function gallery(){
         return view('front.gallery',[
             'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
-            'categories' => EventCategory::all()
+            'categories' => EventCategory::all(),
+            'contacts'=>Contact::all(),
+            'services'=>Service::orderByDesc('service_start_time')->take(2)->get(),
+            'locations'=>Location::orderByDesc('id')->take(1)->get()
         ]);
     }
 
@@ -101,7 +138,10 @@ class FrontEndController extends Controller
     public function contact(){
         return view('front.contact',[
             'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
-            'categories' => EventCategory::all()
+            'categories' => EventCategory::all(),
+            'contacts'=>Contact::all(),
+            'services'=>Service::orderByDesc('service_start_time')->take(2)->get(),
+            'locations'=>Location::orderByDesc('id')->take(1)->get()
         ]);
     }
 
@@ -109,7 +149,10 @@ class FrontEndController extends Controller
         return view('front.recent-blog',[
             'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
             'categories' => EventCategory::all(),
-            'blogs'=>Blog::all()
+            'blogs'=>Blog::all(),
+            'contacts'=>Contact::all(),
+            'services'=>Service::orderByDesc('service_start_time')->take(2)->get(),
+            'locations'=>Location::orderByDesc('id')->take(1)->get()
         ]);
     }
 
@@ -117,7 +160,10 @@ class FrontEndController extends Controller
         return view('front.single-recent-blog',[
             'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
             'categories' => EventCategory::all(),
-            'blogs'=>Blog::all()
+            'blogs'=>Blog::all(),
+            'contacts'=>Contact::all(),
+            'services'=>Service::orderByDesc('service_start_time')->take(2)->get(),
+            'locations'=>Location::orderByDesc('id')->take(1)->get()
         ]);
     }
 
@@ -125,7 +171,10 @@ class FrontEndController extends Controller
         return view('front.past-blog',[
             'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
             'categories' => EventCategory::all(),
-            'blogs'=>Blog::all()
+            'blogs'=>Blog::all(),
+            'contacts'=>Contact::all(),
+            'services'=>Service::orderByDesc('service_start_time')->take(2)->get(),
+            'locations'=>Location::orderByDesc('id')->take(1)->get()
         ]);
     }
 
@@ -133,7 +182,10 @@ class FrontEndController extends Controller
         return view('front.single-past-blog',[
             'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
             'categories' => EventCategory::all(),
-            'blogs'=>Blog::all()
+            'blogs'=>Blog::all(),
+            'contacts'=>Contact::all(),
+            'services'=>Service::orderByDesc('service_start_time')->take(2)->get(),
+            'locations'=>Location::orderByDesc('id')->take(1)->get()
         ]);
     }
 
@@ -142,7 +194,10 @@ class FrontEndController extends Controller
 //        print_r($event->toArray());die;
         return view('front.single-event',[
             'event'=> $event,
-            'schedules' => EventSchedule::where('event_id',$event->id)->get()
+            'schedules' => EventSchedule::where('event_id',$event->id)->get(),
+            'contacts'=>Contact::all(),
+            'services'=>Service::orderByDesc('service_start_time')->take(2)->get(),
+            'locations'=>Location::orderByDesc('id')->take(1)->get()
         ]);
     }
 }

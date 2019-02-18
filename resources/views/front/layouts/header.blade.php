@@ -58,7 +58,7 @@
                         {{--<li><a href="{{url('/single/{id}')}}">Single Event</a></li>--}}
                     </ul>
                 </li>
-                <li class="megamenu"><a href="javascript:void(0)">Mega Menu</a>
+                <li class="megamenu"><a href="javascript:void(0)">Join Us</a>
                     <ul class="dropdown">
                         <li>
                             <div class="megamenu-container container">
