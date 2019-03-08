@@ -8,19 +8,19 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class Blog
  * @package App\Models
- * @version February 14, 2019, 9:58 am EAT
+ * @version March 8, 2019, 4:05 pm EAT
  *
  * @property \App\Models\BlogCategory blogCategory
  * @property \Illuminate\Database\Eloquent\Collection churchGroupMembers
  * @property \Illuminate\Database\Eloquent\Collection roleRoute
  * @property \Illuminate\Database\Eloquent\Collection roleUser
  * @property \Illuminate\Database\Eloquent\Collection roles
- * @property string author
- * @property string|\Carbon\Carbon blog_date
- * @property string title
  * @property integer blog_category_id
- * @property string image_path
- * @property string body
+ * @property date date
+ * @property string author
+ * @property string blog_title
+ * @property string media_path
+ * @property string blog_body
  */
 class Blog extends Model
 {
@@ -36,12 +36,12 @@ class Blog extends Model
 
 
     public $fillable = [
-        'author',
-        'blog_date',
-        'title',
         'blog_category_id',
-        'image_path',
-        'body'
+        'date',
+        'author',
+        'blog_title',
+        'media_path',
+        'blog_body'
     ];
 
     /**
@@ -51,11 +51,12 @@ class Blog extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'author' => 'string',
-        'title' => 'string',
         'blog_category_id' => 'integer',
-        'image_path' => 'string',
-        'body' => 'string'
+        'date' => 'date',
+        'author' => 'string',
+        'blog_title' => 'string',
+        'media_path' => 'string',
+        'blog_body' => 'string'
     ];
 
     /**

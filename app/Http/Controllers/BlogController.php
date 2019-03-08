@@ -6,6 +6,7 @@ use App\DataTables\BlogDataTable;
 use App\Http\Requests;
 use App\Http\Requests\CreateBlogRequest;
 use App\Http\Requests\UpdateBlogRequest;
+use App\Models\blogCategory;
 use App\Repositories\BlogRepository;
 use Flash;
 use App\Http\Controllers\AppBaseController;
@@ -29,7 +30,7 @@ class BlogController extends AppBaseController
      */
     public function index(BlogDataTable $blogDataTable)
     {
-        return $blogDataTable->render('blogs.index',['blogcategories'=>blogCategoryController::all()]);
+        return $blogDataTable->render('blogs.index',['blogCategories'=>blogCategory::all()]);
     }
 
     /**

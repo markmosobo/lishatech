@@ -65,8 +65,7 @@ class blogCategoryDataTable extends DataTable
     {
         return [
             'name',
-            'status',
-            'description'
+            'status'
         ];
     }
 

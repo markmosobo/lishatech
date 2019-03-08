@@ -18,14 +18,14 @@
                         <li><a href="{{url('about')}}">Overview</a></li>
                         <li><a href="{{url('new-here')}}">New Here?</a></li>
                         <li><a href="{{url('church-staff')}}">Our Members</a></li>
-                        <li><a href="{{url('donate')}}">Donate now</a></li>
+                        <li><a href="{{url('donate')}}">Give Now</a></li>
                     </ul>
                 </li>
                 <li><a href="javascript:void(0)">Sermons</a>
                     <ul class="dropdown">
                         <li><a href="#">Sermons</a>
                             <ul class="dropdown">
-                                <li><a href="{{url('sermon-series')}}">Recent Sermons</a></li>
+                                <li><a href="{{url('sermon-series')}}">Sermon Series</a></li>
                                 <li><a href="{{url('sermon-list')}}">Past Sermons</a></li>
                                 {{--<li><a href="{{url('/singleSermon/{id')}}">Single Sermon</a></li>--}}
                             </ul>
@@ -54,7 +54,7 @@
                 <li><a href="javascript:void(0)">Events</a>
                     <ul class="dropdown">
                         <li><a href="{{url('/event-list')}}">Upcoming Events</a></li>
-                        <li><a href="{{url('/events_calendar')}}">Recent/Past Events</a></li>
+                        <li><a href="{{url('/events_calendar')}}">News</a></li>
                         {{--<li><a href="{{url('/single/{id}')}}">Single Event</a></li>--}}
                     </ul>
                 </li>
@@ -64,7 +64,7 @@
                             <div class="megamenu-container container">
                                 <div class="row">
                                     <div class="col-md-4 hidden-sm hidden-xs">
-                                        <span class="megamenu-sub-title">Put videos</span>
+                                        <span class="megamenu-sub-title">Upcoming Event</span>
                                         <div class="fw-video">
                                             <iframe src="https://player.vimeo.com/video/37540860?title=0&amp;byline=0&amp;portrait=0" width="500" height="281"></iframe>
                                         </div>

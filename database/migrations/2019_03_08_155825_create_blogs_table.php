@@ -15,14 +15,14 @@ class CreateBlogsTable extends Migration
     {
         Schema::create('blogs', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('author')->nullable();
-            $table->dateTime('blog_date')->nullable();
-            $table->string('title')->nullable();
-            $table->integer('blog_category_id')->unsigned()->nullable();
-            $table->string('image_path')->nullable();
-            $table->longText('body')->nullable();
+            $table->integer('blog_category_id')->unsigned();
             $table->foreign('blog_category_id')->references('id')
-                ->on('blog_categories')->onUpdate('cascade')->onDelete('no action');
+                ->on('blog_categories')->onUpdate('cascade')->nDelete('no action');
+            $table->date('date');
+            $table->string('author')->nullable();
+            $table->string('blog_title')->nullable();
+            $table->string('media_path')->nullable();
+            $table->longText('blog_body')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

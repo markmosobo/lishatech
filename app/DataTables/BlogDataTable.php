@@ -64,12 +64,12 @@ class BlogDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            'author',
-            'blog_date',
-            'title',
             'blog_category_id',
-            'image_path',
-            'body'
+            'date',
+            'author',
+            'blog_title',
+            'media_path',
+            'blog_body'
         ];
     }
 

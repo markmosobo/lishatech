@@ -77,7 +77,7 @@ class blogCategoryController extends AppBaseController
             return redirect(route('blogCategories.index'));
         }
 
-        return response()->json($blogCategory);
+        return view('blog_categories.show')->with('blogCategory', $blogCategory);
     }
 
     /**

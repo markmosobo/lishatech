@@ -19,30 +19,7 @@
         </div>
     </div>
     <!-- Start Body Content -->
-    <!-- Start of Upcoming Event -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-5 col-sm-5">
-                <span class="label label-primary">Upcoming Event</span>
-                <h3><a href="../index98c7.html?event=water-baptism&amp;event_date=2019-02-13" class="event-title">Water Baptism</a></h3>
-                <span class="meta-data">On <span class="event-date">February 13, 2019</span> at <span class="event-time">10:00 am</span> at</span>
-                <span class="meta-data event-location"> <span class="event-location-address">State Route H, Saint Louis, MO, USA</span></span>                </div>
-            <div class="col-md-5 col-sm-7">
-                <div id="counters" class="counter clearfix" data-date="1550066401">
-                    <div class="timer-col"> <span id="days"></span> <span class="timer-type">Days</span> </div>
-                    <div class="timer-col"> <span id="hours"></span> <span class="timer-type">Hours</span> </div>
-                    <div class="timer-col"> <span id="minutes"></span> <span class="timer-type">Minutes</span> </div>
-                    <div class="timer-col"> <span id="seconds"></span> <span class="timer-type">Seconds</span> </div>
-                </div>
-            </div>
-            {{--<div class="col-md-2 text-align-right">--}}
-                {{--<ul class="action-buttons">                        <li title="Share Event"><a href="#" data-trigger="focus" data-placement="top" data-content="" data-toggle="popover" data-original-title="Share Event" class="event-share-link"><i class="icon-share"></i></a></li>                        <li title="Get directions" class="hidden-xs"><a href="#" class="cover-overlay-trigger event-direction-link"><i class="icon-compass"></i></a></li>                        <li title="Contact event manager"><a id="contact-2761|1550066401" href="#" data-toggle="modal" data-target="#Econtact" class="event-contact-link"><i class="icon-mail"></i></a></li>                    </ul>--}}
-                {{--<a id="register-2761|1550066401" href="#" class="btn btn-primary btn-sm event-tickets event-register-button">Register</a>--}}
-            {{--</div>--}}
-        </div>
-    </div>
 
-    <!-- End of Upcoming Event -->
 
     <div class="main" role="main">
         <div id="content" class="content full">

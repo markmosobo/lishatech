@@ -118,9 +118,9 @@ Route::resource('churchGroups', 'churchGroupController');
 
 Route::resource('churchGroupMembers', 'churchGroupMemberController');
 
-Route::resource('blogCategories', 'blogCategoryController');
 
-Route::resource('blogs', 'BlogController');
+
+
 
 Route::resource('sermons', 'SermonController');
 
@@ -135,3 +135,7 @@ Route::resource('locations', 'LocationController');
 Route::resource('aboutuses', 'AboutUsController');
 
 Route::resource('aboutuses', 'AboutUsController');
+
+Route::resource('blogCategories', 'blogCategoryController');
+
+Route::resource('blogs', 'BlogController');
