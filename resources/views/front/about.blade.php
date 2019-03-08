@@ -21,6 +21,8 @@
     </div>
 
     <!-- Start Body Content -->
+    @if(count($aboutuses))
+        @foreach($aboutuses as $aboutus)
     <div class="main" role="main">
         <div id="content" class="content full">
             <div class="container">
@@ -32,21 +34,39 @@
                         <p class="">paragraph goes here...</p>
                         <div class="spacer-50"></div>
                         <div class="row">
-                            <div class="col-md-4 " ><div class="icon-box icon-box-style1"><div class="icon-box-head">
-                                        <span class="ico"><i class="icon-happy-drop"></i></span>
-                                        <h4>Be happy</h4>
-                                    </div><p>bible verse goes here...</p>
-                                </div></div>
-                            <div class="col-md-4 " ><div class="icon-box icon-box-style1"><a href="http://www.imithemes.com/"><div class="icon-box-head">
+                            <div class="col-md-4 " >
+                                <div class="icon-box icon-box-style1">
+                                    <div class="icon-box-head">
+                                        <span class="ico"><i class="icon-church"></i></span>
+                                        <h4>Our Church Structure</h4>
+                                    </div>
+                                    <p>
+                                        The Presbyterian Church of East Africa governing system is Presbyterian which means that no one person or
+                                        group within the Church has more influence or say than any other. Its supreme rule of faith and life is
+                                        through the teachings of the Bible.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 " >
+                                <div class="icon-box icon-box-style1"><a href="http://www.imithemes.com/">
+                                        <div class="icon-box-head">
                                             <span class="ico"><i class="icon-umbrella"></i></span>
-                                            <h4>Help others</h4>
-                                        </div></a><p>word goes here...</p>
-                                </div></div>
-                            <div class="col-md-4 " ><div class="icon-box icon-box-style1"><div class="icon-box-head">
-                                        <span class="ico"><i class="icon-tshirt"></i></span>
-                                        <h4>Pray for a cause</h4>
-                                    </div><p>Lorem ipsum dolor sit amet,</p>
-                                </div></div>
+                                            <h4>Community Role</h4>
+                                        </div></a><p></p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 " >
+                                <div class="icon-box icon-box-style1">
+                                    <div class="icon-box-head">
+                                        <span class="ico"><i class="icon-user"></i></span>
+                                        <h4>Friends & Partners</h4>
+                                    </div>
+                                    <p>To fulfill our missions we collaborate with friends and
+                                        partners across the globe. This includes both
+                                        internationals and domestic partners.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                         <hr class="fw">
                         <h3>Our Members</h3>
@@ -172,4 +192,6 @@
             </div>
         </div>
     </div>
+       @endforeach
+    @endif
 @endsection

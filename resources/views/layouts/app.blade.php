@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>{{  \App\Models\Tenant::find(\Illuminate\Support\Facades\Auth::user()->tenant_id)->name }}</title>
+    <title>{{  config('app.name') }}</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -33,7 +33,7 @@
 
             <!-- Logo -->
             <a href="#" class="logo">
-                <b>{{  \App\Models\Tenant::find(\Illuminate\Support\Facades\Auth::user()->tenant_id)->name }}</b>
+                <b>{{config('app.name')}}</b>
             </a>
 
             <!-- Header Navbar -->

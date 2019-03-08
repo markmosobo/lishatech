@@ -67,6 +67,7 @@ class RoutesTableSeeder extends Seeder
         ]);
         $cChild->roles()->attach($admin);
 
+
         $cChild = Route::create([
             'route_name'=> 'Common Questions',
             'parent_route'=> $configurations->id,
@@ -78,7 +79,7 @@ class RoutesTableSeeder extends Seeder
         $configurations = Route::create([
             'route_name'=>"Events",
             'url'=> '#',
-            'icon'=> 'fa-volume-up',
+            'icon'=> 'fa-calendar',
             'sequence'=>3
         ]);
 
@@ -101,7 +102,7 @@ class RoutesTableSeeder extends Seeder
         $parent = Route::create([
         'route_name'=>"Sections",
         'url'=> '#',
-        'icon'=> 'fa-volume-up',
+        'icon'=> 'fa-bars',
         'sequence'=>3
     ]);
 
@@ -112,11 +113,18 @@ class RoutesTableSeeder extends Seeder
         ]);
         $cChild->roles()->attach($admin);
 
+        $cChild = Route::create([
+            'route_name'=> 'About Us',
+            'parent_route'=> $parent->id,
+            'url'=>'aboutuses',
+        ]);
+        $cChild->roles()->attach($admin);
+
         ####church members
         $parent = Route::create([
             'route_name'=>"Church Members",
             'url'=> '#',
-            'icon'=> 'fa-volume-up',
+            'icon'=> 'fa-users',
             'sequence'=>3
         ]);
 
@@ -132,7 +140,7 @@ class RoutesTableSeeder extends Seeder
         $parent = Route::create([
             'route_name'=>"Sermons",
             'url'=> '#',
-            'icon'=> 'fa-volume-up',
+                'icon'=> 'fa-book',
             'sequence'=>3
         ]);
 
@@ -147,7 +155,7 @@ class RoutesTableSeeder extends Seeder
         $parent = Route::create([
             'route_name'=>"Manage Church Groups",
             'url'=> '#',
-            'icon'=> 'fa-volume-up',
+            'icon'=> 'fa-group',
             'sequence'=>3
         ]);
 
@@ -170,7 +178,7 @@ class RoutesTableSeeder extends Seeder
         $parent = Route::create([
             'route_name'=>"Manage Blogs",
             'url'=> '#',
-            'icon'=> 'fa-volume-up',
+            'icon'=> 'fa-bold',
             'sequence'=>3
         ]);
 

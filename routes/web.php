@@ -131,3 +131,7 @@ Route::resource('contacts', 'ContactController');
 Route::resource('commonQuestions', 'CommonQuestionController');
 
 Route::resource('locations', 'LocationController');
+
+Route::resource('aboutuses', 'AboutUsController');
+
+Route::resource('aboutuses', 'AboutUsController');

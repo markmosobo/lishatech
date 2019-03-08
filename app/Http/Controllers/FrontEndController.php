@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AboutUs;
 use App\Models\Blog;
+use App\Models\churchGroupMember;
 use App\Models\Contact;
 use App\Models\Event;
 use App\Models\EventCategory;
 use App\Models\EventSchedule;
 use App\Models\Location;
+use App\Models\Members;
 use App\Models\Sermon;
 use App\Models\Service;
 use Illuminate\Http\Request;
@@ -30,7 +33,8 @@ class FrontEndController extends Controller
             'categories' => EventCategory::all(),
             'contacts'=>Contact::all(),
             'services'=>Service::orderByDesc('service_start_time')->take(2)->get(),
-            'locations'=>Location::orderByDesc('id')->take(1)->get()
+            'locations'=>Location::orderByDesc('id')->take(1)->get(),
+            'aboutuses'=>AboutUs::all()
         ]);
     }
 
@@ -50,7 +54,8 @@ class FrontEndController extends Controller
             'categories' => EventCategory::all(),
             'contacts'=>Contact::all(),
             'services'=>Service::orderByDesc('service_start_time')->take(2)->get(),
-            'locations'=>Location::orderByDesc('id')->take(1)->get()
+            'locations'=>Location::orderByDesc('id')->take(1)->get(),
+            'members'=>Members::all()
         ]);
     }
 
