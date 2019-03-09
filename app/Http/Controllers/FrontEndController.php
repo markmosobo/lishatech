@@ -161,17 +161,6 @@ class FrontEndController extends Controller
         ]);
     }
 
-    public function single_recentBlog(){
-        return view('front.single-recent-blog',[
-            'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
-            'categories' => EventCategory::all(),
-            'blogs'=>Blog::all(),
-            'contacts'=>Contact::all(),
-            'services'=>Service::orderByDesc('service_start_time')->take(2)->get(),
-            'locations'=>Location::orderByDesc('id')->take(1)->get()
-        ]);
-    }
-
     public function pastBlog(){
         return view('front.past-blog',[
             'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
@@ -183,11 +172,12 @@ class FrontEndController extends Controller
         ]);
     }
 
-    public function single_pastBlog(){
-        return view('front.single-past-blog',[
+    public function singleBlog($id){
+        $blog=Blog::find($id);
+        return view('front.single-blog',[
+            'blog'=>$blog,
             'events' => Event::query()->with(['category'])->orderByDesc('event_date')->get(),
             'categories' => EventCategory::all(),
-            'blogs'=>Blog::all(),
             'contacts'=>Contact::all(),
             'services'=>Service::orderByDesc('service_start_time')->take(2)->get(),
             'locations'=>Location::orderByDesc('id')->take(1)->get()

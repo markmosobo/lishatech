@@ -23,6 +23,7 @@
     </div>
 
     <!-- Start Body Content -->
+    @foreach($blogs as $blog)
     <div class="main" role="main">
         <div id="content" class="content full">
             <div class="container">
@@ -32,16 +33,16 @@
                             <ul class="isotope-grid">
                                 <li class="col-md-4 col-sm-6 blog-item grid-item format-standard">
                                     <div class="grid-item-inner">
-                                        <div class="post-media"><a href="{{url('single-past-blog')}}" class="media-box">
+                                        <div class="post-media"><a href="{{url('single-blog/'.$blog->id)}}" class="media-box">
                                                 <img src="../../../2ysft2ywl8l3ofc6s43cyjwf-wpengine.netdna-ssl.com/adore-church-wp/wp-content/uploads/sites/13/2015/01/slide1-600x400.jpg"
                                                      class="post-thumb wp-post-image" alt="" srcset="https://2ysft2ywl8l3ofc6s43cyjwf-wpengine.netdna-ssl.com/adore-church-wp/wp-content/uploads/sites/13/2015/01/slide1-600x400.jpg 600w,
                                                       https://2ysft2ywl8l3ofc6s43cyjwf-wpengine.netdna-ssl.com/adore-church-wp/wp-content/uploads/sites/13/2015/01/slide1-272x182.jpg 272w" sizes="(max-width: 600px) 100vw, 600px" /></a></div>                                <div class="grid-content">
-                                                <h3 class="post-title"><a href="{{url('single-past-blog')}}">Blog Title</a></h3>
-                                                <p>substring goes here...</p>
-                                                <span class="meta-data"><span class="meta-post-date"><i class="fa fa-calendar"></i> January 24, 2018</span><span class="meta-post-author"> by <a href="../author/imicreation/index.html">Admin</a></span></span>                                </div>
+                                                <h3 class="post-title"><a href="{{url('single-blog/'.$blog->id)}}">{{$blog->blog_title}}</a></h3>
+                                                <p>{{$blog->blog_body}}</p>
+                                                <span class="meta-data"><span class="meta-post-date"><i class="fa fa-calendar"></i> January 24, 2018</span><span class="meta-post-author"> by <a href="../author/imicreation/index.html">{{$blog->author}}</a></span></span>                                </div>
                                         <div class="grid-footer clearfix">
-                                            <a href="{{url('single-past-blog')}}#respond" class="pull-right meta-data" ><i class="fa fa-comment"></i>No comments yet</a>
-                                            <a href="{{url('single-past-blog')}}" class="basic-link">Read post</a>
+                                            <a href="{{url('single-blog/'.$blog->id)}}#respond" class="pull-right meta-data" ><i class="fa fa-comment"></i>No comments yet</a>
+                                            <a href="{{url('single-blog/'.$blog->id)}}" class="basic-link">Read blog</a>
                                         </div>
                                     </div>
                                 </li>
@@ -134,6 +135,7 @@
             </div>
         </div>
     </div>
+    @endforeach
     <!-- End Body Content -->
 
 @stop

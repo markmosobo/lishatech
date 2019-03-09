@@ -6,7 +6,7 @@
 <div class="page-header parallax clearfix" style="background-image:url({{ asset('images/default-event-list-img.jpg') }});">
     <div class="title-subtitle-holder">
         <div class="title-subtitle-holder-inner">
-            <h2>@yield('title')</h2>
+            <h2>{{$blog->blog_title}}</h2>
         </div>
     </div>
 </div>
@@ -16,7 +16,8 @@
     <div class="container">
         <ol class="breadcrumb">
             <li><a href="{{url('/')}}">Home</a></li>
-            <li class="active">@yield('title')</li>
+            <li><a href="{{url('/recent-blog')}}">Blogs</a></li>
+            <li class="active">{{$blog->blog_title}}</li>
         </ol>
     </div>
 </div>
@@ -31,7 +32,7 @@
                         <div class="title-row">
                             <a href="#respond" class="comments-go" >
                                 <i class="icon-dialogue-text"></i>
-                            </a><h2><h3 class="post-title">Blog Title</h3></h2></div>
+                            </a><h2><h3 class="post-title">{{$blog->blog_title}}</h3></h2></div>
                         <div class="meta-data">
                             <span class="meta-data"><span class="meta-post-date"><i class="fa fa-calendar"></i> January 24, 2018</span><span class="meta-post-author"> by <a href="../../../../author/imicreation/index.html">Admin</a></span></span>                            	<span><i class="fa fa-archive"></i> <a href="../../../../category/featured/index.html" >Featured</a>, <a href="../../../../category/general/index.html" >General</a>, <a href="../../../../category/uncategorized/index.html" >Uncategorized</a></span>
                         </div>
