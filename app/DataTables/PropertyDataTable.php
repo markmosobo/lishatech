@@ -2,11 +2,11 @@
 
 namespace App\DataTables;
 
-use App\Models\Blog;
+use App\Models\Property;
 use Yajra\DataTables\Services\DataTable;
 use Yajra\DataTables\EloquentDataTable;
 
-class BlogDataTable extends DataTable
+class PropertyDataTable extends DataTable
 {
     /**
      * Build DataTable class.
@@ -18,7 +18,7 @@ class BlogDataTable extends DataTable
     {
         $dataTable = new EloquentDataTable($query);
 
-        return $dataTable->addColumn('action', 'blogs.datatables_actions');
+        return $dataTable->addColumn('action', 'properties.datatables_actions');
     }
 
     /**
@@ -27,7 +27,7 @@ class BlogDataTable extends DataTable
      * @param \App\Models\Post $model
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    public function query(Blog $model)
+    public function query(Property $model)
     {
         return $model->newQuery();
     }
@@ -64,11 +64,12 @@ class BlogDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            'blog_title',
-            'author',
+            'property_name',
+            'address',
+            'status',
+            'price',
             'image_path',
-            'date',
-            'body'
+            'description'
         ];
     }
 
@@ -79,6 +80,6 @@ class BlogDataTable extends DataTable
      */
     protected function filename()
     {
-        return 'blogsdatatable_' . time();
+        return 'propertiesdatatable_' . time();
     }
 }

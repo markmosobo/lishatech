@@ -131,3 +131,11 @@ Route::resource('aboutuses', 'AboutUsController');
 Route::resource('blogCategories', 'blogCategoryController');
 
 Route::resource('blogs', 'BlogController');
+
+Route::resource('properties', 'PropertyController');
+
+Route::resource('plots', 'PlotController');
+
+Route::resource('blogs', 'BlogController');
+
+Route::resource('managementPortfolios', 'ManagementPortfolioController');
