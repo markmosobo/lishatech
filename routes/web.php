@@ -1,22 +1,15 @@
 <?php
 Route::get('/','FrontEndController@index');
-Route::get('about','FrontEndController@about');
-Route::get('/event-list','FrontEndController@eventList');
-Route::get('/event-calendar','FrontEndController@eventCalendar');
-Route::get('/event-grid','FrontEndController@eventGrid');
-Route::get('/single/{id}','FrontEndController@singleEvent');
-Route::get('/new-here','FrontEndController@newHere');
-Route::get('/church-staff','FrontEndController@churchStaff');
-Route::get('/donate','FrontEndController@donate');
-Route::get('/contact','FrontEndController@contact');
-Route::get('/sermon-list','FrontEndController@sermonList');
-Route::get('/sermon-series','FrontEndController@sermonSeries');
-Route::get('recent-sermon/{id}','FrontEndController@recentSermon');
-Route::get('past-sermon/{id}','FrontEndController@pastSermon');
-Route::get('/gallery','FrontEndController@gallery');
-Route::get('/recent-blog','FrontEndController@recentBlog');
-Route::get('/past-blog','FrontEndController@pastBlog');
-Route::get('/single-blog/{id}','FrontEndController@singleBlog');
+Route::get('/about-us','FrontEndController@aboutUs');
+Route::get('/blog','FrontEndController@blog');
+Route::get('/contact-us','FrontEndController@contactUs');
+Route::get('/management-portfolio','FrontEndController@managementPortfolio');
+Route::get('/plots-for-sale','FrontEndController@salePlot');
+Route::get('/properties-for-sale-commercial','FrontEndController@saleCommercial');
+Route::get('/properties-for-sale-residential','FrontEndController@saleResidential');
+Route::get('/properties-to-rent-commercial','FrontEndController@rentCommercial');
+Route::get('/properties-to-rent-residential','FrontEndController@rentResidential');
+Route::get('/our-services','FrontEndController@services');
 
 Route::get('/login','HomeController@index');
 

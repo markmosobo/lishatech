@@ -75,103 +75,103 @@ class RoutesTableSeeder extends Seeder
         ]);
         $cChild->roles()->attach($admin);
 
-        #### events
-        $configurations = Route::create([
-            'route_name'=>"Events",
-            'url'=> '#',
-            'icon'=> 'fa-calendar',
-            'sequence'=>3
-        ]);
-
-        $cChild = Route::create([
-            'route_name'=> 'Event Categories',
-            'parent_route'=> $configurations->id,
-            'url'=>'eventCategories',
-        ]);
-        $cChild->roles()->attach($admin);
-
-        $cChild = Route::create([
-            'route_name'=> 'All Events',
-            'parent_route'=> $configurations->id,
-            'url'=>'events',
-        ]);
-        $cChild->roles()->attach($admin);
-
-
-        #### events
-        $parent = Route::create([
-        'route_name'=>"Sections",
-        'url'=> '#',
-        'icon'=> 'fa-bars',
-        'sequence'=>3
-    ]);
-
-        $cChild = Route::create([
-            'route_name'=> 'Home Slides',
-            'parent_route'=> $parent->id,
-            'url'=>'slides',
-        ]);
-        $cChild->roles()->attach($admin);
-
-        $cChild = Route::create([
-            'route_name'=> 'About Us',
-            'parent_route'=> $parent->id,
-            'url'=>'aboutuses',
-        ]);
-        $cChild->roles()->attach($admin);
-
-        ####church members
-        $parent = Route::create([
-            'route_name'=>"Church Members",
-            'url'=> '#',
-            'icon'=> 'fa-users',
-            'sequence'=>3
-        ]);
-
-        $cChild = Route::create([
-            'route_name'=> 'All Church Members',
-            'parent_route'=> $parent->id,
-            'url'=>'members',
-        ]);
-        $cChild->roles()->attach($admin);
-        ;
-
-        #### sermons
-        $parent = Route::create([
-            'route_name'=>"Sermons",
-            'url'=> '#',
-                'icon'=> 'fa-book',
-            'sequence'=>3
-        ]);
-
-        $cChild = Route::create([
-            'route_name'=> 'Sermons',
-            'parent_route'=> $parent->id,
-            'url'=>'sermons',
-        ]);
-        $cChild->roles()->attach($admin);
-
-        #### church groups
-        $parent = Route::create([
-            'route_name'=>"Manage Church Groups",
-            'url'=> '#',
-            'icon'=> 'fa-group',
-            'sequence'=>3
-        ]);
-
-        $cChild = Route::create([
-            'route_name'=> 'Church Groups',
-            'parent_route'=> $parent->id,
-            'url'=>'churchGroups',
-        ]);
-        $cChild->roles()->attach($admin);
-
-        $cChild = Route::create([
-            'route_name'=> 'Church Group Members',
-            'parent_route'=> $parent->id,
-            'url'=>'churchGroupMembers',
-        ]);
-        $cChild->roles()->attach($admin);
+//        #### events
+//        $configurations = Route::create([
+//            'route_name'=>"Events",
+//            'url'=> '#',
+//            'icon'=> 'fa-calendar',
+//            'sequence'=>3
+//        ]);
+//
+//        $cChild = Route::create([
+//            'route_name'=> 'Event Categories',
+//            'parent_route'=> $configurations->id,
+//            'url'=>'eventCategories',
+//        ]);
+//        $cChild->roles()->attach($admin);
+//
+//        $cChild = Route::create([
+//            'route_name'=> 'All Events',
+//            'parent_route'=> $configurations->id,
+//            'url'=>'events',
+//        ]);
+//        $cChild->roles()->attach($admin);
+//
+//
+//        #### events
+//        $parent = Route::create([
+//        'route_name'=>"Sections",
+//        'url'=> '#',
+//        'icon'=> 'fa-bars',
+//        'sequence'=>3
+//    ]);
+//
+//        $cChild = Route::create([
+//            'route_name'=> 'Home Slides',
+//            'parent_route'=> $parent->id,
+//            'url'=>'slides',
+//        ]);
+//        $cChild->roles()->attach($admin);
+//
+//        $cChild = Route::create([
+//            'route_name'=> 'About Us',
+//            'parent_route'=> $parent->id,
+//            'url'=>'aboutuses',
+//        ]);
+//        $cChild->roles()->attach($admin);
+//
+//        ####church members
+//        $parent = Route::create([
+//            'route_name'=>"Church Members",
+//            'url'=> '#',
+//            'icon'=> 'fa-users',
+//            'sequence'=>3
+//        ]);
+//
+//        $cChild = Route::create([
+//            'route_name'=> 'All Church Members',
+//            'parent_route'=> $parent->id,
+//            'url'=>'members',
+//        ]);
+//        $cChild->roles()->attach($admin);
+//        ;
+//
+//        #### sermons
+//        $parent = Route::create([
+//            'route_name'=>"Sermons",
+//            'url'=> '#',
+//                'icon'=> 'fa-book',
+//            'sequence'=>3
+//        ]);
+//
+//        $cChild = Route::create([
+//            'route_name'=> 'Sermons',
+//            'parent_route'=> $parent->id,
+//            'url'=>'sermons',
+//        ]);
+//        $cChild->roles()->attach($admin);
+//
+//        #### church groups
+//        $parent = Route::create([
+//            'route_name'=>"Manage Church Groups",
+//            'url'=> '#',
+//            'icon'=> 'fa-group',
+//            'sequence'=>3
+//        ]);
+//
+//        $cChild = Route::create([
+//            'route_name'=> 'Church Groups',
+//            'parent_route'=> $parent->id,
+//            'url'=>'churchGroups',
+//        ]);
+//        $cChild->roles()->attach($admin);
+//
+//        $cChild = Route::create([
+//            'route_name'=> 'Church Group Members',
+//            'parent_route'=> $parent->id,
+//            'url'=>'churchGroupMembers',
+//        ]);
+//        $cChild->roles()->attach($admin);
 
 
         #### blog
