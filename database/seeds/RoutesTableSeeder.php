@@ -77,7 +77,7 @@ class RoutesTableSeeder extends Seeder
 
         #### properties
         $configurations = Route::create([
-            'route_name'=>"Properties",
+            'route_name'=>"Manage Properties",
             'url'=> '#',
             'icon'=> 'fa-calendar',
             'sequence'=>3
@@ -89,13 +89,20 @@ class RoutesTableSeeder extends Seeder
             'url'=>'properties',
         ]);
         $cChild->roles()->attach($admin);
-//
-//        $cChild = Route::create([
-//            'route_name'=> 'All Events',
-//            'parent_route'=> $configurations->id,
-//            'url'=>'events',
-//        ]);
-//        $cChild->roles()->attach($admin);
+
+        $cChild = Route::create([
+            'route_name'=> 'Properties For Sale',
+            'parent_route'=> $configurations->id,
+            'url'=>'propertyforSales',
+        ]);
+        $cChild->roles()->attach($admin);
+
+        $cChild = Route::create([
+            'route_name'=> 'Properties To Rent',
+            'parent_route'=> $configurations->id,
+            'url'=>'propertytoRents',
+        ]);
+        $cChild->roles()->attach($admin);
 //
 //
 //        #### events

@@ -10,6 +10,8 @@ Route::get('/properties-for-sale-residential','FrontEndController@saleResidentia
 Route::get('/properties-to-rent-commercial','FrontEndController@rentCommercial');
 Route::get('/properties-to-rent-residential','FrontEndController@rentResidential');
 Route::get('/our-services','FrontEndController@services');
+Route::get('/all-properties','FrontEndController@allProperties');
+Route::get('/single-property/{id}','FrontEndController@singleProperty');
 
 Route::get('/login','HomeController@index');
 
@@ -139,3 +141,7 @@ Route::resource('plots', 'PlotController');
 Route::resource('blogs', 'BlogController');
 
 Route::resource('managementPortfolios', 'ManagementPortfolioController');
+
+Route::resource('propertyforSales', 'PropertyforSaleController');
+
+Route::resource('propertytoRents', 'PropertytoRentController');

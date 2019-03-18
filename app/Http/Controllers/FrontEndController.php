@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Property;
+use App\Models\PropertyforSale;
 use Illuminate\Http\Request;
 
 class FrontEndController extends Controller
@@ -48,5 +50,18 @@ class FrontEndController extends Controller
 
     public function blog(){
         return view('front.blog');
+    }
+
+    public function allProperties(){
+        return view('front.all-properties',[
+            'properties'=>PropertyforSale::all()
+        ]);
+    }
+
+    public function singleProperty($id){
+            $singleproperty=Property::find($id);
+        return view('front.single-property',[
+            'singleproperty'=>$singleproperty
+        ]);
     }
 }

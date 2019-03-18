@@ -19,7 +19,7 @@
                             </li>
                             <li class=""><a href="{{url('/about-us')}}">About Us</a>
                             <li class=""><a href="{{url('/our-services')}}">Services</a>
-                            <li class="has-dropdown"><a href="{{url('/properties')}}">Properties</a>
+                            <li class="has-dropdown"><a href="{{url('/all-properties')}}">Properties</a>
                                 <ul class="sub-menu">
                                     <li class="has-dropdown"><a href="#">Properties For Sale</a>
                                         <ul class="sub-menu">
