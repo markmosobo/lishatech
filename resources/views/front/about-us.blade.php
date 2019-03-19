@@ -21,7 +21,7 @@
                     <div class="row">
                         <div class="col">
                             <div class="about-content">
-                                <h3>Welcome to <span>Khonike</span></h3>
+                                <h3>Welcome to <span>{{config('app.name')}}</span></h3>
                                 <h1>We Always Provide Priority to Our Customer</h1>
                                 <p>Khonike - Real Estate Bootstrap 4 Templateis the best theme for elit, sed do eiusmod tempor dolor sit amet, conse ctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et lorna aliquatd minimam, quis nostrud exercitation oris nisi ut aliquip.</p>
 
