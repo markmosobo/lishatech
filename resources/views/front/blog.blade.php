@@ -11,112 +11,118 @@
                 <div class="news-carousel section">
 
                     <!--News start-->
+                    @foreach($blogs as $blog)
                     <div class="col">
                         <div class="news">
                             <div class="image">
-                                <a href="news-details.html"><img src="assets/images/news/news-1.jpg" alt=""></a>
+                                <a href="{{url('single-blog/'.$blog->id)}}"><img src="assets/images/news/news-1.jpg" alt=""></a>
                                 <div class="meta-wrap">
                                     <ul class="meta">
-                                        <li>By <a href="#">Donald</a></li>
-                                        <li>September 30, 2018</li>
+                                        <li>By <a href="#">{{$blog->author}}</a></li>
+                                        <li>{{date('M',strtotime($blog->date))}}
+                                            {{\Carbon\Carbon::parse($blog->date)->day}},
+                                            {{date('Y',strtotime($blog->date))}}</li>
                                     </ul>
                                     <ul class="meta back">
-                                        <li>By <a href="#">Donald</a></li>
-                                        <li>September 30, 2018</li>
+                                        <li>By <a href="#">{{$blog->author}}</a></li>
+                                        <li>{{date('M',strtotime($blog->date))}}
+                                            {{\Carbon\Carbon::parse($blog->date)->day}},
+                                            {{date('Y',strtotime($blog->date))}}</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="content">
-                                <h4 class="title"><a href="news-details.html">Duplex Villa with Altra Concept</a></h4>
+                                <h4 class="title"><a href="{{url('single-blog/'.$blog->id)}}">{{$blog->blog_title}}</a></h4>
                                 <div class="desc">
-                                    <p>Khonike - Real Estate Bootstrap 4 Templatethe best theme for  elit, sed do to eiumod tempor dolor sit amet, ctetur adipiscing elit sed do.</p>
+                                    <p>{{substr($blog->body,0,200)}}{{strlen($blog->body) > 200 ? "..." : ""}}</p>
                                 </div>
-                                <a href="news-details.html" class="readmore">Continure Reading</a>
+                                <a href="{{url('single-blog/'.$blog->id)}}" class="readmore">Continue Reading</a>
                             </div>
                         </div>
                     </div>
+                    @endforeach
                     <!--News end-->
 
-                    <!--News start-->
-                    <div class="col">
-                        <div class="news">
-                            <div class="image">
-                                <a href="news-details.html"><img src="assets/images/news/news-2.jpg" alt=""></a>
-                                <div class="meta-wrap">
-                                    <ul class="meta">
-                                        <li>By <a href="#">Donald</a></li>
-                                        <li>September 30, 2018</li>
-                                    </ul>
-                                    <ul class="meta back">
-                                        <li>By <a href="#">Donald</a></li>
-                                        <li>September 30, 2018</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="content">
-                                <h4 class="title"><a href="news-details.html">Joint Mortgage: Pros vs. Cons</a></h4>
-                                <div class="desc">
-                                    <p>Khonike - Real Estate Bootstrap 4 Templatethe best theme for  elit, sed do to eiumod tempor dolor sit amet, ctetur adipiscing elit sed do.</p>
-                                </div>
-                                <a href="news-details.html" class="readmore">Continure Reading</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--News end-->
+                    {{--<!--News start-->--}}
+                    {{--<div class="col">--}}
+                        {{--<div class="news">--}}
+                            {{--<div class="image">--}}
+                                {{--<a href="news-details.html"><img src="assets/images/news/news-2.jpg" alt=""></a>--}}
+                                {{--<div class="meta-wrap">--}}
+                                    {{--<ul class="meta">--}}
+                                        {{--<li>By <a href="#">Donald</a></li>--}}
+                                        {{--<li>September 30, 2018</li>--}}
+                                    {{--</ul>--}}
+                                    {{--<ul class="meta back">--}}
+                                        {{--<li>By <a href="#">Donald</a></li>--}}
+                                        {{--<li>September 30, 2018</li>--}}
+                                    {{--</ul>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                            {{--<div class="content">--}}
+                                {{--<h4 class="title"><a href="news-details.html">Joint Mortgage: Pros vs. Cons</a></h4>--}}
+                                {{--<div class="desc">--}}
+                                    {{--<p>Khonike - Real Estate Bootstrap 4 Templatethe best theme for  elit, sed do to eiumod tempor dolor sit amet, ctetur adipiscing elit sed do.</p>--}}
+                                {{--</div>--}}
+                                {{--<a href="news-details.html" class="readmore">Continure Reading</a>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<!--News end-->--}}
 
-                    <!--News start-->
-                    <div class="col">
-                        <div class="news">
-                            <div class="image">
-                                <a href="news-details.html"><img src="assets/images/news/news-3.jpg" alt=""></a>
-                                <div class="meta-wrap">
-                                    <ul class="meta">
-                                        <li>By <a href="#">Donald</a></li>
-                                        <li>September 30, 2018</li>
-                                    </ul>
-                                    <ul class="meta back">
-                                        <li>By <a href="#">Donald</a></li>
-                                        <li>September 30, 2018</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="content">
-                                <h4 class="title"><a href="news-details.html">Dealing with Student Loan Debt</a></h4>
-                                <div class="desc">
-                                    <p>Khonike - Real Estate Bootstrap 4 Templatethe best theme for  elit, sed do to eiumod tempor dolor sit amet, ctetur adipiscing elit sed do.</p>
-                                </div>
-                                <a href="news-details.html" class="readmore">Continure Reading</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--News end-->
+                    {{--<!--News start-->--}}
+                    {{--<div class="col">--}}
+                        {{--<div class="news">--}}
+                            {{--<div class="image">--}}
+                                {{--<a href="news-details.html"><img src="assets/images/news/news-3.jpg" alt=""></a>--}}
+                                {{--<div class="meta-wrap">--}}
+                                    {{--<ul class="meta">--}}
+                                        {{--<li>By <a href="#">Donald</a></li>--}}
+                                        {{--<li>September 30, 2018</li>--}}
+                                    {{--</ul>--}}
+                                    {{--<ul class="meta back">--}}
+                                        {{--<li>By <a href="#">Donald</a></li>--}}
+                                        {{--<li>September 30, 2018</li>--}}
+                                    {{--</ul>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                            {{--<div class="content">--}}
+                                {{--<h4 class="title"><a href="news-details.html">Dealing with Student Loan Debt</a></h4>--}}
+                                {{--<div class="desc">--}}
+                                    {{--<p>Khonike - Real Estate Bootstrap 4 Templatethe best theme for  elit, sed do to eiumod tempor dolor sit amet, ctetur adipiscing elit sed do.</p>--}}
+                                {{--</div>--}}
+                                {{--<a href="news-details.html" class="readmore">Continure Reading</a>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<!--News end-->--}}
 
-                    <!--News start-->
-                    <div class="col">
-                        <div class="news">
-                            <div class="image">
-                                <a href="news-details.html"><img src="assets/images/news/news-4.jpg" alt=""></a>
-                                <div class="meta-wrap">
-                                    <ul class="meta">
-                                        <li>By <a href="#">Donald</a></li>
-                                        <li>September 30, 2018</li>
-                                    </ul>
-                                    <ul class="meta back">
-                                        <li>By <a href="#">Donald</a></li>
-                                        <li>September 30, 2018</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="content">
-                                <h4 class="title"><a href="news-details.html">Bridging the home ownership gap</a></h4>
-                                <div class="desc">
-                                    <p>Khonike - Real Estate Bootstrap 4 Templatethe best theme for  elit, sed do to eiumod tempor dolor sit amet, ctetur adipiscing elit sed do.</p>
-                                </div>
-                                <a href="news-details.html" class="readmore">Continure Reading</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--News end-->
+                    {{--<!--News start-->--}}
+                    {{--<div class="col">--}}
+                        {{--<div class="news">--}}
+                            {{--<div class="image">--}}
+                                {{--<a href="news-details.html"><img src="assets/images/news/news-4.jpg" alt=""></a>--}}
+                                {{--<div class="meta-wrap">--}}
+                                    {{--<ul class="meta">--}}
+                                        {{--<li>By <a href="#">Donald</a></li>--}}
+                                        {{--<li>September 30, 2018</li>--}}
+                                    {{--</ul>--}}
+                                    {{--<ul class="meta back">--}}
+                                        {{--<li>By <a href="#">Donald</a></li>--}}
+                                        {{--<li>September 30, 2018</li>--}}
+                                    {{--</ul>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                            {{--<div class="content">--}}
+                                {{--<h4 class="title"><a href="news-details.html">Bridging the home ownership gap</a></h4>--}}
+                                {{--<div class="desc">--}}
+                                    {{--<p>Khonike - Real Estate Bootstrap 4 Templatethe best theme for  elit, sed do to eiumod tempor dolor sit amet, ctetur adipiscing elit sed do.</p>--}}
+                                {{--</div>--}}
+                                {{--<a href="news-details.html" class="readmore">Continure Reading</a>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<!--News end-->--}}
 
                 </div>
             </div>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use App\Models\Property;
 use App\Models\PropertyforSale;
 use Illuminate\Http\Request;
@@ -9,7 +10,9 @@ use Illuminate\Http\Request;
 class FrontEndController extends Controller
 {
     public function index(){
-        return view('front.index');
+        return view('front.index',[
+            'properties'=>Property::all()
+        ]);
     }
 
     public function aboutUs(){
@@ -49,7 +52,14 @@ class FrontEndController extends Controller
     }
 
     public function blog(){
-        return view('front.blog');
+        return view('front.blog',[
+            'blogs'=>Blog::all()
+        ]);
+    }
+
+    public function singleBlog($id){
+        $blog=Blog::find($id);
+        return view('front.single-blog')->withBlog($blog);
     }
 
     public function allProperties(){

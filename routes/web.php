@@ -2,6 +2,7 @@
 Route::get('/','FrontEndController@index');
 Route::get('/about-us','FrontEndController@aboutUs');
 Route::get('/blog','FrontEndController@blog');
+Route::get('single-blog/{id}','FrontEndController@singleBlog');
 Route::get('/contact-us','FrontEndController@contactUs');
 Route::get('/management-portfolio','FrontEndController@managementPortfolio');
 Route::get('/plots-for-sale','FrontEndController@salePlot');

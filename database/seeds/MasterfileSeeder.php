@@ -18,7 +18,7 @@ class MasterfileSeeder extends Seeder
             'email'=>'admin@localhost.com',
             'phone_number'=> '072151582',
             'created_by'=> 1,
-            'tenant_id'=>2,
+            'tenant_id'=>1,
         ]);
     }
 }
