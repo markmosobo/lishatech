@@ -13,13 +13,15 @@ class FrontEndController extends Controller
 {
     public function index(){
         return view('front.index',[
-            'properties'=>Property::all()
+            'properties'=>Property::all(),
+            'contacts'=>Contact::orderByDesc('id')->take(1)->get()
         ]);
     }
 
     public function aboutUs(){
     return view('front.about-us',[
-        'aboutus'=>AboutUs::orderByDesc('id')->take(1)->get()
+        'aboutus'=>AboutUs::orderByDesc('id')->take(1)->get(),
+        'contacts'=>Contact::orderByDesc('id')->take(1)->get()
     ]);
     }
 
@@ -30,47 +32,65 @@ class FrontEndController extends Controller
     }
 
     public function managementPortfolio(){
-        return view('front.management-portfolio');
+        return view('front.management-portfolio',[
+            'contacts'=>Contact::orderByDesc('id')->take(1)->get()
+        ]);
     }
 
     public function salePlot(){
-        return view('front.plots-for-sale');
+        return view('front.plots-for-sale',[
+            'contacts'=>Contact::orderByDesc('id')->take(1)->get()
+        ]);
     }
 
     public function saleCommercial(){
-        return view('front.properties-for-sale-commercial');
+        return view('front.properties-for-sale-commercial',[
+            'contacts'=>Contact::orderByDesc('id')->take(1)->get(),
+            'properties'=>PropertyforSale::all()
+        ]);
     }
 
     public function saleResidential(){
-        return view('front.properties-for-sale-residential');
+        return view('front.properties-for-sale-residential',[
+            'contacts'=>Contact::orderByDesc('id')->take(1)->get(),
+            'properties'=>PropertyforSale::all()
+        ]);
     }
 
     public function rentCommercial(){
-        return view('front.properties-to-rent-commercial');
+        return view('front.properties-to-rent-commercial',[
+            'contacts'=>Contact::orderByDesc('id')->take(1)->get()
+        ]);
     }
 
     public function rentResidential(){
-        return view('front.properties-to-rent-residential');
+        return view('front.properties-to-rent-residential',[
+            'contacts'=>Contact::orderByDesc('id')->take(1)->get()
+        ]);
     }
 
     public function services(){
-        return view('front.our-services');
+        return view('front.our-services',[
+            'contacts'=>Contact::orderByDesc('id')->take(1)->get()
+        ]);
     }
 
     public function blog(){
         return view('front.blog',[
-            'blogs'=>Blog::all()
+            'blogs'=>Blog::all(),
+            'contacts'=>Contact::orderByDesc('id')->take(1)->get()
         ]);
     }
 
     public function singleBlog($id){
         $blog=Blog::find($id);
-        return view('front.single-blog')->withBlog($blog);
+        return view('front.single-blog',['contacts'=>Contact::orderByDesc('id')->take(1)->get()])->withBlog($blog);
     }
 
     public function allProperties(){
         return view('front.all-properties',[
-            'properties'=>PropertyforSale::all()
+            'properties'=>PropertyforSale::all(),
+            'contacts'=>Contact::orderByDesc('id')->take(1)->get()
         ]);
     }
 

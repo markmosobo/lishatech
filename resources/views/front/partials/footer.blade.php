@@ -1,3 +1,4 @@
+@foreach($contacts as $contact)
 <footer class="footer-section section" style="background-image: url(assets/images/bg/footer-bg.jpg)">
 
     <!--Footer Top start-->
@@ -23,9 +24,9 @@
                 <div class="footer-widget col-lg-3 col-md-6 col-12 mb-40">
                     <h4 class="title"><span class="text">Contact us</span><span class="shape"></span></h4>
                     <ul>
-                        <li><i class="fa fa-map-o"></i><span>256, 1st AVE, Manchester 125 , Noth England</span></li>
-                        <li><i class="fa fa-phone"></i><span><a href="#">+012 345 678 102</a><a href="#">+012 345 678 101</a></span></li>
-                        <li><i class="fa fa-envelope-o"></i><span><a href="#">info@example.com</a><a href="#">www.example.com</a></span></li>
+                        <li><i class="fa fa-map-o"></i><span>{{$contact->address}}</span></li>
+                        <li><i class="fa fa-phone"></i><span><a href="#">{{$contact->phone}}</a><a href="#">{{$contact->alternative_phone}}</a></span></li>
+                        <li><i class="fa fa-envelope-o"></i><span><a href="#">{{$contact->email}}</a><a href="{{url('/')}}">www.lishatech.co.ke</a></span></li>
                     </ul>
                 </div>
                 <!--Footer Widget end-->
@@ -83,3 +84,4 @@
     <!--Footer bottom end-->
 
 </footer>
+@endforeach
