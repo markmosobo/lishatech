@@ -2,11 +2,11 @@
 
 namespace App\DataTables;
 
-use App\Models\AboutUs;
+use App\Models\SocialMedia;
 use Yajra\DataTables\Services\DataTable;
 use Yajra\DataTables\EloquentDataTable;
 
-class AboutUsDataTable extends DataTable
+class SocialMediaDataTable extends DataTable
 {
     /**
      * Build DataTable class.
@@ -18,7 +18,7 @@ class AboutUsDataTable extends DataTable
     {
         $dataTable = new EloquentDataTable($query);
 
-        return $dataTable->addColumn('action', 'aboutuses.datatables_actions');
+        return $dataTable->addColumn('action', 'social_media.datatables_actions');
     }
 
     /**
@@ -27,7 +27,7 @@ class AboutUsDataTable extends DataTable
      * @param \App\Models\Post $model
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    public function query(AboutUs $model)
+    public function query(SocialMedia $model)
     {
         return $model->newQuery();
     }
@@ -64,9 +64,10 @@ class AboutUsDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            'description',
-            'vision',
-            'mission'
+            'facebook',
+            'twitter',
+            'googleplus',
+            'linkedin'
         ];
     }
 
@@ -77,6 +78,6 @@ class AboutUsDataTable extends DataTable
      */
     protected function filename()
     {
-        return 'aboutusesdatatable_' . time();
+        return 'social_mediadatatable_' . time();
     }
 }

@@ -146,3 +146,9 @@ Route::resource('managementPortfolios', 'ManagementPortfolioController');
 Route::resource('propertyforSales', 'PropertyforSaleController');
 
 Route::resource('propertytoRents', 'PropertytoRentController');
+
+Route::resource('contacts', 'ContactController');
+
+Route::resource('socialMedia', 'SocialMediaController');
+
+Route::resource('aboutuses', 'AboutUsController');

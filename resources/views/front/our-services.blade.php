@@ -62,10 +62,13 @@
                                 <div class="service-inner">
                                     <div class="head">
                                         <div class="icon"><img src="assets/images/service/service-1.png" alt=""></div>
-                                        <h4>Buy Property</h4>
+                                        <h4>Property Sales</h4>
                                     </div>
                                     <div class="content">
-                                        <p>Khonike - Real Estate Bootstrap 4 Template best theme for elit, seddo eiumod tempor dolor sit.</p>
+                                        <p>Assist in sound property disposal options<br>
+                                            Identify and source for credible purchasers<br>
+                                            Assist in purchase negotiations</p>
+
                                     </div>
                                 </div>
                             </div>
@@ -78,10 +81,12 @@
                                 <div class="service-inner">
                                     <div class="head">
                                         <div class="icon"><img src="assets/images/service/service-2.png" alt=""></div>
-                                        <h4>Sale Property</h4>
+                                        <h4>Property Letting</h4>
                                     </div>
                                     <div class="content">
-                                        <p>Khonike - Real Estate Bootstrap 4 Template best theme for elit, seddo eiumod tempor dolor sit.</p>
+                                        <p>Identify credible tenants for various categories of properties offered for rent<br>
+                                            Advise on feasible rental returns<br>
+                                            Negotiation of secure leases</p>
                                     </div>
                                 </div>
                             </div>
@@ -94,10 +99,12 @@
                                 <div class="service-inner">
                                     <div class="head">
                                         <div class="icon"><img src="assets/images/service/service-3.png" alt=""></div>
-                                        <h4>Rent Property</h4>
+                                        <h4>Property Development Consultancy</h4>
                                     </div>
                                     <div class="content">
-                                        <p>Khonike - Real Estate Bootstrap 4 Template best theme for elit, seddo eiumod tempor dolor sit.</p>
+                                        <p>Identify suitable real estate for development<br>
+                                            Identify and connect suitable partners for joint ven­ture property development<br>
+                                            Assist in Project management during development</p>
                                     </div>
                                 </div>
                             </div>
@@ -110,15 +117,17 @@
                                 <div class="service-inner">
                                     <div class="head">
                                         <div class="icon"><img src="assets/images/service/service-4.png" alt=""></div>
-                                        <h4>Mortgage Property</h4>
+                                        <h4>Rental Assessment</h4>
                                     </div>
                                     <div class="content">
-                                        <p>Khonike - Real Estate Bootstrap 4 Template best theme for elit, seddo eiumod tempor dolor sit.</p>
+                                        <p>We do professional rental assessments for both commercial and residential
+                                            properties and advice clients accordingly</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!--Service end-->
+
 
                     </div>
                 </div>
@@ -127,5 +136,6 @@
         </div>
     </div>
     <!--Services section end-->
+
 
     @stop

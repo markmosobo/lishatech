@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AboutUs;
 use App\Models\Blog;
+use App\Models\Contact;
 use App\Models\Property;
 use App\Models\PropertyforSale;
 use Illuminate\Http\Request;
@@ -16,11 +18,15 @@ class FrontEndController extends Controller
     }
 
     public function aboutUs(){
-    return view('front.about-us');
+    return view('front.about-us',[
+        'aboutus'=>AboutUs::orderByDesc('id')->take(1)->get()
+    ]);
     }
 
     public function contactUs(){
-        return view('front.contact-us');
+        return view('front.contact-us',[
+            'contacts'=>Contact::orderByDesc('id')->take(1)->get()
+        ]);
     }
 
     public function managementPortfolio(){

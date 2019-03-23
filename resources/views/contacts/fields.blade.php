@@ -1,18 +1,30 @@
-<!-- Church Phone Number Field -->
+<!-- Address Field -->
 <div class="form-group col-sm-12">
-    {!! Form::label('church_phone_number', 'Church Phone Number:') !!}
-    {!! Form::text('church_phone_number', null, ['class' => 'form-control']) !!}
+    {!! Form::label('address', 'Address:') !!}
+    {!! Form::text('address', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Church Email Field -->
+<!-- Alternative Address Field -->
 <div class="form-group col-sm-12">
-    {!! Form::label('church_email', 'Church Email:') !!}
-    {!! Form::text('church_email', null, ['class' => 'form-control']) !!}
+    {!! Form::label('alternative_address', 'Alternative Address:') !!}
+    {!! Form::text('alternative_address', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Church Postal Address Field -->
+<!-- Phone Field -->
 <div class="form-group col-sm-12">
-    {!! Form::label('church_postal_address', 'Church Postal Address:') !!}
-    {!! Form::text('church_postal_address', null, ['class' => 'form-control']) !!}
+    {!! Form::label('phone', 'Phone:') !!}
+    {!! Form::text('phone', null, ['class' => 'form-control']) !!}
+</div>
+
+<!-- Alternative Phone Field -->
+<div class="form-group col-sm-12">
+    {!! Form::label('alternative_phone', 'Alternative Phone:') !!}
+    {!! Form::text('alternative_phone', null, ['class' => 'form-control']) !!}
+</div>
+
+<!-- Email Field -->
+<div class="form-group col-sm-12">
+    {!! Form::label('email', 'Email:') !!}
+    {!! Form::email('email', null, ['class' => 'form-control']) !!}
 </div>
 

@@ -47,33 +47,33 @@ class RoutesTableSeeder extends Seeder
         ]);
 
         $cChild = Route::create([
-            'route_name'=> 'Services',
-            'parent_route'=> $configurations->id,
-            'url'=>'services',
-        ]);
-        $cChild->roles()->attach($admin);
-
-        $cChild = Route::create([
-            'route_name'=> 'PCEA Contact Info',
+            'route_name'=> 'LishaTech Contact Info',
             'parent_route'=> $configurations->id,
             'url'=>'contacts',
         ]);
         $cChild->roles()->attach($admin);
 
         $cChild = Route::create([
-            'route_name'=> 'PCEA Location',
+            'route_name'=> 'Social Media',
             'parent_route'=> $configurations->id,
-            'url'=>'locations',
+            'url'=>'socialMedia',
         ]);
         $cChild->roles()->attach($admin);
 
-
-        $cChild = Route::create([
-            'route_name'=> 'Common Questions',
-            'parent_route'=> $configurations->id,
-            'url'=>'commonQuestions',
-        ]);
-        $cChild->roles()->attach($admin);
+//        $cChild = Route::create([
+//            'route_name'=> 'PCEA Location',
+//            'parent_route'=> $configurations->id,
+//            'url'=>'locations',
+//        ]);
+//        $cChild->roles()->attach($admin);
+//
+//
+//        $cChild = Route::create([
+//            'route_name'=> 'Common Questions',
+//            'parent_route'=> $configurations->id,
+//            'url'=>'commonQuestions',
+//        ]);
+//        $cChild->roles()->attach($admin);
 
 
 

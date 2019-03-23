@@ -7,7 +7,7 @@
 
                 <!--Footer Widget start-->
                 <div class="footer-widget col-lg-3 col-md-6 col-12 mb-40">
-                    <img src="assets/images/logo-footer.png" alt="">
+                    {{--<img src="assets/images/logo-footer.png" alt="">--}}
                     <p>Khonike - Real Estate Bootstrap 4 Templatethe best theme for elit, sed do to eiumod tempor dolor sit amet, ctetur adipiscing elit seddo dolor sit amet.</p>
                     <div class="footer-social">
                         <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>

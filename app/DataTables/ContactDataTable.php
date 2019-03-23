@@ -64,9 +64,11 @@ class ContactDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            'church_phone_number',
-            'church_email',
-            'church_postal_address'
+            'address',
+            'alternative_address',
+            'phone',
+            'alternative_phone',
+            'email'
         ];
     }
 

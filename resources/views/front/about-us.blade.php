@@ -4,7 +4,7 @@
 
 @section('content')
 
-
+@foreach($aboutus as $about)
     <!--Welcome Khonike - Real Estate Bootstrap 4 Templatesection-->
     <div class="feature-section feature-section-border-top section pt-100 pt-lg-80 pt-md-70 pt-sm-60 pt-xs-50 pb-60 pb-lg-40 pb-md-30 pb-sm-20 pb-xs-10">
         <div class="container">
@@ -12,7 +12,7 @@
 
                 <!--Feature Image start-->
                 <div class="col-lg-5 col-12 order-1 order-lg-2 mb-40">
-                    <div class="feature-image"><img src="assets/images/others/feature.png" alt=""></div>
+                    {{--<div class="feature-image"><img src="assets/images/others/feature.png" alt=""></div>--}}
                 </div>
                 <!--Feature Image end-->
 
@@ -21,36 +21,41 @@
                     <div class="row">
                         <div class="col">
                             <div class="about-content">
-                                <h3>Welcome to <span>{{config('app.name')}}</span></h3>
+                                <h3>About <span>{{config('app.name')}}</span></h3>
                                 <h1>We Always Provide Priority to Our Customer</h1>
-                                <p>Khonike - Real Estate Bootstrap 4 Templateis the best theme for elit, sed do eiusmod tempor dolor sit amet, conse ctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et lorna aliquatd minimam, quis nostrud exercitation oris nisi ut aliquip.</p>
+                                <p>{{$about->description}}</p>
 
-                                <ul class="feature-list">
-                                    <li>
-                                        <i class="pe-7s-piggy"></i>
-                                        <h4>Low Cost</h4>
-                                    </li>
-                                    <li>
-                                        <i class="pe-7s-science"></i>
-                                        <h4>Modern Design</h4>
-                                    </li>
-                                    <li>
-                                        <i class="pe-7s-display1"></i>
-                                        <h4>Good Marketing</h4>
-                                    </li>
-                                    <li>
-                                        <i class="pe-7s-signal"></i>
-                                        <h4>Free Wifi</h4>
-                                    </li>
-                                    <li>
-                                        <i class="pe-7s-map"></i>
-                                        <h4>Easy to Find</h4>
-                                    </li>
-                                    <li>
-                                        <i class="pe-7s-shield"></i>
-                                        <h4>Reliable</h4>
-                                    </li>
-                                </ul>
+                                <h3>Vision</h3>
+                                <p>{{$about->vision}}</p>
+
+                                <h3>Mission</h3>
+                                <p>{{$about->mission}}</p>
+                                {{--<ul class="feature-list">--}}
+                                    {{--<li>--}}
+                                        {{--<i class="pe-7s-piggy"></i>--}}
+                                        {{--<h4>Low Cost</h4>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<i class="pe-7s-science"></i>--}}
+                                        {{--<h4>Modern Design</h4>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<i class="pe-7s-display1"></i>--}}
+                                        {{--<h4>Good Marketing</h4>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<i class="pe-7s-signal"></i>--}}
+                                        {{--<h4>Free Wifi</h4>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<i class="pe-7s-map"></i>--}}
+                                        {{--<h4>Easy to Find</h4>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<i class="pe-7s-shield"></i>--}}
+                                        {{--<h4>Reliable</h4>--}}
+                                    {{--</li>--}}
+                                {{--</ul>--}}
 
                             </div>
                         </div>
@@ -515,4 +520,5 @@
         {{--</div>--}}
     {{--</div>--}}
     {{--<!--Brand section end-->--}}
+    @endforeach
 @stop

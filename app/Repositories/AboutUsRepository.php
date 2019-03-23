@@ -8,7 +8,7 @@ use InfyOm\Generator\Common\BaseRepository;
 /**
  * Class AboutUsRepository
  * @package App\Repositories
- * @version March 8, 2019, 10:47 am EAT
+ * @version March 23, 2019, 10:25 am EAT
  *
  * @method AboutUs findWithoutFail($id, $columns = ['*'])
  * @method AboutUs find($id, $columns = ['*'])
@@ -20,8 +20,9 @@ class AboutUsRepository extends BaseRepository
      * @var array
      */
     protected $fieldSearchable = [
-        'about_category',
-        'body'
+        'description',
+        'vision',
+        'mission'
     ];
 
     /**
