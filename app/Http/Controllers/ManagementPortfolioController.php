@@ -77,7 +77,7 @@ class ManagementPortfolioController extends AppBaseController
             return redirect(route('managementPortfolios.index'));
         }
 
-        return view('management_portfolios.show')->with('managementPortfolio', $managementPortfolio);
+        return response()->json($managementPortfolio);
     }
 
     /**

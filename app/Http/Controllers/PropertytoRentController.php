@@ -77,7 +77,7 @@ class PropertytoRentController extends AppBaseController
             return redirect(route('propertytoRents.index'));
         }
 
-        return view('propertyto_rents.show')->with('propertytoRent', $propertytoRent);
+        return response()->json($propertytoRent);
     }
 
     /**

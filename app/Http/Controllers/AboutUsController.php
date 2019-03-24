@@ -77,7 +77,7 @@ class AboutUsController extends AppBaseController
             return redirect(route('aboutuses.index'));
         }
 
-        return view('aboutuses.show')->with('aboutUs', $aboutUs);
+        return response()->json($aboutUs);
     }
 
     /**

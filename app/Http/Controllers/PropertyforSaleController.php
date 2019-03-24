@@ -77,7 +77,7 @@ class PropertyforSaleController extends AppBaseController
             return redirect(route('propertyforSales.index'));
         }
 
-        return view('propertyfor_sales.show')->with('propertyforSale', $propertyforSale);
+        return response()->json($propertyforSale);
     }
 
     /**

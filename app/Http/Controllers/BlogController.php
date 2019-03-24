@@ -77,7 +77,7 @@ class BlogController extends AppBaseController
             return redirect(route('blogs.index'));
         }
 
-        return view('blogs.show')->with('blog', $blog);
+        return response()->json($blog);
     }
 
     /**
