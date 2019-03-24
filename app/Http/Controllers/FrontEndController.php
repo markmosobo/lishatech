@@ -7,6 +7,7 @@ use App\Models\Blog;
 use App\Models\Contact;
 use App\Models\Property;
 use App\Models\PropertyforSale;
+use App\Models\PropertytoRent;
 use Illuminate\Http\Request;
 
 class FrontEndController extends Controller
@@ -14,7 +15,11 @@ class FrontEndController extends Controller
     public function index(){
         return view('front.index',[
             'properties'=>Property::all(),
-            'contacts'=>Contact::orderByDesc('id')->take(1)->get()
+            'contacts'=>Contact::orderByDesc('id')->take(1)->get(),
+            'comproperties'=>PropertyforSale::orderByDesc('created_at')->take(1)->get(),
+            'aboutus'=>AboutUs::all(),
+            'saleproperties'=>PropertyforSale::all(),
+            'rentproperties'=>PropertytoRent::all()
         ]);
     }
 

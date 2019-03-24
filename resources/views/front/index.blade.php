@@ -4,61 +4,106 @@
 
 @section('content')
 
-    <!--Hero Section start-->
-    <div class="hero-section section position-relative">
 
-        <!--Hero Slider start-->
-        <div class="hero-slider section">
-            {{--@foreach($properties as $property)--}}
 
-            <!--Hero Item start-->
-            <div class="hero-item" style="background-image: url(assets/images/hero/hero-1.jpg)">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
 
-                            <!--Hero Content start-->
-                            <div class="hero-property-content text-center">
+        <!--Hero Section start-->
+        @foreach($comproperties as $property)
+        <div class="hero-section section position-relative">
 
-                                <h1 class="title"><a href="single-properties.html">Friuli-Venezia Giulia</a></h1>
-                                <span class="location"><img src="assets/images/icons/hero-marker.png" alt=""> 568 E 1st Ave, Miami</span>
-                                <div class="type-wrap">
-                                    <span class="type">For Rent</span>
-                                    <span class="price">$550 <span>Month</span></span>
+            <!--Hero Slider start-->
+            <div class="hero-slider section">
+
+                <!--Hero Item start-->
+                <div class="hero-item" style="background-image: url(assets/images/hero/hero-1.jpg)">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+
+                                <!--Hero Content start-->
+                                <div class="hero-property-content text-center">
+
+                                    <h1 class="title"><a href="{{url('/properties-for-sale-commercial')}}">Commercial Properties For Sale</a></h1>
+                                    <span class="location"><img src="assets/images/icons/hero-marker.png" alt=""> {{$property->address}}</span>
+                                    <div class="type-wrap">
+                                        <span class="type">For Sale</span>
+                                        <span class="price">Ksh. {{$property->price}} </span>
+                                    </div>
+                                    {{--<ul class="property-feature">--}}
+                                        {{--<li>--}}
+                                            {{--<img src="assets/images/icons/hero-area.png" alt=""><span>550 SqFt</span>--}}
+                                        {{--</li>--}}
+                                        {{--<li>--}}
+                                            {{--<img src="assets/images/icons/hero-bed.png" alt=""><span>6 Bed</span>--}}
+                                        {{--</li>--}}
+                                        {{--<li>--}}
+                                            {{--<img src="assets/images/icons/hero-bath.png" alt=""><span>4 Bath</span>--}}
+                                        {{--</li>--}}
+                                        {{--<li>--}}
+                                            {{--<img src="assets/images/icons/hero-parking.png" alt=""><span>3 Garage</span>--}}
+                                        {{--</li>--}}
+                                    {{--</ul>--}}
+
+
                                 </div>
-                                <ul class="property-feature">
-                                    {{--<li>--}}
-                                        {{--<img src="assets/images/icons/hero-area.png" alt=""><span>550 SqFt</span>--}}
-                                    {{--</li>--}}
-                                    {{--<li>--}}
-                                        {{--<img src="assets/images/icons/hero-bed.png" alt=""><span>6 Bed</span>--}}
-                                    {{--</li>--}}
-                                    {{--<li>--}}
-                                        {{--<img src="assets/images/icons/hero-bath.png" alt=""><span>4 Bath</span>--}}
-                                    {{--</li>--}}
-                                    {{--<li>--}}
-                                        {{--<img src="assets/images/icons/hero-parking.png" alt=""><span>3 Garage</span>--}}
-                                    {{--</li>--}}
-                                </ul>
-
+                                <!--Hero Content end-->
 
                             </div>
-                            <!--Hero Content end-->
-
                         </div>
                     </div>
                 </div>
+                <!--Hero Item end-->
+
+                <!--Hero Item start-->
+                <div class="hero-item" style="background-image: url(assets/images/hero/hero-3.jpg)">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+
+                                <!--Hero Content start-->
+                                <div class="hero-property-content text-center">
+
+                                    <h1 class="title"><a href="{{url('/properties-for-sale-residential')}}">Residential Properties For Sale</a></h1>
+                                    <span class="location"><img src="assets/images/icons/marker.png" alt=""><img src="assets/images/icons/hero-marker.png" alt=""> {{$property->address}}</span>
+                                    <div class="type-wrap">
+                                        <span class="type">For Sale</span>
+                                        <span class="price">Ksh. {{$property->price}} </span>
+                                    </div>
+                                    {{--<ul class="property-feature">--}}
+                                        {{--<li>--}}
+                                            {{--<img src="assets/images/icons/hero-area.png" alt=""><span>550 SqFt</span>--}}
+                                        {{--</li>--}}
+                                        {{--<li>--}}
+                                            {{--<img src="assets/images/icons/hero-bed.png" alt=""><span>6 Bed</span>--}}
+                                        {{--</li>--}}
+                                        {{--<li>--}}
+                                            {{--<img src="assets/images/icons/hero-bath.png" alt=""><span>4 Bath</span>--}}
+                                        {{--</li>--}}
+                                        {{--<li>--}}
+                                            {{--<img src="assets/images/icons/hero-parking.png" alt=""><span>3 Garage</span>--}}
+                                        {{--</li>--}}
+                                    {{--</ul>--}}
+
+
+                                </div>
+                                <!--Hero Content end-->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Hero Item end-->
+
             </div>
-            <!--Hero Item end-->
-
-            {{--@endforeach--}}
-
+            <!--Hero Slider end-->
 
         </div>
-        <!--Hero Slider end-->
+        @endforeach
+        <!--Hero Section end-->
 
-    </div>
-    <!--Hero Section end-->
+
+
+
 
     <!--Search Section section start-->
     <div class="search-section section pt-100 pt-lg-80 pt-md-70 pt-sm-60 pt-xs-50 pb-100 pb-lg-80 pb-md-70 pb-sm-60 pb-xs-50">
@@ -177,14 +222,15 @@
     <!--Search Section section end-->
 
     <!--Welcome Khonike - Real Estate Bootstrap 4 Templatesection-->
+        @foreach($aboutus as $about)
     <div class="feature-section feature-section-border-top section pt-100 pt-lg-80 pt-md-70 pt-sm-60 pt-xs-50 pb-60 pb-lg-40 pb-md-30 pb-sm-20 pb-xs-10">
         <div class="container">
             <div class="row row-25 align-items-center">
 
                 <!--Feature Image start-->
-                <div class="col-lg-5 col-12 order-1 order-lg-2 mb-40">
-                    <div class="feature-image"><img src="assets/images/others/feature.png" alt=""></div>
-                </div>
+                {{--<div class="col-lg-5 col-12 order-1 order-lg-2 mb-40">--}}
+                    {{--<div class="feature-image"><img src="assets/images/others/feature.png" alt=""></div>--}}
+                {{--</div>--}}
                 <!--Feature Image end-->
 
                 <div class="col-lg-7 col-12 order-2 order-lg-1 mb-40">
@@ -194,7 +240,7 @@
                             <div class="about-content">
                                 <h3>Welcome to <span>{{config('app.name')}} Properties Limited</span></h3>
                                 <h1>We Always Provide Priority to Our Customer</h1>
-                                <p>Khonike - Real Estate Bootstrap 4 Templateis the best theme for elit, sed do eiusmod tempor dolor sit amet, conse ctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et lorna aliquatd minimam, quis nostrud exercitation oris nisi ut aliquip.</p>
+                                <p>{{$about->description}}</p>
 
                                 <ul class="feature-list">
                                     <li>
@@ -232,6 +278,7 @@
             </div>
         </div>
     </div>
+        @endforeach
     <!--Welcome Khonike - Real Estate Bootstrap 4 Templatesection end-->
 
     <!--Feature property section start-->
@@ -253,224 +300,226 @@
                 <!--Property Slider start-->
                 <div class="property-carousel section">
 
-                    <!--Property start-->
-                    <div class="property-item col">
-                        <div class="property-inner">
-                            <div class="image">
-                                <a href="single-properties.html"><img src="assets/images/property/property-1.jpg" alt=""></a>
-                                <ul class="property-feature">
-                                    <li>
-                                        <span class="area"><img src="assets/images/icons/area.png" alt="">550 SqFt</span>
-                                    </li>
-                                    <li>
-                                        <span class="bed"><img src="assets/images/icons/bed.png" alt="">6</span>
-                                    </li>
-                                    <li>
-                                        <span class="bath"><img src="assets/images/icons/bath.png" alt="">4</span>
-                                    </li>
-                                    <li>
-                                        <span class="parking"><img src="assets/images/icons/parking.png" alt="">3</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="content">
-                                <div class="left">
-                                    <h3 class="title"><a href="single-properties.html">Friuli-Venezia Giulia</a></h3>
-                                    <span class="location"><img src="assets/images/icons/marker.png" alt="">568 E 1st Ave, Miami</span>
-                                </div>
-                                <div class="right">
-                                    <div class="type-wrap">
-                                        <span class="price">$550<span>M</span></span>
-                                        <span class="type">For Rent</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Property end-->
+                    {{--<!--Property start-->--}}
+                    {{--<div class="property-item col">--}}
+                        {{--<div class="property-inner">--}}
+                            {{--<div class="image">--}}
+                                {{--<a href="single-properties.html"><img src="assets/images/property/property-1.jpg" alt=""></a>--}}
+                                {{--<ul class="property-feature">--}}
+                                    {{--<li>--}}
+                                        {{--<span class="area"><img src="assets/images/icons/area.png" alt="">550 SqFt</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="bed"><img src="assets/images/icons/bed.png" alt="">6</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="bath"><img src="assets/images/icons/bath.png" alt="">4</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="parking"><img src="assets/images/icons/parking.png" alt="">3</span>--}}
+                                    {{--</li>--}}
+                                {{--</ul>--}}
+                            {{--</div>--}}
+                            {{--<div class="content">--}}
+                                {{--<div class="left">--}}
+                                    {{--<h3 class="title"><a href="single-properties.html">Friuli-Venezia Giulia</a></h3>--}}
+                                    {{--<span class="location"><img src="assets/images/icons/marker.png" alt="">568 E 1st Ave, Miami</span>--}}
+                                {{--</div>--}}
+                                {{--<div class="right">--}}
+                                    {{--<div class="type-wrap">--}}
+                                        {{--<span class="price">$550<span>M</span></span>--}}
+                                        {{--<span class="type">For Rent</span>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<!--Property end-->--}}
+
+                    {{--<!--Property start-->--}}
+                    {{--<div class="property-item col">--}}
+                        {{--<div class="property-inner">--}}
+                            {{--<div class="image">--}}
+                                {{--<span class="label">Feature</span>--}}
+                                {{--<a href="single-properties.html"><img src="assets/images/property/property-2.jpg" alt=""></a>--}}
+                                {{--<ul class="property-feature">--}}
+                                    {{--<li>--}}
+                                        {{--<span class="area"><img src="assets/images/icons/area.png" alt="">550 SqFt</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="bed"><img src="assets/images/icons/bed.png" alt="">6</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="bath"><img src="assets/images/icons/bath.png" alt="">4</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="parking"><img src="assets/images/icons/parking.png" alt="">3</span>--}}
+                                    {{--</li>--}}
+                                {{--</ul>--}}
+                            {{--</div>--}}
+                            {{--<div class="content">--}}
+                                {{--<div class="left">--}}
+                                    {{--<h3 class="title"><a href="single-properties.html">Marvel de Villa</a></h3>--}}
+                                    {{--<span class="location"><img src="assets/images/icons/marker.png" alt="">450 E 1st Ave, New Jersey</span>--}}
+                                {{--</div>--}}
+                                {{--<div class="right">--}}
+                                    {{--<div class="type-wrap">--}}
+                                        {{--<span class="price">$2550</span>--}}
+                                        {{--<span class="type">For Sale</span>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<!--Property end-->--}}
 
                     <!--Property start-->
+                        @foreach($saleproperties as $property)
                     <div class="property-item col">
                         <div class="property-inner">
                             <div class="image">
-                                <span class="label">Feature</span>
-                                <a href="single-properties.html"><img src="assets/images/property/property-2.jpg" alt=""></a>
-                                <ul class="property-feature">
-                                    <li>
-                                        <span class="area"><img src="assets/images/icons/area.png" alt="">550 SqFt</span>
-                                    </li>
-                                    <li>
-                                        <span class="bed"><img src="assets/images/icons/bed.png" alt="">6</span>
-                                    </li>
-                                    <li>
-                                        <span class="bath"><img src="assets/images/icons/bath.png" alt="">4</span>
-                                    </li>
-                                    <li>
-                                        <span class="parking"><img src="assets/images/icons/parking.png" alt="">3</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="content">
-                                <div class="left">
-                                    <h3 class="title"><a href="single-properties.html">Marvel de Villa</a></h3>
-                                    <span class="location"><img src="assets/images/icons/marker.png" alt="">450 E 1st Ave, New Jersey</span>
-                                </div>
-                                <div class="right">
-                                    <div class="type-wrap">
-                                        <span class="price">$2550</span>
-                                        <span class="type">For Sale</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Property end-->
-
-                    <!--Property start-->
-                    <div class="property-item col">
-                        <div class="property-inner">
-                            <div class="image">
-                                <span class="label">popular</span>
+                                <span class="label">{{$property->status}}</span>
                                 <a href="single-properties.html"><img src="assets/images/property/property-3.jpg" alt=""></a>
-                                <ul class="property-feature">
-                                    <li>
-                                        <span class="area"><img src="assets/images/icons/area.png" alt="">550 SqFt</span>
-                                    </li>
-                                    <li>
-                                        <span class="bed"><img src="assets/images/icons/bed.png" alt="">6</span>
-                                    </li>
-                                    <li>
-                                        <span class="bath"><img src="assets/images/icons/bath.png" alt="">4</span>
-                                    </li>
-                                    <li>
-                                        <span class="parking"><img src="assets/images/icons/parking.png" alt="">3</span>
-                                    </li>
-                                </ul>
+                                {{--<ul class="property-feature">--}}
+                                    {{--<li>--}}
+                                        {{--<span class="area"><img src="assets/images/icons/area.png" alt="">550 SqFt</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="bed"><img src="assets/images/icons/bed.png" alt="">6</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="bath"><img src="assets/images/icons/bath.png" alt="">4</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="parking"><img src="assets/images/icons/parking.png" alt="">3</span>--}}
+                                    {{--</li>--}}
+                                {{--</ul>--}}
                             </div>
                             <div class="content">
                                 <div class="left">
-                                    <h3 class="title"><a href="single-properties.html">Ruposi Bangla Cottage</a></h3>
-                                    <span class="location"><img src="assets/images/icons/marker.png" alt="">215 L AH Rod, California</span>
+                                    <h3 class="title"><a href="single-properties.html">{{$property->property_name}}</a></h3>
+                                    <span class="location"><img src="assets/images/icons/marker.png" alt="">{{$property->address}}</span>
                                 </div>
                                 <div class="right">
                                     <div class="type-wrap">
-                                        <span class="price">$550<span>M</span></span>
-                                        <span class="type">For Rent</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Property end-->
-
-                    <!--Property start-->
-                    <div class="property-item col">
-                        <div class="property-inner">
-                            <div class="image">
-                                <a href="single-properties.html"><img src="assets/images/property/property-4.jpg" alt=""></a>
-                                <ul class="property-feature">
-                                    <li>
-                                        <span class="area"><img src="assets/images/icons/area.png" alt="">550 SqFt</span>
-                                    </li>
-                                    <li>
-                                        <span class="bed"><img src="assets/images/icons/bed.png" alt="">6</span>
-                                    </li>
-                                    <li>
-                                        <span class="bath"><img src="assets/images/icons/bath.png" alt="">4</span>
-                                    </li>
-                                    <li>
-                                        <span class="parking"><img src="assets/images/icons/parking.png" alt="">3</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="content">
-                                <div class="left">
-                                    <h3 class="title"><a href="single-properties.html">MayaKanon de Villa</a></h3>
-                                    <span class="location"><img src="assets/images/icons/marker.png" alt="">12 EA 1st Ave, Washington</span>
-                                </div>
-                                <div class="right">
-                                    <div class="type-wrap">
-                                        <span class="price">$550<span>M</span></span>
-                                        <span class="type">For Rent</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Property end-->
-
-                    <!--Property start-->
-                    <div class="property-item col">
-                        <div class="property-inner">
-                            <div class="image">
-                                <a href="single-properties.html"><img src="assets/images/property/property-5.jpg" alt=""></a>
-                                <ul class="property-feature">
-                                    <li>
-                                        <span class="area"><img src="assets/images/icons/area.png" alt="">550 SqFt</span>
-                                    </li>
-                                    <li>
-                                        <span class="bed"><img src="assets/images/icons/bed.png" alt="">6</span>
-                                    </li>
-                                    <li>
-                                        <span class="bath"><img src="assets/images/icons/bath.png" alt="">4</span>
-                                    </li>
-                                    <li>
-                                        <span class="parking"><img src="assets/images/icons/parking.png" alt="">3</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="content">
-                                <div class="left">
-                                    <h3 class="title"><a href="single-properties.html">Azorex de South Villa</a></h3>
-                                    <span class="location"><img src="assets/images/icons/marker.png" alt="">668 L 2nd Ave, Boston</span>
-                                </div>
-                                <div class="right">
-                                    <div class="type-wrap">
-                                        <span class="price">$2550</span>
+                                        <span class="price">Ksh. {{$property->price}}</span>
                                         <span class="type">For Sale</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                        @endforeach
                     <!--Property end-->
 
-                    <!--Property start-->
-                    <div class="property-item col">
-                        <div class="property-inner">
-                            <div class="image">
-                                <span class="label">Feature</span>
-                                <a href="single-properties.html"><img src="assets/images/property/property-6.jpg" alt=""></a>
-                                <ul class="property-feature">
-                                    <li>
-                                        <span class="area"><img src="assets/images/icons/area.png" alt="">550 SqFt</span>
-                                    </li>
-                                    <li>
-                                        <span class="bed"><img src="assets/images/icons/bed.png" alt="">6</span>
-                                    </li>
-                                    <li>
-                                        <span class="bath"><img src="assets/images/icons/bath.png" alt="">4</span>
-                                    </li>
-                                    <li>
-                                        <span class="parking"><img src="assets/images/icons/parking.png" alt="">3</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="content">
-                                <div class="left">
-                                    <h3 class="title"><a href="single-properties.html">Radison de Villa</a></h3>
-                                    <span class="location"><img src="assets/images/icons/marker.png" alt="">12 1st Ave, New Yourk</span>
-                                </div>
-                                <div class="right">
-                                    <div class="type-wrap">
-                                        <span class="price">$550<span>M</span></span>
-                                        <span class="type">For Rent</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Property end-->
+                    {{--<!--Property start-->--}}
+                    {{--<div class="property-item col">--}}
+                        {{--<div class="property-inner">--}}
+                            {{--<div class="image">--}}
+                                {{--<a href="single-properties.html"><img src="assets/images/property/property-4.jpg" alt=""></a>--}}
+                                {{--<ul class="property-feature">--}}
+                                    {{--<li>--}}
+                                        {{--<span class="area"><img src="assets/images/icons/area.png" alt="">550 SqFt</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="bed"><img src="assets/images/icons/bed.png" alt="">6</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="bath"><img src="assets/images/icons/bath.png" alt="">4</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="parking"><img src="assets/images/icons/parking.png" alt="">3</span>--}}
+                                    {{--</li>--}}
+                                {{--</ul>--}}
+                            {{--</div>--}}
+                            {{--<div class="content">--}}
+                                {{--<div class="left">--}}
+                                    {{--<h3 class="title"><a href="single-properties.html">MayaKanon de Villa</a></h3>--}}
+                                    {{--<span class="location"><img src="assets/images/icons/marker.png" alt="">12 EA 1st Ave, Washington</span>--}}
+                                {{--</div>--}}
+                                {{--<div class="right">--}}
+                                    {{--<div class="type-wrap">--}}
+                                        {{--<span class="price">$550<span>M</span></span>--}}
+                                        {{--<span class="type">For Rent</span>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<!--Property end-->--}}
+
+                    {{--<!--Property start-->--}}
+                    {{--<div class="property-item col">--}}
+                        {{--<div class="property-inner">--}}
+                            {{--<div class="image">--}}
+                                {{--<a href="single-properties.html"><img src="assets/images/property/property-5.jpg" alt=""></a>--}}
+                                {{--<ul class="property-feature">--}}
+                                    {{--<li>--}}
+                                        {{--<span class="area"><img src="assets/images/icons/area.png" alt="">550 SqFt</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="bed"><img src="assets/images/icons/bed.png" alt="">6</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="bath"><img src="assets/images/icons/bath.png" alt="">4</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="parking"><img src="assets/images/icons/parking.png" alt="">3</span>--}}
+                                    {{--</li>--}}
+                                {{--</ul>--}}
+                            {{--</div>--}}
+                            {{--<div class="content">--}}
+                                {{--<div class="left">--}}
+                                    {{--<h3 class="title"><a href="single-properties.html">Azorex de South Villa</a></h3>--}}
+                                    {{--<span class="location"><img src="assets/images/icons/marker.png" alt="">668 L 2nd Ave, Boston</span>--}}
+                                {{--</div>--}}
+                                {{--<div class="right">--}}
+                                    {{--<div class="type-wrap">--}}
+                                        {{--<span class="price">$2550</span>--}}
+                                        {{--<span class="type">For Sale</span>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<!--Property end-->--}}
+
+                    {{--<!--Property start-->--}}
+                    {{--<div class="property-item col">--}}
+                        {{--<div class="property-inner">--}}
+                            {{--<div class="image">--}}
+                                {{--<span class="label">Feature</span>--}}
+                                {{--<a href="single-properties.html"><img src="assets/images/property/property-6.jpg" alt=""></a>--}}
+                                {{--<ul class="property-feature">--}}
+                                    {{--<li>--}}
+                                        {{--<span class="area"><img src="assets/images/icons/area.png" alt="">550 SqFt</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="bed"><img src="assets/images/icons/bed.png" alt="">6</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="bath"><img src="assets/images/icons/bath.png" alt="">4</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="parking"><img src="assets/images/icons/parking.png" alt="">3</span>--}}
+                                    {{--</li>--}}
+                                {{--</ul>--}}
+                            {{--</div>--}}
+                            {{--<div class="content">--}}
+                                {{--<div class="left">--}}
+                                    {{--<h3 class="title"><a href="single-properties.html">Radison de Villa</a></h3>--}}
+                                    {{--<span class="location"><img src="assets/images/icons/marker.png" alt="">12 1st Ave, New Yourk</span>--}}
+                                {{--</div>--}}
+                                {{--<div class="right">--}}
+                                    {{--<div class="type-wrap">--}}
+                                        {{--<span class="price">$550<span>M</span></span>--}}
+                                        {{--<span class="type">For Rent</span>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<!--Property end-->--}}
 
                 </div>
                 <!--Property Slider end-->
@@ -500,84 +549,85 @@
                 <!--Property Slider start-->
                 <div class="property-carousel section">
 
-                    <!--Property start-->
-                    <div class="property-item col">
-                        <div class="property-inner">
-                            <div class="image">
-                                <a href="single-properties.html"><img src="assets/images/property/property-1.jpg" alt=""></a>
-                                <ul class="property-feature">
-                                    <li>
-                                        <span class="area"><img src="assets/images/icons/area.png" alt="">550 SqFt</span>
-                                    </li>
-                                    <li>
-                                        <span class="bed"><img src="assets/images/icons/bed.png" alt="">6</span>
-                                    </li>
-                                    <li>
-                                        <span class="bath"><img src="assets/images/icons/bath.png" alt="">4</span>
-                                    </li>
-                                    <li>
-                                        <span class="parking"><img src="assets/images/icons/parking.png" alt="">3</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="content">
-                                <div class="left">
-                                    <h3 class="title"><a href="single-properties.html">Friuli-Venezia Giulia</a></h3>
-                                    <span class="location"><img src="assets/images/icons/marker.png" alt="">568 E 1st Ave, Miami</span>
-                                </div>
-                                <div class="right">
-                                    <div class="type-wrap">
-                                        <span class="price">$550<span>M</span></span>
-                                        <span class="type">For Rent</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Property end-->
+                    {{--<!--Property start-->--}}
+                    {{--<div class="property-item col">--}}
+                        {{--<div class="property-inner">--}}
+                            {{--<div class="image">--}}
+                                {{--<a href="single-properties.html"><img src="assets/images/property/property-1.jpg" alt=""></a>--}}
+                                {{--<ul class="property-feature">--}}
+                                    {{--<li>--}}
+                                        {{--<span class="area"><img src="assets/images/icons/area.png" alt="">550 SqFt</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="bed"><img src="assets/images/icons/bed.png" alt="">6</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="bath"><img src="assets/images/icons/bath.png" alt="">4</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="parking"><img src="assets/images/icons/parking.png" alt="">3</span>--}}
+                                    {{--</li>--}}
+                                {{--</ul>--}}
+                            {{--</div>--}}
+                            {{--<div class="content">--}}
+                                {{--<div class="left">--}}
+                                    {{--<h3 class="title"><a href="single-properties.html">Friuli-Venezia Giulia</a></h3>--}}
+                                    {{--<span class="location"><img src="assets/images/icons/marker.png" alt="">568 E 1st Ave, Miami</span>--}}
+                                {{--</div>--}}
+                                {{--<div class="right">--}}
+                                    {{--<div class="type-wrap">--}}
+                                        {{--<span class="price">$550<span>M</span></span>--}}
+                                        {{--<span class="type">For Rent</span>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<!--Property end-->--}}
+
+                    {{--<!--Property start-->--}}
+                    {{--<div class="property-item col">--}}
+                        {{--<div class="property-inner">--}}
+                            {{--<div class="image">--}}
+                                {{--<span class="label">Feature</span>--}}
+                                {{--<a href="single-properties.html"><img src="assets/images/property/property-2.jpg" alt=""></a>--}}
+                                {{--<ul class="property-feature">--}}
+                                    {{--<li>--}}
+                                        {{--<span class="area"><img src="assets/images/icons/area.png" alt="">550 SqFt</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="bed"><img src="assets/images/icons/bed.png" alt="">6</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="bath"><img src="assets/images/icons/bath.png" alt="">4</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="parking"><img src="assets/images/icons/parking.png" alt="">3</span>--}}
+                                    {{--</li>--}}
+                                {{--</ul>--}}
+                            {{--</div>--}}
+                            {{--<div class="content">--}}
+                                {{--<div class="left">--}}
+                                    {{--<h3 class="title"><a href="single-properties.html">Marvel de Villa</a></h3>--}}
+                                    {{--<span class="location"><img src="assets/images/icons/marker.png" alt="">450 E 1st Ave, New Jersey</span>--}}
+                                {{--</div>--}}
+                                {{--<div class="right">--}}
+                                    {{--<div class="type-wrap">--}}
+                                        {{--<span class="price">$2550</span>--}}
+                                        {{--<span class="type">For Sale</span>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<!--Property end-->--}}
 
                     <!--Property start-->
+                        @foreach($rentproperties as $property)
                     <div class="property-item col">
                         <div class="property-inner">
                             <div class="image">
-                                <span class="label">Feature</span>
-                                <a href="single-properties.html"><img src="assets/images/property/property-2.jpg" alt=""></a>
-                                <ul class="property-feature">
-                                    <li>
-                                        <span class="area"><img src="assets/images/icons/area.png" alt="">550 SqFt</span>
-                                    </li>
-                                    <li>
-                                        <span class="bed"><img src="assets/images/icons/bed.png" alt="">6</span>
-                                    </li>
-                                    <li>
-                                        <span class="bath"><img src="assets/images/icons/bath.png" alt="">4</span>
-                                    </li>
-                                    <li>
-                                        <span class="parking"><img src="assets/images/icons/parking.png" alt="">3</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="content">
-                                <div class="left">
-                                    <h3 class="title"><a href="single-properties.html">Marvel de Villa</a></h3>
-                                    <span class="location"><img src="assets/images/icons/marker.png" alt="">450 E 1st Ave, New Jersey</span>
-                                </div>
-                                <div class="right">
-                                    <div class="type-wrap">
-                                        <span class="price">$2550</span>
-                                        <span class="type">For Sale</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Property end-->
-
-                    <!--Property start-->
-                    <div class="property-item col">
-                        <div class="property-inner">
-                            <div class="image">
-                                <span class="label">popular</span>
+                                <span class="label">{{$property->status}}</span>
                                 <a href="single-properties.html"><img src="assets/images/property/property-3.jpg" alt=""></a>
                                 <ul class="property-feature">
                                     <li>
@@ -596,128 +646,129 @@
                             </div>
                             <div class="content">
                                 <div class="left">
-                                    <h3 class="title"><a href="single-properties.html">Ruposi Bangla Cottage</a></h3>
-                                    <span class="location"><img src="assets/images/icons/marker.png" alt="">215 L AH Rod, California</span>
+                                    <h3 class="title"><a href="single-properties.html">{{$property->property_name}}</a></h3>
+                                    <span class="location"><img src="assets/images/icons/marker.png" alt="">{{$property->address}}</span>
                                 </div>
                                 <div class="right">
                                     <div class="type-wrap">
-                                        <span class="price">$550<span>M</span></span>
+                                        <span class="price">{{$property->rent}}<span>M</span></span>
                                         <span class="type">For Rent</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                        @endforeach
                     <!--Property end-->
 
-                    <!--Property start-->
-                    <div class="property-item col">
-                        <div class="property-inner">
-                            <div class="image">
-                                <a href="single-properties.html"><img src="assets/images/property/property-4.jpg" alt=""></a>
-                                <ul class="property-feature">
-                                    <li>
-                                        <span class="area"><img src="assets/images/icons/area.png" alt="">550 SqFt</span>
-                                    </li>
-                                    <li>
-                                        <span class="bed"><img src="assets/images/icons/bed.png" alt="">6</span>
-                                    </li>
-                                    <li>
-                                        <span class="bath"><img src="assets/images/icons/bath.png" alt="">4</span>
-                                    </li>
-                                    <li>
-                                        <span class="parking"><img src="assets/images/icons/parking.png" alt="">3</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="content">
-                                <div class="left">
-                                    <h3 class="title"><a href="single-properties.html">MayaKanon de Villa</a></h3>
-                                    <span class="location"><img src="assets/images/icons/marker.png" alt="">12 EA 1st Ave, Washington</span>
-                                </div>
-                                <div class="right">
-                                    <div class="type-wrap">
-                                        <span class="price">$550<span>M</span></span>
-                                        <span class="type">For Rent</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Property end-->
+                    {{--<!--Property start-->--}}
+                    {{--<div class="property-item col">--}}
+                        {{--<div class="property-inner">--}}
+                            {{--<div class="image">--}}
+                                {{--<a href="single-properties.html"><img src="assets/images/property/property-4.jpg" alt=""></a>--}}
+                                {{--<ul class="property-feature">--}}
+                                    {{--<li>--}}
+                                        {{--<span class="area"><img src="assets/images/icons/area.png" alt="">550 SqFt</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="bed"><img src="assets/images/icons/bed.png" alt="">6</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="bath"><img src="assets/images/icons/bath.png" alt="">4</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="parking"><img src="assets/images/icons/parking.png" alt="">3</span>--}}
+                                    {{--</li>--}}
+                                {{--</ul>--}}
+                            {{--</div>--}}
+                            {{--<div class="content">--}}
+                                {{--<div class="left">--}}
+                                    {{--<h3 class="title"><a href="single-properties.html">MayaKanon de Villa</a></h3>--}}
+                                    {{--<span class="location"><img src="assets/images/icons/marker.png" alt="">12 EA 1st Ave, Washington</span>--}}
+                                {{--</div>--}}
+                                {{--<div class="right">--}}
+                                    {{--<div class="type-wrap">--}}
+                                        {{--<span class="price">$550<span>M</span></span>--}}
+                                        {{--<span class="type">For Rent</span>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<!--Property end-->--}}
 
-                    <!--Property start-->
-                    <div class="property-item col">
-                        <div class="property-inner">
-                            <div class="image">
-                                <a href="single-properties.html"><img src="assets/images/property/property-5.jpg" alt=""></a>
-                                <ul class="property-feature">
-                                    <li>
-                                        <span class="area"><img src="assets/images/icons/area.png" alt="">550 SqFt</span>
-                                    </li>
-                                    <li>
-                                        <span class="bed"><img src="assets/images/icons/bed.png" alt="">6</span>
-                                    </li>
-                                    <li>
-                                        <span class="bath"><img src="assets/images/icons/bath.png" alt="">4</span>
-                                    </li>
-                                    <li>
-                                        <span class="parking"><img src="assets/images/icons/parking.png" alt="">3</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="content">
-                                <div class="left">
-                                    <h3 class="title"><a href="single-properties.html">Azorex de South Villa</a></h3>
-                                    <span class="location"><img src="assets/images/icons/marker.png" alt="">668 L 2nd Ave, Boston</span>
-                                </div>
-                                <div class="right">
-                                    <div class="type-wrap">
-                                        <span class="price">$2550</span>
-                                        <span class="type">For Sale</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Property end-->
+                    {{--<!--Property start-->--}}
+                    {{--<div class="property-item col">--}}
+                        {{--<div class="property-inner">--}}
+                            {{--<div class="image">--}}
+                                {{--<a href="single-properties.html"><img src="assets/images/property/property-5.jpg" alt=""></a>--}}
+                                {{--<ul class="property-feature">--}}
+                                    {{--<li>--}}
+                                        {{--<span class="area"><img src="assets/images/icons/area.png" alt="">550 SqFt</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="bed"><img src="assets/images/icons/bed.png" alt="">6</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="bath"><img src="assets/images/icons/bath.png" alt="">4</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="parking"><img src="assets/images/icons/parking.png" alt="">3</span>--}}
+                                    {{--</li>--}}
+                                {{--</ul>--}}
+                            {{--</div>--}}
+                            {{--<div class="content">--}}
+                                {{--<div class="left">--}}
+                                    {{--<h3 class="title"><a href="single-properties.html">Azorex de South Villa</a></h3>--}}
+                                    {{--<span class="location"><img src="assets/images/icons/marker.png" alt="">668 L 2nd Ave, Boston</span>--}}
+                                {{--</div>--}}
+                                {{--<div class="right">--}}
+                                    {{--<div class="type-wrap">--}}
+                                        {{--<span class="price">$2550</span>--}}
+                                        {{--<span class="type">For Sale</span>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<!--Property end-->--}}
 
-                    <!--Property start-->
-                    <div class="property-item col">
-                        <div class="property-inner">
-                            <div class="image">
-                                <span class="label">Feature</span>
-                                <a href="single-properties.html"><img src="assets/images/property/property-6.jpg" alt=""></a>
-                                <ul class="property-feature">
-                                    <li>
-                                        <span class="area"><img src="assets/images/icons/area.png" alt="">550 SqFt</span>
-                                    </li>
-                                    <li>
-                                        <span class="bed"><img src="assets/images/icons/bed.png" alt="">6</span>
-                                    </li>
-                                    <li>
-                                        <span class="bath"><img src="assets/images/icons/bath.png" alt="">4</span>
-                                    </li>
-                                    <li>
-                                        <span class="parking"><img src="assets/images/icons/parking.png" alt="">3</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="content">
-                                <div class="left">
-                                    <h3 class="title"><a href="single-properties.html">Radison de Villa</a></h3>
-                                    <span class="location"><img src="assets/images/icons/marker.png" alt="">12 1st Ave, New Yourk</span>
-                                </div>
-                                <div class="right">
-                                    <div class="type-wrap">
-                                        <span class="price">$550<span>M</span></span>
-                                        <span class="type">For Rent</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Property end-->
+                    {{--<!--Property start-->--}}
+                    {{--<div class="property-item col">--}}
+                        {{--<div class="property-inner">--}}
+                            {{--<div class="image">--}}
+                                {{--<span class="label">Feature</span>--}}
+                                {{--<a href="single-properties.html"><img src="assets/images/property/property-6.jpg" alt=""></a>--}}
+                                {{--<ul class="property-feature">--}}
+                                    {{--<li>--}}
+                                        {{--<span class="area"><img src="assets/images/icons/area.png" alt="">550 SqFt</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="bed"><img src="assets/images/icons/bed.png" alt="">6</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="bath"><img src="assets/images/icons/bath.png" alt="">4</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="parking"><img src="assets/images/icons/parking.png" alt="">3</span>--}}
+                                    {{--</li>--}}
+                                {{--</ul>--}}
+                            {{--</div>--}}
+                            {{--<div class="content">--}}
+                                {{--<div class="left">--}}
+                                    {{--<h3 class="title"><a href="single-properties.html">Radison de Villa</a></h3>--}}
+                                    {{--<span class="location"><img src="assets/images/icons/marker.png" alt="">12 1st Ave, New Yourk</span>--}}
+                                {{--</div>--}}
+                                {{--<div class="right">--}}
+                                    {{--<div class="type-wrap">--}}
+                                        {{--<span class="price">$550<span>M</span></span>--}}
+                                        {{--<span class="type">For Rent</span>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<!--Property end-->--}}
 
                 </div>
                 <!--Property Slider end-->
