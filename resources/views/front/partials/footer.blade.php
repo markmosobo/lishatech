@@ -35,11 +35,11 @@
                 <div class="footer-widget col-lg-3 col-md-6 col-12 mb-40">
                     <h4 class="title"><span class="text">Useful links</span><span class="shape"></span></h4>
                     <ul>
-                        <li><a href="#">Rental Builidngs</a></li>
-                        <li><a href="#">Browe all Categories</a></li>
-                        <li><a href="#">Top Mortagages Rates</a></li>
-                        <li><a href="#">RentalTerms of use</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="{{url('about-us')}}">About Us</a></li>
+                        <li><a href="{{url('our-services')}}">Services</a></li>
+                        <li><a href="{{url('all-properties')}}">Properties</a></li>
+                        <li><a href="{{url('blog')}}">Blog</a></li>
+                        <li><a href="{{url('management-portfolio')}}">Management Portfolio</a></li>
                     </ul>
                 </div>
                 <!--Footer Widget end-->

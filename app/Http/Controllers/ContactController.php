@@ -77,7 +77,7 @@ class ContactController extends AppBaseController
             return redirect(route('contacts.index'));
         }
 
-        return view('contacts.show')->with('contact', $contact);
+        return response()->json($contact);
     }
 
     /**
