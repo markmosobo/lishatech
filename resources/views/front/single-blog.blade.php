@@ -118,35 +118,35 @@
 
                 <div class="col-xl-3 col-lg-4 col-12 order-2 order-lg-1 pr-30 pr-sm-15 pr-xs-15">
 
-                    <!--Sidebar start-->
-                    <div class="sidebar">
-                        <h4 class="sidebar-title"><span class="text">Search</span><span class="shape"></span></h4>
+                    {{--<!--Sidebar start-->--}}
+                    {{--<div class="sidebar">--}}
+                        {{--<h4 class="sidebar-title"><span class="text">Search</span><span class="shape"></span></h4>--}}
 
-                        <div class="sidebar-search">
-                            <form action="#">
-                                <input type="text" placeholder="Search">
-                                <button><i class="pe-7s-search"></i></button>
-                            </form>
-                        </div>
+                        {{--<div class="sidebar-search">--}}
+                            {{--<form action="#">--}}
+                                {{--<input type="text" placeholder="Search">--}}
+                                {{--<button><i class="pe-7s-search"></i></button>--}}
+                            {{--</form>--}}
+                        {{--</div>--}}
 
-                    </div>
-                    <!--Sidebar end-->
+                    {{--</div>--}}
+                    {{--<!--Sidebar end-->--}}
 
-                    <!--Sidebar start-->
-                    <div class="sidebar">
-                        <h4 class="sidebar-title"><span class="text">Categiry</span><span class="shape"></span></h4>
+                    {{--<!--Sidebar start-->--}}
+                    {{--<div class="sidebar">--}}
+                        {{--<h4 class="sidebar-title"><span class="text">Categiry</span><span class="shape"></span></h4>--}}
 
-                        <ul class="sidebar-list">
-                            <li><a href="#">Houses</a></li>
-                            <li><a href="#">Real Home</a></li>
-                            <li><a href="#">Garages</a></li>
-                            <li><a href="#">Real Estates</a></li>
-                            <li><a href="#">Properties</a></li>
-                            <li><a href="#">Family House</a></li>
-                        </ul>
+                        {{--<ul class="sidebar-list">--}}
+                            {{--<li><a href="#">Houses</a></li>--}}
+                            {{--<li><a href="#">Real Home</a></li>--}}
+                            {{--<li><a href="#">Garages</a></li>--}}
+                            {{--<li><a href="#">Real Estates</a></li>--}}
+                            {{--<li><a href="#">Properties</a></li>--}}
+                            {{--<li><a href="#">Family House</a></li>--}}
+                        {{--</ul>--}}
 
-                    </div>
-                    <!--Sidebar end-->
+                    {{--</div>--}}
+                    {{--<!--Sidebar end-->--}}
 
                     <!--Sidebar start-->
                     <div class="sidebar">
@@ -154,37 +154,21 @@
 
                         <!--Sidebar Property start-->
                         <div class="sidebar-news-list">
+                        @foreach($blogs as $blog)
 
                             <div class="sidebar-news">
                                 <div class="image">
-                                    <a href="news-details.html"><img src="assets/images/news/sidebar-news-1.jpg" alt=""></a>
+                                    <a href="{{url('single-blog/'.$blog->id)}}"><img src="{{asset('assets/images/news/sidebar-news-1.jpg')}}" alt=""></a>
                                 </div>
                                 <div class="content">
-                                    <h5 class="title"><a href="news-details.html">Duplex Villa with Altra Concept</a></h5>
-                                    <span class="date">September 30, 2018</span>
+                                    <h5 class="title"><a href="{{url('single-blog/'.$blog->id)}}">{{$blog->blog_title}}</a></h5>
+                                    <span class="date">{{date('M',strtotime($blog->date))}}
+                                        {{\Carbon\Carbon::parse($blog->date)->day}},
+                                        {{date('Y',strtotime($blog->date))}}</span>
                                 </div>
                             </div>
 
-                            <div class="sidebar-news">
-                                <div class="image">
-                                    <a href="news-details.html"><img src="assets/images/news/sidebar-news-2.jpg" alt=""></a>
-                                </div>
-                                <div class="content">
-                                    <h5 class="title"><a href="news-details.html">Joint Mortgage: Pros vs. Cons</a></h5>
-                                    <span class="date">September 30, 2018</span>
-                                </div>
-                            </div>
-
-                            <div class="sidebar-news">
-                                <div class="image">
-                                    <a href="news-details.html"><img src="assets/images/news/sidebar-news-3.jpg" alt=""></a>
-                                </div>
-                                <div class="content">
-                                    <h5 class="title"><a href="news-details.html">Dealing with Student Loan Debt</a></h5>
-                                    <span class="date">September 30, 2018</span>
-                                </div>
-                            </div>
-
+                        @endforeach
                         </div>
                         <!--Sidebar Property end-->
 

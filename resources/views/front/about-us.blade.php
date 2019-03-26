@@ -21,7 +21,7 @@
                     <div class="row">
                         <div class="col">
                             <div class="about-content">
-                                <h3>About <span>{{config('app.name')}}</span></h3>
+                                <h3>About <span>{{config('app.name')}} Investments Limited</span></h3>
                                 <h1>We Always Provide Priority to Our Customer</h1>
                                 <p>{{$about->description}}</p>
 

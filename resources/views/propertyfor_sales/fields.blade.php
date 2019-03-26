@@ -30,8 +30,8 @@
 
 <!-- Image Path Field -->
 <div class="form-group col-sm-12">
-    {!! Form::label('image_path', 'Image Path:') !!}
-    {!! Form::text('image_path', null, ['class' => 'form-control']) !!}
+    {!! Form::label('image', 'Upload Image:') !!}
+    {!! Form::file('image', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Description Field -->

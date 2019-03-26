@@ -8,13 +8,13 @@
 
 
         <!--Hero Section start-->
-        @foreach($comproperties as $property)
-        <div class="hero-section section position-relative">
 
+        <div class="hero-section section position-relative">
             <!--Hero Slider start-->
             <div class="hero-slider section">
 
                 <!--Hero Item start-->
+                @foreach($comproperties as $property)
                 <div class="hero-item" style="background-image: url(assets/images/hero/hero-1.jpg)">
                     <div class="container">
                         <div class="row">
@@ -26,7 +26,9 @@
                                     <h1 class="title"><a href="{{url('/properties-for-sale-commercial')}}">Commercial Properties For Sale</a></h1>
                                     <span class="location"><img src="assets/images/icons/hero-marker.png" alt=""> {{$property->address}}</span>
                                     <div class="type-wrap">
+                                        <a href="{{url('single-property/'.$property->id)}}">
                                         <span class="type">For Sale</span>
+                                        </a>
                                         <span class="price">Ksh. {{$property->price}} </span>
                                     </div>
                                     {{--<ul class="property-feature">--}}
@@ -52,9 +54,11 @@
                         </div>
                     </div>
                 </div>
+                @endforeach
                 <!--Hero Item end-->
 
                 <!--Hero Item start-->
+                @foreach($resproperties as $property)
                 <div class="hero-item" style="background-image: url(assets/images/hero/hero-3.jpg)">
                     <div class="container">
                         <div class="row">
@@ -66,8 +70,8 @@
                                     <h1 class="title"><a href="{{url('/properties-for-sale-residential')}}">Residential Properties For Sale</a></h1>
                                     <span class="location"><img src="assets/images/icons/marker.png" alt=""><img src="assets/images/icons/hero-marker.png" alt=""> {{$property->address}}</span>
                                     <div class="type-wrap">
-                                        <span class="type">For Sale</span>
-                                        <span class="price">Ksh. {{$property->price}} </span>
+                                        <span class="type">For Rent</span>
+                                        <span class="price">Ksh. {{$property->rent}} </span>
                                     </div>
                                     {{--<ul class="property-feature">--}}
                                         {{--<li>--}}
@@ -92,134 +96,134 @@
                         </div>
                     </div>
                 </div>
+                @endforeach
                 <!--Hero Item end-->
 
             </div>
             <!--Hero Slider end-->
-
         </div>
-        @endforeach
+
         <!--Hero Section end-->
 
 
 
 
 
-    <!--Search Section section start-->
-    <div class="search-section section pt-100 pt-lg-80 pt-md-70 pt-sm-60 pt-xs-50 pb-100 pb-lg-80 pb-md-70 pb-sm-60 pb-xs-50">
-        <div class="container">
+    {{--<!--Search Section section start-->--}}
+    {{--<div class="search-section section pt-100 pt-lg-80 pt-md-70 pt-sm-60 pt-xs-50 pb-100 pb-lg-80 pb-md-70 pb-sm-60 pb-xs-50">--}}
+        {{--<div class="container">--}}
 
-            <!--Section Title start-->
-            <div class="row">
-                <div class="col-md-12 mb-60 mb-xs-30">
-                    <div class="section-title center">
-                        <h1>Find Your Home</h1>
-                    </div>
-                </div>
-            </div>
-            <!--Section Title end-->
+            {{--<!--Section Title start-->--}}
+            {{--<div class="row">--}}
+                {{--<div class="col-md-12 mb-60 mb-xs-30">--}}
+                    {{--<div class="section-title center">--}}
+                        {{--<h1>Find Your Home</h1>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<!--Section Title end-->--}}
 
-            <div class="row">
-                <div class="col">
+            {{--<div class="row">--}}
+                {{--<div class="col">--}}
 
-                    <!--Property Search start-->
-                    <div class="property-search">
+                    {{--<!--Property Search start-->--}}
+                    {{--<div class="property-search">--}}
 
-                        <form action="#">
+                        {{--<form action="#">--}}
 
-                            <div>
-                                <input type="text" placeholder="Location">
-                            </div>
+                            {{--<div>--}}
+                                {{--<input type="text" placeholder="Location">--}}
+                            {{--</div>--}}
 
-                            <div>
-                                <select class="nice-select">
-                                    <option>All Cities</option>
-                                    <option>Athina</option>
-                                    <option>Austin</option>
-                                    <option>Baytown</option>
-                                    <option>Brampton</option>
-                                    <option>Cedar Hill</option>
-                                    <option>Chester</option>
-                                    <option>Chicago</option>
-                                    <option>Coleman</option>
-                                    <option>Corpus Christi</option>
-                                    <option>Dallas</option>
-                                    <option>distrito federal</option>
-                                    <option>Fayetteville</option>
-                                    <option>Galveston</option>
-                                    <option>Jersey City</option>
-                                    <option>Los Angeles</option>
-                                    <option>Midland</option>
-                                    <option>New York</option>
-                                    <option>Odessa</option>
-                                    <option>Reno</option>
-                                    <option>San Angelo</option>
-                                    <option>San Antonio</option>
-                                </select>
-                            </div>
+                            {{--<div>--}}
+                                {{--<select class="nice-select">--}}
+                                    {{--<option>All Cities</option>--}}
+                                    {{--<option>Athina</option>--}}
+                                    {{--<option>Austin</option>--}}
+                                    {{--<option>Baytown</option>--}}
+                                    {{--<option>Brampton</option>--}}
+                                    {{--<option>Cedar Hill</option>--}}
+                                    {{--<option>Chester</option>--}}
+                                    {{--<option>Chicago</option>--}}
+                                    {{--<option>Coleman</option>--}}
+                                    {{--<option>Corpus Christi</option>--}}
+                                    {{--<option>Dallas</option>--}}
+                                    {{--<option>distrito federal</option>--}}
+                                    {{--<option>Fayetteville</option>--}}
+                                    {{--<option>Galveston</option>--}}
+                                    {{--<option>Jersey City</option>--}}
+                                    {{--<option>Los Angeles</option>--}}
+                                    {{--<option>Midland</option>--}}
+                                    {{--<option>New York</option>--}}
+                                    {{--<option>Odessa</option>--}}
+                                    {{--<option>Reno</option>--}}
+                                    {{--<option>San Angelo</option>--}}
+                                    {{--<option>San Antonio</option>--}}
+                                {{--</select>--}}
+                            {{--</div>--}}
 
-                            <div>
-                                <select class="nice-select">
-                                    <option>For Rent</option>
-                                    <option>For Sale</option>
-                                </select>
-                            </div>
+                            {{--<div>--}}
+                                {{--<select class="nice-select">--}}
+                                    {{--<option>For Rent</option>--}}
+                                    {{--<option>For Sale</option>--}}
+                                {{--</select>--}}
+                            {{--</div>--}}
 
-                            <div>
-                                <select class="nice-select">
-                                    <option>Type</option>
-                                    <option>Apartment</option>
-                                    <option>Cafe</option>
-                                    <option>House</option>
-                                    <option>Restaurant</option>
-                                    <option>Store</option>
-                                    <option>Villa</option>
-                                </select>
-                            </div>
+                            {{--<div>--}}
+                                {{--<select class="nice-select">--}}
+                                    {{--<option>Type</option>--}}
+                                    {{--<option>Apartment</option>--}}
+                                    {{--<option>Cafe</option>--}}
+                                    {{--<option>House</option>--}}
+                                    {{--<option>Restaurant</option>--}}
+                                    {{--<option>Store</option>--}}
+                                    {{--<option>Villa</option>--}}
+                                {{--</select>--}}
+                            {{--</div>--}}
 
-                            <div>
-                                <select class="nice-select">
-                                    <option>Bedrooms</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option>
-                                </select>
-                            </div>
+                            {{--<div>--}}
+                                {{--<select class="nice-select">--}}
+                                    {{--<option>Bedrooms</option>--}}
+                                    {{--<option>1</option>--}}
+                                    {{--<option>2</option>--}}
+                                    {{--<option>3</option>--}}
+                                    {{--<option>4</option>--}}
+                                    {{--<option>5</option>--}}
+                                    {{--<option>6</option>--}}
+                                {{--</select>--}}
+                            {{--</div>--}}
 
-                            <div>
-                                <select class="nice-select">
-                                    <option>Bathrooms</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option>
-                                </select>
-                            </div>
+                            {{--<div>--}}
+                                {{--<select class="nice-select">--}}
+                                    {{--<option>Bathrooms</option>--}}
+                                    {{--<option>1</option>--}}
+                                    {{--<option>2</option>--}}
+                                    {{--<option>3</option>--}}
+                                    {{--<option>4</option>--}}
+                                    {{--<option>5</option>--}}
+                                    {{--<option>6</option>--}}
+                                {{--</select>--}}
+                            {{--</div>--}}
 
-                            <div>
-                                <div id="search-price-range"></div>
-                            </div>
+                            {{--<div>--}}
+                                {{--<div id="search-price-range"></div>--}}
+                            {{--</div>--}}
 
-                            <div>
-                                <button>search</button>
-                            </div>
+                            {{--<div>--}}
+                                {{--<button>search</button>--}}
+                            {{--</div>--}}
 
-                        </form>
+                        {{--</form>--}}
 
-                    </div>
-                    <!--Property Search end-->
+                    {{--</div>--}}
+                    {{--<!--Property Search end-->--}}
 
-                </div>
-            </div>
+                {{--</div>--}}
+            {{--</div>--}}
 
-        </div>
-    </div>
-    <!--Search Section section end-->
+        {{--</div>--}}
+    {{--</div>--}}
+    {{--<!--Search Section section end-->--}}
 
     <!--Welcome Khonike - Real Estate Bootstrap 4 Templatesection-->
         @foreach($aboutus as $about)
@@ -242,32 +246,32 @@
                                 <h1>We Always Provide Priority to Our Customer</h1>
                                 <p>{{$about->description}}</p>
 
-                                <ul class="feature-list">
-                                    <li>
-                                        <i class="pe-7s-piggy"></i>
-                                        <h4>Low Cost</h4>
-                                    </li>
-                                    <li>
-                                        <i class="pe-7s-science"></i>
-                                        <h4>Modern Design</h4>
-                                    </li>
-                                    <li>
-                                        <i class="pe-7s-display1"></i>
-                                        <h4>Good Marketing</h4>
-                                    </li>
-                                    <li>
-                                        <i class="pe-7s-signal"></i>
-                                        <h4>Free Wifi</h4>
-                                    </li>
-                                    <li>
-                                        <i class="pe-7s-map"></i>
-                                        <h4>Easy to Find</h4>
-                                    </li>
-                                    <li>
-                                        <i class="pe-7s-shield"></i>
-                                        <h4>Reliable</h4>
-                                    </li>
-                                </ul>
+                                {{--<ul class="feature-list">--}}
+                                    {{--<li>--}}
+                                        {{--<i class="pe-7s-piggy"></i>--}}
+                                        {{--<h4>Low Cost</h4>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<i class="pe-7s-science"></i>--}}
+                                        {{--<h4>Modern Design</h4>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<i class="pe-7s-display1"></i>--}}
+                                        {{--<h4>Good Marketing</h4>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<i class="pe-7s-signal"></i>--}}
+                                        {{--<h4>Free Wifi</h4>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<i class="pe-7s-map"></i>--}}
+                                        {{--<h4>Easy to Find</h4>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<i class="pe-7s-shield"></i>--}}
+                                        {{--<h4>Reliable</h4>--}}
+                                    {{--</li>--}}
+                                {{--</ul>--}}
 
                             </div>
                         </div>
@@ -538,7 +542,7 @@
             <div class="row">
                 <div class="col-md-12 mb-60 mb-xs-30">
                     <div class="section-title center">
-                        <h1>Properties On Rent</h1>
+                        <h1>Properties To Rent</h1>
                     </div>
                 </div>
             </div>
@@ -628,21 +632,21 @@
                         <div class="property-inner">
                             <div class="image">
                                 <span class="label">{{$property->status}}</span>
-                                <a href="single-properties.html"><img src="assets/images/property/property-3.jpg" alt=""></a>
-                                <ul class="property-feature">
-                                    <li>
-                                        <span class="area"><img src="assets/images/icons/area.png" alt="">550 SqFt</span>
-                                    </li>
-                                    <li>
-                                        <span class="bed"><img src="assets/images/icons/bed.png" alt="">6</span>
-                                    </li>
-                                    <li>
-                                        <span class="bath"><img src="assets/images/icons/bath.png" alt="">4</span>
-                                    </li>
-                                    <li>
-                                        <span class="parking"><img src="assets/images/icons/parking.png" alt="">3</span>
-                                    </li>
-                                </ul>
+                                <a href="{{url('single-property/'.$property->id)}}"><img src="assets/images/property/property-3.jpg" alt=""></a>
+                                {{--<ul class="property-feature">--}}
+                                    {{--<li>--}}
+                                        {{--<span class="area"><img src="assets/images/icons/area.png" alt="">550 SqFt</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="bed"><img src="assets/images/icons/bed.png" alt="">6</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="bath"><img src="assets/images/icons/bath.png" alt="">4</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="parking"><img src="assets/images/icons/parking.png" alt="">3</span>--}}
+                                    {{--</li>--}}
+                                {{--</ul>--}}
                             </div>
                             <div class="content">
                                 <div class="left">

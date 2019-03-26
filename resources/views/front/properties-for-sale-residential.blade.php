@@ -56,25 +56,25 @@
                         <div class="property-inner">
                             <div class="image">
                                 <span class="label">{{$property->status}}</span>
-                                <a href="single-properties.html"><img src="assets/images/property/property-2.jpg" alt=""></a>
-                                <ul class="property-feature">
-                                    <li>
-                                        <span class="area"><img src="assets/images/icons/area.png" alt="">550 SqFt</span>
-                                    </li>
-                                    <li>
-                                        <span class="bed"><img src="assets/images/icons/bed.png" alt="">6</span>
-                                    </li>
-                                    <li>
-                                        <span class="bath"><img src="assets/images/icons/bath.png" alt="">4</span>
-                                    </li>
-                                    <li>
-                                        <span class="parking"><img src="assets/images/icons/parking.png" alt="">3</span>
-                                    </li>
-                                </ul>
+                                <a href="{{url('single-property/'.$property->id)}}"><img src="assets/images/property/property-2.jpg" alt=""></a>
+                                {{--<ul class="property-feature">--}}
+                                    {{--<li>--}}
+                                        {{--<span class="area"><img src="assets/images/icons/area.png" alt="">550 SqFt</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="bed"><img src="assets/images/icons/bed.png" alt="">6</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="bath"><img src="assets/images/icons/bath.png" alt="">4</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="parking"><img src="assets/images/icons/parking.png" alt="">3</span>--}}
+                                    {{--</li>--}}
+                                {{--</ul>--}}
                             </div>
                             <div class="content">
                                 <div class="left">
-                                    <h3 class="title"><a href="single-properties.html">{{$property->property_name}}</a></h3>
+                                    <h3 class="title"><a href="{{url('single-property/'.$property->id)}}">{{$property->property_name}}</a></h3>
                                     <span class="location"><img src="assets/images/icons/marker.png" alt="">{{$property->address}}</span>
                                 </div>
                                 <div class="right">

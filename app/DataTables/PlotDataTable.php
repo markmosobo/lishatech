@@ -65,6 +65,7 @@ class PlotDataTable extends DataTable
     {
         return [
             'plot_title',
+            'plot_address',
             'price',
             'image_path',
             'description'

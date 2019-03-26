@@ -8,12 +8,13 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class Plot
  * @package App\Models
- * @version March 13, 2019, 3:00 pm EAT
+ * @version March 26, 2019, 9:08 am EAT
  *
  * @property \Illuminate\Database\Eloquent\Collection roleRoute
  * @property \Illuminate\Database\Eloquent\Collection roleUser
  * @property \Illuminate\Database\Eloquent\Collection roles
  * @property string plot_title
+ * @property string plot_address
  * @property bigInteger price
  * @property string image_path
  * @property string description
@@ -33,6 +34,7 @@ class Plot extends Model
 
     public $fillable = [
         'plot_title',
+        'plot_address',
         'price',
         'image_path',
         'description'
@@ -46,6 +48,7 @@ class Plot extends Model
     protected $casts = [
         'id' => 'integer',
         'plot_title' => 'string',
+        'plot_address' => 'string',
         'image_path' => 'string',
         'description' => 'string'
     ];

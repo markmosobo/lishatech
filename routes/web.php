@@ -6,6 +6,7 @@ Route::get('single-blog/{id}','FrontEndController@singleBlog');
 Route::get('/contact-us','FrontEndController@contactUs');
 Route::get('/management-portfolio','FrontEndController@managementPortfolio');
 Route::get('/plots-for-sale','FrontEndController@salePlot');
+Route::get('/single-plot/{id}','FrontEndController@singlePlot');
 Route::get('/properties-for-sale-commercial','FrontEndController@saleCommercial');
 Route::get('/properties-for-sale-residential','FrontEndController@saleResidential');
 Route::get('/properties-to-rent-commercial','FrontEndController@rentCommercial');
@@ -137,7 +138,7 @@ Route::resource('blogs', 'BlogController');
 
 Route::resource('properties', 'PropertyController');
 
-Route::resource('plots', 'PlotController');
+
 
 Route::resource('blogs', 'BlogController');
 
@@ -152,3 +153,5 @@ Route::resource('contacts', 'ContactController');
 Route::resource('socialMedia', 'SocialMediaController');
 
 Route::resource('aboutuses', 'AboutUsController');
+
+Route::resource('plots', 'PlotController');

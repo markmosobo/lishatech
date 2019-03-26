@@ -4,6 +4,12 @@
     {!! Form::text('plot_title', null, ['class' => 'form-control']) !!}
 </div>
 
+<!-- Plot Address Field -->
+<div class="form-group col-sm-12">
+    {!! Form::label('plot_address', 'Plot Address:') !!}
+    {!! Form::text('plot_address', null, ['class' => 'form-control']) !!}
+</div>
+
 <!-- Price Field -->
 <div class="form-group col-sm-12">
     {!! Form::label('price', 'Price:') !!}
@@ -12,8 +18,8 @@
 
 <!-- Image Path Field -->
 <div class="form-group col-sm-12">
-    {!! Form::label('image_path', 'Image Path:') !!}
-    {!! Form::text('image_path', null, ['class' => 'form-control']) !!}
+    {!! Form::label('image', 'Upload Image:') !!}
+    {!! Form::file('image', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Description Field -->

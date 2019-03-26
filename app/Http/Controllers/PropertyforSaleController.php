@@ -53,6 +53,12 @@ class PropertyforSaleController extends AppBaseController
     {
         $input = $request->all();
 
+        if($request->hasFile('image')) {
+            $image = $request->file('image');
+//            echo 'yes';die;
+            $input['image_path'] = $request->file('image')->store('uploads');
+        }
+
         $propertyforSale = $this->propertyforSaleRepository->create($input);
 
         Flash::success('Propertyfor Sale saved successfully.');

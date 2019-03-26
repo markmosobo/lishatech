@@ -16,6 +16,7 @@ class CreatePlotsTable extends Migration
         Schema::create('plots', function (Blueprint $table) {
             $table->increments('id');
             $table->string('plot_title')->nullable();
+            $table->string('plot_address')->nullable();
             $table->bigInteger('price')->nullable();
             $table->string('image_path')->nullable();
             $table->longText('description')->nullable();

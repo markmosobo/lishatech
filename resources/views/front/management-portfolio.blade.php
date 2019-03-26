@@ -11,6 +11,7 @@
             <div class="row">
 
                 <!--News start-->
+                @foreach($portfolio as $port)
                 <div class="col-lg-4 col-md-6 col-12 mb-30">
                     <div class="news">
                         <div class="image">
@@ -27,14 +28,15 @@
                             </div>
                         </div>
                         <div class="content">
-                            <h4 class="title"><a href="#">Duplex Villa with Altra Concept</a></h4>
+                            <h4 class="title"><a href="#">{{$port->property_title}}</a></h4>
                             <div class="desc">
-                                <p>Khonike - Real Estate Bootstrap 4 Templatethe best theme for  elit, sed do to eiumod tempor dolor sit amet, ctetur adipiscing elit sed do.</p>
+                                <p>{{$port->description}}</p>
                             </div>
                             {{--<a href="news-details.html" class="readmore">Continure Reading</a>--}}
                         </div>
                     </div>
                 </div>
+                @endforeach
                 <!--News end-->
 
 

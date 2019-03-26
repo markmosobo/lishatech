@@ -87,40 +87,42 @@
                     {{--<!--Property end-->--}}
 
                     <!--Property start-->
+                        @foreach($properties as $property)
                     <div class="property-item col">
                         <div class="property-inner">
                             <div class="image">
-                                <span class="label">popular</span>
-                                <a href="single-properties.html"><img src="assets/images/property/property-3.jpg" alt=""></a>
-                                <ul class="property-feature">
-                                    <li>
-                                        <span class="area"><img src="assets/images/icons/area.png" alt="">550 SqFt</span>
-                                    </li>
-                                    <li>
-                                        <span class="bed"><img src="assets/images/icons/bed.png" alt="">6</span>
-                                    </li>
-                                    <li>
-                                        <span class="bath"><img src="assets/images/icons/bath.png" alt="">4</span>
-                                    </li>
-                                    <li>
-                                        <span class="parking"><img src="assets/images/icons/parking.png" alt="">3</span>
-                                    </li>
-                                </ul>
+                                <span class="label">For Rent - Residential</span>
+                                <a href="{{url('single-property/'.$property->id)}}"><img src="assets/images/property/property-3.jpg" alt=""></a>
+                                {{--<ul class="property-feature">--}}
+                                    {{--<li>--}}
+                                        {{--<span class="area"><img src="assets/images/icons/area.png" alt="">550 SqFt</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="bed"><img src="assets/images/icons/bed.png" alt="">6</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="bath"><img src="assets/images/icons/bath.png" alt="">4</span>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<span class="parking"><img src="assets/images/icons/parking.png" alt="">3</span>--}}
+                                    {{--</li>--}}
+                                {{--</ul>--}}
                             </div>
                             <div class="content">
                                 <div class="left">
-                                    <h3 class="title"><a href="single-properties.html">Ruposi Bangla Cottage</a></h3>
-                                    <span class="location"><img src="assets/images/icons/marker.png" alt="">215 L AH Rod, California</span>
+                                    <h3 class="title"><a href="{{url('single-property/'.$property->id)}}">{{$property->property_name}}</a></h3>
+                                    <span class="location"><img src="assets/images/icons/marker.png" alt="">{{$property->address}}</span>
                                 </div>
                                 <div class="right">
                                     <div class="type-wrap">
-                                        <span class="price">$550<span>M</span></span>
+                                        <span class="price">{{$property->rent}}<span>M</span></span>
                                         <span class="type">For Rent</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                        @endforeach
                     <!--Property end-->
 
                     {{--<!--Property start-->--}}

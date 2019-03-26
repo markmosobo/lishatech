@@ -21,36 +21,23 @@
             <div class="row row-30 align-items-center">
                 <div class="col-lg-5 col-12 mb-30">
                     <div class="property-slider-2">
+                        @foreach($properties as $property)
                         <div class="property-2">
                             <div class="property-inner">
                                 <a href="single-properties.html" class="image"><img src="assets/images/property/property-13.jpg" alt=""></a>
                                 <div class="content">
-                                    <h4 class="title"><a href="single-properties.html">Friuli-Venezia Giulia</a></h4>
-                                    <span class="location">568 E 1st Ave, Miami</span>
-                                    <h4 class="type">Rent <span>$550 <span>Month</span></span></h4>
-                                    <ul>
-                                        <li>6 Bed</li>
-                                        <li>4 Bath</li>
-                                        <li>3 Garage</li>
-                                    </ul>
+                                    <h4 class="title"><a href="single-properties.html">{{$property->property_name}}</a></h4>
+                                    <span class="location">{{$property->address}}</span>
+                                    <h4 class="type">Rent <span>{{$property->price}} <span>Month</span></span></h4>
+                                    {{--<ul>--}}
+                                        {{--<li>6 Bed</li>--}}
+                                        {{--<li>4 Bath</li>--}}
+                                        {{--<li>3 Garage</li>--}}
+                                    {{--</ul>--}}
                                 </div>
                             </div>
                         </div>
-                        <div class="property-2">
-                            <div class="property-inner">
-                                <a href="single-properties.html" class="image"><img src="assets/images/property/property-14.jpg" alt=""></a>
-                                <div class="content">
-                                    <h4 class="title"><a href="single-properties.html">Marvel de Villa</a></h4>
-                                    <span class="location">450 E 1st Ave, New Jersey</span>
-                                    <h4 class="type">Rent <span>$550 <span>Month</span></span></h4>
-                                    <ul>
-                                        <li>6 Bed</li>
-                                        <li>4 Bath</li>
-                                        <li>3 Garage</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                       @endforeach
                     </div>
                 </div>
                 <div class="col-lg-7 col-12">
