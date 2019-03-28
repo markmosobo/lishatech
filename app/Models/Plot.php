@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class Plot
  * @package App\Models
- * @version March 26, 2019, 9:08 am EAT
+ * @version March 28, 2019, 3:12 pm EAT
  *
  * @property \Illuminate\Database\Eloquent\Collection roleRoute
  * @property \Illuminate\Database\Eloquent\Collection roleUser

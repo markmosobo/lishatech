@@ -54,12 +54,12 @@
 
 <!-- All jquery file included here -->
 <script src="https://maps.google.com/maps/api/js?sensor=false&amp;libraries=geometry&amp;v=3.22&amp;key=AIzaSyDAq7MrCR1A2qIShmjbtLHSKjcEIEBEEwM"></script>
-<script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
-<script src="assets/js/popper.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/plugins.js"></script>
-<script src="assets/js/map-place.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="{{asset('assets/js/vendor/jquery-1.12.4.min.js')}}"></script>
+<script src="{{asset('assets/js/popper.min.js')}}"></script>
+<script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('assets/js/plugins.js')}}"></script>
+<script src="{{asset('assets/js/map-place.js')}}"></script>
+<script src="{{asset('assets/js/main.js')}}"></script>
 
 </body>
 

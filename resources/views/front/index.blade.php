@@ -383,7 +383,7 @@
                         <div class="property-inner">
                             <div class="image">
                                 <span class="label">{{$property->status}}</span>
-                                <a href="single-properties.html"><img src="assets/images/property/property-3.jpg" alt=""></a>
+                                <a href="{{url('single-property/'.$property->id)}}"><img src="assets/images/property/property-3.jpg" alt=""></a>
                                 {{--<ul class="property-feature">--}}
                                     {{--<li>--}}
                                         {{--<span class="area"><img src="assets/images/icons/area.png" alt="">550 SqFt</span>--}}
@@ -401,7 +401,7 @@
                             </div>
                             <div class="content">
                                 <div class="left">
-                                    <h3 class="title"><a href="single-properties.html">{{$property->property_name}}</a></h3>
+                                    <h3 class="title"><a href="{{url('single-property/'.$property->id)}}">{{$property->property_name}}</a></h3>
                                     <span class="location"><img src="assets/images/icons/marker.png" alt="">{{$property->address}}</span>
                                 </div>
                                 <div class="right">
@@ -650,7 +650,7 @@
                             </div>
                             <div class="content">
                                 <div class="left">
-                                    <h3 class="title"><a href="single-properties.html">{{$property->property_name}}</a></h3>
+                                    <h3 class="title"><a href="{{url('single-property/'.$property->id)}}">{{$property->property_name}}</a></h3>
                                     <span class="location"><img src="assets/images/icons/marker.png" alt="">{{$property->address}}</span>
                                 </div>
                                 <div class="right">

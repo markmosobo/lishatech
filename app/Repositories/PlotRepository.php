@@ -8,7 +8,7 @@ use InfyOm\Generator\Common\BaseRepository;
 /**
  * Class PlotRepository
  * @package App\Repositories
- * @version March 26, 2019, 9:08 am EAT
+ * @version March 28, 2019, 3:12 pm EAT
  *
  * @method Plot findWithoutFail($id, $columns = ['*'])
  * @method Plot find($id, $columns = ['*'])

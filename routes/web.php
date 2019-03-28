@@ -154,4 +154,6 @@ Route::resource('socialMedia', 'SocialMediaController');
 
 Route::resource('aboutuses', 'AboutUsController');
 
+
+
 Route::resource('plots', 'PlotController');
