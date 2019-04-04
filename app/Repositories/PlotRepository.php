@@ -8,7 +8,7 @@ use InfyOm\Generator\Common\BaseRepository;
 /**
  * Class PlotRepository
  * @package App\Repositories
- * @version March 28, 2019, 3:12 pm EAT
+ * @version April 4, 2019, 2:39 pm EAT
  *
  * @method Plot findWithoutFail($id, $columns = ['*'])
  * @method Plot find($id, $columns = ['*'])
@@ -21,7 +21,7 @@ class PlotRepository extends BaseRepository
      */
     protected $fieldSearchable = [
         'plot_title',
-        'plot_address',
+        'location',
         'price',
         'image_path',
         'description'

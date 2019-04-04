@@ -24,11 +24,17 @@
                         @foreach($properties as $property)
                         <div class="property-2">
                             <div class="property-inner">
-                                <a href="single-properties.html" class="image"><img src="assets/images/property/property-13.jpg" alt=""></a>
+                                <a href="{{url('single-property/'.$property->id)}}" class="image"><img src="assets/images/property/prop.jpg" alt=""></a>
                                 <div class="content">
-                                    <h4 class="title"><a href="single-properties.html">{{$property->property_name}}</a></h4>
+                                    <h4 class="title"><a href="{{url('single-property/'.$property->id)}}">{{$property->property_title}}</a></h4>
                                     <span class="location">{{$property->address}}</span>
-                                    <h4 class="type">Rent <span>{{$property->price}} <span>Month</span></span></h4>
+                                    <h4 class="type">@if($property->status=='For Rent')
+                                            Rent
+                                        <span>{{$property->price}} <span>Month</span></span></h4>
+                                                    @else
+                                                        Sale
+                                        <span>{{$property->price}}</span>
+                                                    @endif
                                     {{--<ul>--}}
                                         {{--<li>6 Bed</li>--}}
                                         {{--<li>4 Bath</li>--}}

@@ -31,5 +31,7 @@ class UserTableSeeder extends Seeder
             'created_by'=>1
         ]);
 
+
+
     }
 }

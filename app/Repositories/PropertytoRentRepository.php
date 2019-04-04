@@ -8,7 +8,7 @@ use InfyOm\Generator\Common\BaseRepository;
 /**
  * Class PropertytoRentRepository
  * @package App\Repositories
- * @version March 14, 2019, 10:47 am EAT
+ * @version April 2, 2019, 6:00 pm EAT
  *
  * @method PropertytoRent findWithoutFail($id, $columns = ['*'])
  * @method PropertytoRent find($id, $columns = ['*'])
@@ -20,9 +20,9 @@ class PropertytoRentRepository extends BaseRepository
      * @var array
      */
     protected $fieldSearchable = [
-        'property_name',
-        'address',
+        'property_title',
         'status',
+        'address',
         'rent',
         'image_path',
         'description'

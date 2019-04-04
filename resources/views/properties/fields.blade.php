@@ -1,44 +1,40 @@
-<!-- Property Name Field -->
+<!-- Property Title Field -->
 <div class="form-group col-sm-12">
-    {!! Form::label('property_name', 'Property Name:') !!}
-    {!! Form::text('property_name', null, ['class' => 'form-control']) !!}
-</div>
-
-<!-- Address Field -->
-<div class="form-group col-sm-12">
-    {!! Form::label('address', 'Address:') !!}
-    {!! Form::text('address', null, ['class' => 'form-control']) !!}
+    {!! Form::label('property_title', 'Property Title:') !!}
+    {!! Form::text('property_title', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Status Field -->
 <div class="form-group col-sm-12">
     {!! Form::label('status', 'Status:') !!}
-    <select name="status" class="form-control select2" id="status" required>
-        <option value="">Select Status</option>
-
-                <option value="To Rent - Commercial">To Rent - Commercial</option>
-                <option value="To Rent - Residential">To Rent - Residential</option>
-                <option value="For Sale - Commercial">For Sale - Commercial</option>
-                <option value="For Sale - Residential">For Sale - Residential</option>
-
+    <select name="status" class="select2 form-control" required>
+        <option value="">Select status</option>
+        <option value="For Rent">For Rent</option>
+        <option value="For Sale">For Sale</option>
     </select>
 </div>
 
+<!-- Address Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('address', 'Address:') !!}
+    {!! Form::text('address', null, ['class' => 'form-control']) !!}
+</div>
+
 <!-- Price Field -->
-<div class="form-group col-sm-12">
+<div class="form-group col-sm-6">
     {!! Form::label('price', 'Price:') !!}
     {!! Form::number('price', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Image Path Field -->
 <div class="form-group col-sm-12">
-    {!! Form::label('image_path', 'Image Path:') !!}
-    {!! Form::text('image_path', null, ['class' => 'form-control']) !!}
+    {!! Form::label('image_path', 'Upload Image:') !!}
+    {!! Form::file('image_path', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Description Field -->
 <div class="form-group col-sm-12 col-lg-12">
     {!! Form::label('description', 'Description:') !!}
-    {!! Form::textarea('description', null, ['class' => 'form-control']) !!}
+    {!! Form::textarea('description', null, ['class' => 'form-control','rows'=>3]) !!}
 </div>
 

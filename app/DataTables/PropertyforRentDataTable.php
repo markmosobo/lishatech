@@ -2,11 +2,11 @@
 
 namespace App\DataTables;
 
-use App\Models\SermonSpeaker;
+use App\Models\PropertyforRent;
 use Yajra\DataTables\Services\DataTable;
 use Yajra\DataTables\EloquentDataTable;
 
-class SermonSpeakerDataTable extends DataTable
+class PropertyforRentDataTable extends DataTable
 {
     /**
      * Build DataTable class.
@@ -18,7 +18,7 @@ class SermonSpeakerDataTable extends DataTable
     {
         $dataTable = new EloquentDataTable($query);
 
-        return $dataTable->addColumn('action', 'sermon_speakers.datatables_actions');
+        return $dataTable->addColumn('action', 'propertyfor_rents.datatables_actions');
     }
 
     /**
@@ -27,7 +27,7 @@ class SermonSpeakerDataTable extends DataTable
      * @param \App\Models\Post $model
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    public function query(SermonSpeaker $model)
+    public function query(PropertyforRent $model)
     {
         return $model->newQuery();
     }
@@ -64,9 +64,9 @@ class SermonSpeakerDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            'full_name',
-            'position_id',
-            'bible_verses'
+            'property_title_id',
+            'price_id',
+            'address_id'
         ];
     }
 
@@ -77,6 +77,6 @@ class SermonSpeakerDataTable extends DataTable
      */
     protected function filename()
     {
-        return 'sermon_speakersdatatable_' . time();
+        return 'propertyfor_rentsdatatable_' . time();
     }
 }

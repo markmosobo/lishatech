@@ -18,11 +18,7 @@ class FrontEndController extends Controller
         return view('front.index',[
             'properties'=>Property::all(),
             'contacts'=>Contact::orderByDesc('id')->take(1)->get(),
-            'comproperties'=>PropertyforSale::orderByDesc('created_at')->take(1)->get(),
-            'resproperties'=>PropertytoRent::orderByDesc('created_at')->take(1)->get(),
             'aboutus'=>AboutUs::all(),
-            'saleproperties'=>PropertyforSale::all(),
-            'rentproperties'=>PropertytoRent::all()
         ]);
     }
 
@@ -89,7 +85,7 @@ class FrontEndController extends Controller
     public function services(){
         return view('front.our-services',[
             'contacts'=>Contact::orderByDesc('id')->take(1)->get(),
-            'properties'=>PropertyforSale::all()
+            'properties'=>Property::all()
         ]);
     }
 
@@ -107,13 +103,23 @@ class FrontEndController extends Controller
 
     public function allProperties(){
         return view('front.all-properties',[
-            'properties'=>PropertyforSale::all(),
-            'contacts'=>Contact::orderByDesc('id')->take(1)->get()
+            'properties'=>Property::all(),
+            'contacts'=>Contact::orderByDesc('id')->take(1)->get(),
         ]);
     }
 
     public function singleProperty($id){
-            $property=PropertyforSale::find($id);
-        return view('front.single-property',['contacts'=>Contact::all(),'properties'=>PropertyforSale::all()])->withProperty($property);
+            $property=Property::find($id);
+        return view('front.single-property',['contacts'=>Contact::all(),'properties'=>Property::all()])->withProperty($property);
+    }
+
+    public function rentProperty($id){
+        $property=PropertytoRent::find($id);
+        return view('front.single-rental-property',['contacts'=>Contact::all(),'properties'=>Property::all()])->withProperty($property);
+    }
+
+    public function saleProperty($id){
+        $property=PropertyforSale::find($id);
+        return view('front.single-sale-property',['contacts'=>Contact::all(),'properties'=>Property::all()])->withProperty($property);
     }
 }

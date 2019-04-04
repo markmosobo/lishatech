@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePlotsTable extends Migration
+class CreatePropertiesForSaleTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,15 @@ class CreatePlotsTable extends Migration
      */
     public function up()
     {
-        Schema::create('plots', function (Blueprint $table) {
+        Schema::create('properties_for_sale', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('plot_title')->nullable();
-            $table->string('plot_address')->nullable();
+            $table->softDeletes();
+            $table->string('property_title')->nullable();
+            $table->string('status')->nullable();
+            $table->string('address')->nullable();
             $table->bigInteger('price')->nullable();
             $table->string('image_path')->nullable();
             $table->longText('description')->nullable();
-            $table->softDeletes();
             $table->timestamps();
         });
     }
@@ -32,6 +33,6 @@ class CreatePlotsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('plots');
+        Schema::dropIfExists('properties_for_sale');
     }
 }

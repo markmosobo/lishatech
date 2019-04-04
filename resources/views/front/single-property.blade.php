@@ -1,6 +1,6 @@
 @extends('branch')
 
-@section('title', $property->property_name)
+@section('title', $property->property_title)
 
 @section('content')
 
@@ -18,25 +18,24 @@
 
                                 <div class="head">
                                     <div class="left">
-                                        <h1 class="title">{{$property->property_name}}</h1>
+                                        <h1 class="title">{{$property->property_title}}</h1>
                                         <span class="location"><img src="{{asset('assets/images/icons/marker.png')}}" alt="">{{$property->address}}</span>
                                     </div>
                                     <div class="right">
                                         <div class="type-wrap">
+                                            @if($property->status=='For Rent')
                                             <span class="price">{{$property->price}}<span>Month</span></span>
-                                            @if($property->status=='For Sale - Commercial')
-                                            <span class="type">For Sale</span>
-                                                @elseif($property->status=='For Sale - Residential')
-                                                <span class="type">For Sale</span>
+                                            <span class="type">For Rent</span>
                                                 @else
-                                                <span class="type">For Rent</span>
+                                                <span class="price">Ksh. {{$property->price}}M</span>
+                                                <span class="type">For Sale</span>
                                              @endif
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="image mb-30">
-                                    <img src="{{asset('assets/images/property/single-property-1.jpg')}}" alt="">
+                                    <img src="{{asset('assets/images/property/prop.jpg')}}" alt="">
                                 </div>
 
                                 <div class="content">
@@ -44,36 +43,36 @@
                                     <h3>Description</h3>
 
                                     <p>{{$property->description}}</p>
-                                    <div class="row mt-30 mb-30">
+                                    {{--<div class="row mt-30 mb-30">--}}
 
-                                        <div class="col-md-5 col-12 mb-xs-30">
-                                            <h3>Condition</h3>
-                                            <ul class="feature-list">
-                                                <li><div class="image"><img src="{{asset('assets/images/icons/area.png')}}" alt=""></div>Area 550 sqft</li>
-                                                <li><div class="image"><img src="{{asset('assets/images/icons/bed.png')}}" alt=""></div>Bedroom 6</li>
-                                                <li><div class="image"><img src="{{asset('assets/images/icons/bath.png')}}" alt=""></div>Bathroom 4</li>
-                                                <li><div class="image"><img src="{{asset('assets/images/icons/parking.png')}}" alt=""></div>Garage 2</li>
-                                                <li><div class="image"><img src="{{asset('assets/images/icons/kitchen.png')}}" alt=""></div>Kitchen 2</li>
-                                            </ul>
-                                        </div>
+                                        {{--<div class="col-md-5 col-12 mb-xs-30">--}}
+                                            {{--<h3>Condition</h3>--}}
+                                            {{--<ul class="feature-list">--}}
+                                                {{--<li><div class="image"><img src="{{asset('assets/images/icons/area.png')}}" alt=""></div>Area 550 sqft</li>--}}
+                                                {{--<li><div class="image"><img src="{{asset('assets/images/icons/bed.png')}}" alt=""></div>Bedroom 6</li>--}}
+                                                {{--<li><div class="image"><img src="{{asset('assets/images/icons/bath.png')}}" alt=""></div>Bathroom 4</li>--}}
+                                                {{--<li><div class="image"><img src="{{asset('assets/images/icons/parking.png')}}" alt=""></div>Garage 2</li>--}}
+                                                {{--<li><div class="image"><img src="{{asset('assets/images/icons/kitchen.png')}}" alt=""></div>Kitchen 2</li>--}}
+                                            {{--</ul>--}}
+                                        {{--</div>--}}
 
-                                        <div class="col-md-7 col-12">
-                                            <h3>Amenities</h3>
-                                            <ul class="amenities-list">
-                                                <li>Air Conditioning</li>
-                                                <li>Bedding</li>
-                                                <li>Balcony</li>
-                                                <li>Cable TV</li>
-                                                <li>Internet</li>
-                                                <li>Parking</li>
-                                                <li>Lift</li>
-                                                <li>Pool</li>
-                                                <li>Dishwasher</li>
-                                                <li>Toaster</li>
-                                            </ul>
-                                        </div>
+                                        {{--<div class="col-md-7 col-12">--}}
+                                            {{--<h3>Amenities</h3>--}}
+                                            {{--<ul class="amenities-list">--}}
+                                                {{--<li>Air Conditioning</li>--}}
+                                                {{--<li>Bedding</li>--}}
+                                                {{--<li>Balcony</li>--}}
+                                                {{--<li>Cable TV</li>--}}
+                                                {{--<li>Internet</li>--}}
+                                                {{--<li>Parking</li>--}}
+                                                {{--<li>Lift</li>--}}
+                                                {{--<li>Pool</li>--}}
+                                                {{--<li>Dishwasher</li>--}}
+                                                {{--<li>Toaster</li>--}}
+                                            {{--</ul>--}}
+                                        {{--</div>--}}
 
-                                    </div>
+                                    {{--</div>--}}
 
                                     {{--<div class="row">--}}
                                         {{--<div class="col-12 mb-30">--}}
@@ -172,100 +171,100 @@
 
                     <!--Sidebar start-->
                     <div class="sidebar">
-                        <h4 class="sidebar-title"><span class="text">Search Property</span><span class="shape"></span></h4>
+                        {{--<h4 class="sidebar-title"><span class="text">Search Property</span><span class="shape"></span></h4>--}}
 
 
-                        <!--Property Search start-->
-                        <div class="property-search sidebar-property-search">
+                        {{--<!--Property Search start-->--}}
+                        {{--<div class="property-search sidebar-property-search">--}}
 
-                            <form action="#">
+                            {{--<form action="#">--}}
 
-                                <div>
-                                    <input type="text" placeholder="Location">
-                                </div>
+                                {{--<div>--}}
+                                    {{--<input type="text" placeholder="Location">--}}
+                                {{--</div>--}}
 
-                                <div>
-                                    <select class="nice-select">
-                                        <option>All Cities</option>
-                                        <option>Athina</option>
-                                        <option>Austin</option>
-                                        <option>Baytown</option>
-                                        <option>Brampton</option>
-                                        <option>Cedar Hill</option>
-                                        <option>Chester</option>
-                                        <option>Chicago</option>
-                                        <option>Coleman</option>
-                                        <option>Corpus Christi</option>
-                                        <option>Dallas</option>
-                                        <option>distrito federal</option>
-                                        <option>Fayetteville</option>
-                                        <option>Galveston</option>
-                                        <option>Jersey City</option>
-                                        <option>Los Angeles</option>
-                                        <option>Midland</option>
-                                        <option>New York</option>
-                                        <option>Odessa</option>
-                                        <option>Reno</option>
-                                        <option>San Angelo</option>
-                                        <option>San Antonio</option>
-                                    </select>
-                                </div>
+                                {{--<div>--}}
+                                    {{--<select class="nice-select">--}}
+                                        {{--<option>All Cities</option>--}}
+                                        {{--<option>Athina</option>--}}
+                                        {{--<option>Austin</option>--}}
+                                        {{--<option>Baytown</option>--}}
+                                        {{--<option>Brampton</option>--}}
+                                        {{--<option>Cedar Hill</option>--}}
+                                        {{--<option>Chester</option>--}}
+                                        {{--<option>Chicago</option>--}}
+                                        {{--<option>Coleman</option>--}}
+                                        {{--<option>Corpus Christi</option>--}}
+                                        {{--<option>Dallas</option>--}}
+                                        {{--<option>distrito federal</option>--}}
+                                        {{--<option>Fayetteville</option>--}}
+                                        {{--<option>Galveston</option>--}}
+                                        {{--<option>Jersey City</option>--}}
+                                        {{--<option>Los Angeles</option>--}}
+                                        {{--<option>Midland</option>--}}
+                                        {{--<option>New York</option>--}}
+                                        {{--<option>Odessa</option>--}}
+                                        {{--<option>Reno</option>--}}
+                                        {{--<option>San Angelo</option>--}}
+                                        {{--<option>San Antonio</option>--}}
+                                    {{--</select>--}}
+                                {{--</div>--}}
 
-                                <div>
-                                    <select class="nice-select">
-                                        <option>For Rent</option>
-                                        <option>For Sale</option>
-                                    </select>
-                                </div>
+                                {{--<div>--}}
+                                    {{--<select class="nice-select">--}}
+                                        {{--<option>For Rent</option>--}}
+                                        {{--<option>For Sale</option>--}}
+                                    {{--</select>--}}
+                                {{--</div>--}}
 
-                                <div>
-                                    <select class="nice-select">
-                                        <option>Type</option>
-                                        <option>Apartment</option>
-                                        <option>Cafe</option>
-                                        <option>House</option>
-                                        <option>Restaurant</option>
-                                        <option>Store</option>
-                                        <option>Villa</option>
-                                    </select>
-                                </div>
+                                {{--<div>--}}
+                                    {{--<select class="nice-select">--}}
+                                        {{--<option>Type</option>--}}
+                                        {{--<option>Apartment</option>--}}
+                                        {{--<option>Cafe</option>--}}
+                                        {{--<option>House</option>--}}
+                                        {{--<option>Restaurant</option>--}}
+                                        {{--<option>Store</option>--}}
+                                        {{--<option>Villa</option>--}}
+                                    {{--</select>--}}
+                                {{--</div>--}}
 
-                                <div>
-                                    <select class="nice-select">
-                                        <option>Bedrooms</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                        <option>6</option>
-                                    </select>
-                                </div>
+                                {{--<div>--}}
+                                    {{--<select class="nice-select">--}}
+                                        {{--<option>Bedrooms</option>--}}
+                                        {{--<option>1</option>--}}
+                                        {{--<option>2</option>--}}
+                                        {{--<option>3</option>--}}
+                                        {{--<option>4</option>--}}
+                                        {{--<option>5</option>--}}
+                                        {{--<option>6</option>--}}
+                                    {{--</select>--}}
+                                {{--</div>--}}
 
-                                <div>
-                                    <select class="nice-select">
-                                        <option>Bathrooms</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                        <option>6</option>
-                                    </select>
-                                </div>
+                                {{--<div>--}}
+                                    {{--<select class="nice-select">--}}
+                                        {{--<option>Bathrooms</option>--}}
+                                        {{--<option>1</option>--}}
+                                        {{--<option>2</option>--}}
+                                        {{--<option>3</option>--}}
+                                        {{--<option>4</option>--}}
+                                        {{--<option>5</option>--}}
+                                        {{--<option>6</option>--}}
+                                    {{--</select>--}}
+                                {{--</div>--}}
 
-                                <div>
-                                    <div id="search-price-range"></div>
-                                </div>
+                                {{--<div>--}}
+                                    {{--<div id="search-price-range"></div>--}}
+                                {{--</div>--}}
 
-                                <div>
-                                    <button>search</button>
-                                </div>
+                                {{--<div>--}}
+                                    {{--<button>search</button>--}}
+                                {{--</div>--}}
 
-                            </form>
+                            {{--</form>--}}
 
-                        </div>
-                        <!--Property Search end-->
+                        {{--</div>--}}
+                        {{--<!--Property Search end-->--}}
 
                     </div>
                     <!--Sidebar end-->
@@ -275,35 +274,54 @@
                         <h4 class="sidebar-title"><span class="text">Feature Property</span><span class="shape"></span></h4>
 
                         <!--Sidebar Property start-->
+                        @foreach($properties as $property)
                         <div class="sidebar-property-list">
 
-                            @foreach($properties as $property)
+                                @if($property->status=='For Rent')
                             <div class="sidebar-property">
                                 <div class="image">
-                                    <span class="type">
-                                        @if($property->status=='For Sale - Commercial')
-                                          For Sale
-                                            @elseif($property->status=='For Sale - Residential')
-                                          For Sale
-                                            @elseif($property->status=='For Rent - Commercial')
-                                          For Rent
-                                            @else
-                                            For Rent
-                                        @endif
-                                    </span>
-                                    <a href="{{url('single-property/'.$property->id)}}"><img src="{{asset('assets/images/property/sidebar-property-1.jpg')}}" alt=""></a>
+                                    <span class="type">For Rent</span>
+                                    <a href="{{url('single-property/'.$property->id)}}"><img src="{{asset('assets/images/property/prop.jpg')}}" alt=""></a>
                                 </div>
                                 <div class="content">
-                                    <h5 class="title"><a href="{{url('single-property/'.$property->id)}}">{{$property->property_name}}</a></h5>
+                                    <h5 class="title"><a href="{{url('single-property/'.$property->id)}}">{{$property->property_title}}</a></h5>
                                     <span class="location"><img src="{{asset('assets/images/icons/marker.png')}}" alt="">{{$property->address}}</span>
-                                    <span class="price">Ksh. {{$property->price}} <span>Month</span></span>
+                                    <span class="price">${{$property->price}} <span>Month</span></span>
                                 </div>
                             </div>
+                                @else
+
+                            <div class="sidebar-property">
+                                <div class="image">
+                                    <span class="type">For Sale</span>
+                                    <a href="{{url('single-property/'.$property->id)}}"><img src="{{asset('assets/images/property/prop.jpg')}}" alt=""></a>
+                                </div>
+                                <div class="content">
+                                    <h5 class="title"><a href="{{url('single-property/'.$property->id)}}">{{$property->property_title}}</a></h5>
+                                    <span class="location"><img src="{{asset('assets/images/icons/marker.png')}}" alt="">{{$property->address}}</span>
+                                    <span class="price">Ksh. {{$property->price}}M</span>
+                                </div>
+                            </div>
+                                @endif
+
                             @endforeach
 
+                            {{--<div class="sidebar-property">--}}
+                                {{--<div class="image">--}}
+                                    {{--<span class="type">For Rent</span>--}}
+                                    {{--<a href="single-properties.html"><img src="assets/images/property/sidebar-property-3.jpg" alt=""></a>--}}
+                                {{--</div>--}}
+                                {{--<div class="content">--}}
+                                    {{--<h5 class="title"><a href="single-properties.html">Ruposi Bangla Cottage</a></h5>--}}
+                                    {{--<span class="location"><img src="assets/images/icons/marker.png" alt="">215 L AH Rod, California</span>--}}
+                                    {{--<span class="price">$550 <span>Month</span></span>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
 
                         </div>
                         <!--Sidebar Property end-->
+
+                    </div>
 
                     </div>
 

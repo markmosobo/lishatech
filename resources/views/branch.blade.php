@@ -43,7 +43,7 @@
     </div>
     <!--Page Banner Section end-->
 
-@yield('content')
+ @yield('content')
 
 <!--Footer section start-->
 @include('front.partials.footer')

@@ -7,6 +7,7 @@ use App\Http\Requests;
 use App\Http\Requests\CreatePropertyRequest;
 use App\Http\Requests\UpdatePropertyRequest;
 use App\Repositories\PropertyRepository;
+use Carbon\Carbon;
 use Flash;
 use App\Http\Controllers\AppBaseController;
 use Response;
@@ -53,6 +54,17 @@ class PropertyController extends AppBaseController
     {
         $input = $request->all();
 
+        if($request->hasFile('image_path')){
+            $ext = $request->image_path->getClientOriginalExtension();
+//            var_dump($ext)
+            $input['extension'] = $ext;
+            $input['image_path'] = $request->file('image_path')->getClientOriginalName();
+            $path = $request->file('image_path')->storeAs('public',$string = str_replace(' ', '-', Carbon::today()->toDateString()).'-'.Carbon::now()->timestamp.'.'.$ext);
+//            var_dump($request->file('document_path')->getClientOriginalName());die();
+//            $path = $request->file('document_path')->store('documents');
+            $input['image_path'] = asset('storage/'.$path);
+        }
+
         $property = $this->propertyRepository->create($input);
 
         Flash::success('Property saved successfully.');
@@ -77,7 +89,7 @@ class PropertyController extends AppBaseController
             return redirect(route('properties.index'));
         }
 
-        return view('properties.show')->with('property', $property);
+        return response()->json($property);
     }
 
     /**

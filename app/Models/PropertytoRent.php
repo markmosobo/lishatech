@@ -8,14 +8,14 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class PropertytoRent
  * @package App\Models
- * @version March 14, 2019, 10:47 am EAT
+ * @version April 2, 2019, 6:00 pm EAT
  *
  * @property \Illuminate\Database\Eloquent\Collection roleRoute
  * @property \Illuminate\Database\Eloquent\Collection roleUser
  * @property \Illuminate\Database\Eloquent\Collection roles
- * @property string property_name
- * @property string address
+ * @property string property_title
  * @property string status
+ * @property string address
  * @property bigInteger rent
  * @property string image_path
  * @property string description
@@ -34,9 +34,9 @@ class PropertytoRent extends Model
 
 
     public $fillable = [
-        'property_name',
-        'address',
+        'property_title',
         'status',
+        'address',
         'rent',
         'image_path',
         'description'
@@ -49,9 +49,9 @@ class PropertytoRent extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'property_name' => 'string',
-        'address' => 'string',
+        'property_title' => 'string',
         'status' => 'string',
+        'address' => 'string',
         'image_path' => 'string',
         'description' => 'string'
     ];

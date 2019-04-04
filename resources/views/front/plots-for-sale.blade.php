@@ -17,10 +17,10 @@
                     <div class="property-item col">
                         <div class="property-inner">
                             <div class="image">
-                                <a href="{{url('single-plot/'.$plot->id)}}"><img src="assets/images/property/property-1.jpg" alt=""></a>
+                                <a href="{{url('single-plot/'.$plot->id)}}"><img src="assets/images/property/land.jpg" alt=""></a>
                                 <ul class="property-feature">
                                     <li>
-                                        <span class="area"><img src="assets/images/icons/area.png" alt="">550 SqFt</span>
+                                        <span class="area"><img src="assets/images/icons/area.png" alt="">{{$plot->description}}</span>
                                     </li>
                                     {{--<li>--}}
                                         {{--<span class="bed"><img src="assets/images/icons/bed.png" alt="">6</span>--}}
@@ -36,11 +36,11 @@
                             <div class="content">
                                 <div class="left">
                                     <h3 class="title"><a href="{{url('single-plot/'.$plot->id)}}">{{$plot->plot_title}}</a></h3>
-                                    <span class="location"><img src="assets/images/icons/marker.png" alt="">{{$plot->plot_address}}</span>
+                                    <span class="location"><img src="assets/images/icons/marker.png" alt="">{{$plot->location}}</span>
                                 </div>
                                 <div class="right">
                                     <div class="type-wrap">
-                                        <span class="price">{{$plot->price}}</span>
+                                        <span class="price">Ksh. {{$plot->price}}</span>
                                         <span class="type">For Sale</span>
                                     </div>
                                 </div>

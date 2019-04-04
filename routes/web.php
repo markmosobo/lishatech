@@ -14,6 +14,8 @@ Route::get('/properties-to-rent-residential','FrontEndController@rentResidential
 Route::get('/our-services','FrontEndController@services');
 Route::get('/all-properties','FrontEndController@allProperties');
 Route::get('/single-property/{id}','FrontEndController@singleProperty');
+Route::get('/single-rental-property/{id}','FrontEndController@rentProperty');
+Route::get('/single-sale-property/{id}','FrontEndController@saleProperty');
 
 Route::get('/login','HomeController@index');
 
@@ -136,7 +138,7 @@ Route::resource('blogCategories', 'blogCategoryController');
 
 Route::resource('blogs', 'BlogController');
 
-Route::resource('properties', 'PropertyController');
+
 
 
 
@@ -144,9 +146,9 @@ Route::resource('blogs', 'BlogController');
 
 Route::resource('managementPortfolios', 'ManagementPortfolioController');
 
-Route::resource('propertyforSales', 'PropertyforSaleController');
 
-Route::resource('propertytoRents', 'PropertytoRentController');
+
+
 
 Route::resource('contacts', 'ContactController');
 
@@ -155,5 +157,33 @@ Route::resource('socialMedia', 'SocialMediaController');
 Route::resource('aboutuses', 'AboutUsController');
 
 
+
+
+
+
+
+
+
+
+
+Route::resource('properties', 'PropertyController');
+
+Route::resource('properties', 'PropertyController');
+
+Route::resource('properties', 'PropertyController');
+
+Route::resource('propertyFeatures', 'PropertyFeatureController');
+
+Route::resource('propertySales', 'PropertySaleController');
+
+
+
+Route::resource('propertyforRents', 'PropertyforRentController');
+
+
+
+Route::resource('propertyforSales', 'PropertyforSaleController');
+
+Route::resource('propertytoRents', 'PropertytoRentController');
 
 Route::resource('plots', 'PlotController');

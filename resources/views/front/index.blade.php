@@ -14,7 +14,8 @@
             <div class="hero-slider section">
 
                 <!--Hero Item start-->
-                @foreach($comproperties as $property)
+                @foreach($properties as $property)
+                    @if($property->status=='For Sale')
                 <div class="hero-item" style="background-image: url(assets/images/hero/hero-1.jpg)">
                     <div class="container">
                         <div class="row">
@@ -24,12 +25,12 @@
                                 <div class="hero-property-content text-center">
 
                                     <h1 class="title"><a href="{{url('/properties-for-sale-commercial')}}">Commercial Properties For Sale</a></h1>
-                                    <span class="location"><img src="assets/images/icons/hero-marker.png" alt=""> {{$property->address}}</span>
+                                    <span class="location"><img src="{{asset('assets/images/icons/hero-marker.png')}}" alt=""> {{$property->address}}</span>
                                     <div class="type-wrap">
                                         <a href="{{url('single-property/'.$property->id)}}">
-                                        <span class="type">For Sale</span>
+                                        <span class="type">{{$property->property_title}}</span>
                                         </a>
-                                        <span class="price">Ksh. {{$property->price}} </span>
+                                        <span class="price">Ksh. {{$property->price}}M </span>
                                     </div>
                                     {{--<ul class="property-feature">--}}
                                         {{--<li>--}}
@@ -54,11 +55,13 @@
                         </div>
                     </div>
                 </div>
+                    @endif
                 @endforeach
                 <!--Hero Item end-->
 
                 <!--Hero Item start-->
-                @foreach($resproperties as $property)
+                @foreach($properties as $property)
+                    @if($property->status=='For Rent')
                 <div class="hero-item" style="background-image: url(assets/images/hero/hero-3.jpg)">
                     <div class="container">
                         <div class="row">
@@ -96,6 +99,7 @@
                         </div>
                     </div>
                 </div>
+                    @endif
                 @endforeach
                 <!--Hero Item end-->
 
@@ -378,12 +382,13 @@
                     {{--<!--Property end-->--}}
 
                     <!--Property start-->
-                        @foreach($saleproperties as $property)
+                        @foreach($properties as $property)
+                            @if($property->status=='For Sale')
                     <div class="property-item col">
                         <div class="property-inner">
                             <div class="image">
                                 <span class="label">{{$property->status}}</span>
-                                <a href="{{url('single-property/'.$property->id)}}"><img src="assets/images/property/property-3.jpg" alt=""></a>
+                                <a href="{{url('single-property/'.$property->id)}}"><img src="{{asset('assets/images/property/prop.jpg')}}" alt=""></a>
                                 {{--<ul class="property-feature">--}}
                                     {{--<li>--}}
                                         {{--<span class="area"><img src="assets/images/icons/area.png" alt="">550 SqFt</span>--}}
@@ -401,7 +406,7 @@
                             </div>
                             <div class="content">
                                 <div class="left">
-                                    <h3 class="title"><a href="{{url('single-property/'.$property->id)}}">{{$property->property_name}}</a></h3>
+                                    <h3 class="title"><a href="{{url('single-property/'.$property->id)}}">{{$property->property_title}}</a></h3>
                                     <span class="location"><img src="assets/images/icons/marker.png" alt="">{{$property->address}}</span>
                                 </div>
                                 <div class="right">
@@ -413,6 +418,7 @@
                             </div>
                         </div>
                     </div>
+                            @endif
                         @endforeach
                     <!--Property end-->
 
@@ -627,7 +633,8 @@
                     {{--<!--Property end-->--}}
 
                     <!--Property start-->
-                        @foreach($rentproperties as $property)
+                        @foreach($properties as $property)
+                            @if($property->status=='For Rent')
                     <div class="property-item col">
                         <div class="property-inner">
                             <div class="image">
@@ -662,6 +669,7 @@
                             </div>
                         </div>
                     </div>
+                            @endif
                         @endforeach
                     <!--Property end-->
 

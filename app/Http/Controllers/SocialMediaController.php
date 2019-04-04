@@ -77,7 +77,7 @@ class SocialMediaController extends AppBaseController
             return redirect(route('socialMedia.index'));
         }
 
-        return view('social_media.show')->with('socialMedia', $socialMedia);
+        return response()->json($socialMedia);
     }
 
     /**

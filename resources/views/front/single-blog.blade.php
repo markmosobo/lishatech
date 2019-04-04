@@ -14,7 +14,7 @@
                 <div class="col-xl-9 col-lg-8 col-12 order-1 order-lg-2 mb-sm-50 mb-xs-50">
 
                     <div class="single-news-item">
-                        <div class="image"><img src="{{asset('assets/images/news/news-details-1.jpg')}}" alt=""></div>
+                        {{--<div class="image"><img src="{{asset('assets/images/news/news-details-1.jpg')}}" alt=""></div>--}}
                         <div class="content">
                             <h2 class="title">{{$blog->blog_title}}</h2>
                             <ul class="news-meta">

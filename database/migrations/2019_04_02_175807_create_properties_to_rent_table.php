@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-
 class CreatePropertiesToRentTable extends Migration
 {
     /**
@@ -16,13 +15,13 @@ class CreatePropertiesToRentTable extends Migration
     {
         Schema::create('properties_to_rent', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('property_name')->nullable();
-            $table->string('address')->nullable();
+            $table->softDeletes();
+            $table->string('property_title')->nullable();
             $table->string('status')->nullable();
+            $table->string('address')->nullable();
             $table->bigInteger('rent')->nullable();
             $table->string('image_path')->nullable();
             $table->longText('description')->nullable();
-            $table->softDeletes();
             $table->timestamps();
         });
     }

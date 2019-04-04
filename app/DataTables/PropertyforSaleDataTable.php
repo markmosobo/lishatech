@@ -44,7 +44,7 @@ class PropertyforSaleDataTable extends DataTable
             ->minifiedAjax()
             ->addAction(['width' => '80px'])
             ->parameters([
-                'dom'     => 'Bfrtip',
+//                'dom'     => 'Bfrtip',
                 'order'   => [[0, 'desc']],
                 'buttons' => [
                     'create',
@@ -64,12 +64,15 @@ class PropertyforSaleDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            'property_name',
-            'address',
+            'property_title',
             'status',
+            'address',
             'price',
-            'image_path',
-            'description'
+//            'image_path',
+            'description',
+            'created_at'=>[
+                'title'=>'Features'
+            ],
         ];
     }
 

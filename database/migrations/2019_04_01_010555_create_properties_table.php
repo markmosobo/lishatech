@@ -15,9 +15,9 @@ class CreatePropertiesTable extends Migration
     {
         Schema::create('properties', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('property_name')->nullable();
-            $table->string('address')->nullable();
+            $table->string('property_title')->nullable();
             $table->string('status')->nullable();
+            $table->string('address')->nullable();
             $table->bigInteger('price')->nullable();
             $table->string('image_path')->nullable();
             $table->longText('description')->nullable();

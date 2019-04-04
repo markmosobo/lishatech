@@ -2,11 +2,11 @@
 
 namespace App\DataTables;
 
-use App\Models\EventSchedule;
+use App\Models\PropertyFeature;
 use Yajra\DataTables\Services\DataTable;
 use Yajra\DataTables\EloquentDataTable;
 
-class EventScheduleDataTable extends DataTable
+class PropertyFeatureDataTable extends DataTable
 {
     /**
      * Build DataTable class.
@@ -14,17 +14,11 @@ class EventScheduleDataTable extends DataTable
      * @param mixed $query Results from query() method.
      * @return \Yajra\DataTables\DataTableAbstract
      */
-    private $id;
-    public function __construct($id)
-    {
-        $this->id = $id;
-    }
-
     public function dataTable($query)
     {
         $dataTable = new EloquentDataTable($query);
 
-        return $dataTable->addColumn('action', 'event_schedules.datatables_actions');
+        return $dataTable->addColumn('action', 'property_features.datatables_actions');
     }
 
     /**
@@ -33,9 +27,9 @@ class EventScheduleDataTable extends DataTable
      * @param \App\Models\Post $model
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    public function query(EventSchedule $model)
+    public function query(PropertyFeature $model)
     {
-        return $model->newQuery()->where('event_id',$this->id);
+        return $model->newQuery();
     }
 
     /**
@@ -50,7 +44,7 @@ class EventScheduleDataTable extends DataTable
             ->minifiedAjax()
             ->addAction(['width' => '80px'])
             ->parameters([
-//                'dom'     => 'Bfrtip',
+                'dom'     => 'Bfrtip',
                 'order'   => [[0, 'desc']],
                 'buttons' => [
                     'create',
@@ -70,10 +64,19 @@ class EventScheduleDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            'event_id',
-            'start_at',
-            'ends_at',
-            'description'
+            'property_title_id',
+            'type',
+            'area',
+//            'building_age',
+            'bedrooms',
+            'bathrooms',
+            'kitchen',
+            'garage',
+            'cooling',
+            'heating',
+            'sewer',
+//            'water',
+//            'other_features'
         ];
     }
 
@@ -84,6 +87,6 @@ class EventScheduleDataTable extends DataTable
      */
     protected function filename()
     {
-        return 'event_schedulesdatatable_' . time();
+        return 'property_featuresdatatable_' . time();
     }
 }
