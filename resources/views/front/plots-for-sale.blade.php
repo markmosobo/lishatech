@@ -40,7 +40,7 @@
                                 </div>
                                 <div class="right">
                                     <div class="type-wrap">
-                                        <span class="price">Ksh. {{$plot->price}}</span>
+                                        <span class="price"> {{$plot->price}}</span>
                                         <span class="type">For Sale</span>
                                     </div>
                                 </div>

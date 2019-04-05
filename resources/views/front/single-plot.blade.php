@@ -19,7 +19,7 @@
                                 <div class="head">
                                     <div class="left">
                                         <h1 class="title">{{$plot->plot_title}}</h1>
-                                        <span class="location"><img src="{{asset('assets/images/icons/marker.png')}}" alt="">{{$plot->plot_address}}</span>
+                                        <span class="location"><img src="{{asset('assets/images/icons/marker.png')}}" alt="">{{$plot->location}}</span>
                                     </div>
                                     <div class="right">
                                         <div class="type-wrap">
@@ -30,7 +30,7 @@
                                 </div>
 
                                 <div class="image mb-30">
-                                    <img src="{{asset('assets/images/property/single-property-1.jpg')}}" alt="">
+                                    <img src="{{asset('assets/images/property/land.jpg')}}" alt="">
                                 </div>
 
                                 <div class="content">
@@ -276,11 +276,11 @@
                             <div class="sidebar-property">
                                 <div class="image">
                                     <span class="type">For Sale</span>
-                                    <a href="{{url('single-plot/'.$plot->id)}}"><img src="{{asset('assets/images/property/sidebar-property-1.jpg')}}" alt=""></a>
+                                    <a href="{{url('single-plot/'.$plot->id)}}"><img src="{{asset('assets/images/property/land.jpg')}}" alt=""></a>
                                 </div>
                                 <div class="content">
                                     <h5 class="title"><a href="{{url('single-plot/'.$plot->id)}}">{{$plot->plot_title}}</a></h5>
-                                    <span class="location"><img src="{{asset('assets/images/icons/marker.png')}}" alt="">{{$plot->plot_address}}</span>
+                                    <span class="location"><img src="{{asset('assets/images/icons/marker.png')}}" alt="">{{$plot->location}}</span>
                                     <span class="price">Ksh. {{$plot->price}} </span>
                                 </div>
                             </div>

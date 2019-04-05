@@ -56,7 +56,7 @@
                         <div class="property-inner">
                             <div class="image">
                                 <span class="label">{{$property->status}}</span>
-                                <a href="{{url('single-sale-property/'.$property->id)}}"><img src="assets/images/property/prop.jpg" alt=""></a>
+                                <a href="{{url('single-sale-property/'.$property->id)}}"><img src="{{asset('assets/images/property/prop.jpg')}}" alt=""></a>
                                 {{--<ul class="property-feature">--}}
                                     {{--<li>--}}
                                         {{--<span class="area"><img src="assets/images/icons/area.png" alt="">550 SqFt</span>--}}
@@ -75,11 +75,11 @@
                             <div class="content">
                                 <div class="left">
                                     <h3 class="title"><a href="{{url('single-sale-property/'.$property->id)}}">{{$property->property_title}}</a></h3>
-                                    <span class="location"><img src="assets/images/icons/marker.png" alt="">{{$property->address}}</span>
+                                    <span class="location"><img src="{{asset('assets/images/icons/marker.png')}}" alt="">{{$property->address}}</span>
                                 </div>
                                 <div class="right">
                                     <div class="type-wrap">
-                                        <span class="price">Ksh. {{$property->price}}</span>
+                                        <span class="price">{{$property->price}}M</span>
                                         <span class="type">For Sale</span>
                                     </div>
                                 </div>

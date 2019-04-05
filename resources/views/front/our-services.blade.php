@@ -24,7 +24,7 @@
                         @foreach($properties as $property)
                         <div class="property-2">
                             <div class="property-inner">
-                                <a href="{{url('single-property/'.$property->id)}}" class="image"><img src="assets/images/property/prop.jpg" alt=""></a>
+                                <a href="{{url('single-property/'.$property->id)}}" class="image"><img src="{{asset('assets/images/property/prop.jpg')}}" alt=""></a>
                                 <div class="content">
                                     <h4 class="title"><a href="{{url('single-property/'.$property->id)}}">{{$property->property_title}}</a></h4>
                                     <span class="location">{{$property->address}}</span>
@@ -33,7 +33,7 @@
                                         <span>{{$property->price}} <span>Month</span></span></h4>
                                                     @else
                                                         Sale
-                                        <span>{{$property->price}}</span>
+                                        <span>Ksh. {{$property->price}}M</span>
                                                     @endif
                                     {{--<ul>--}}
                                         {{--<li>6 Bed</li>--}}
@@ -54,7 +54,7 @@
                             <div class="service">
                                 <div class="service-inner">
                                     <div class="head">
-                                        <div class="icon"><img src="assets/images/service/service-1.png" alt=""></div>
+                                        <div class="icon"><img src="{{asset('assets/images/service/service-1.png')}}" alt=""></div>
                                         <h4>Property Sales</h4>
                                     </div>
                                     <div class="content">
@@ -73,7 +73,7 @@
                             <div class="service">
                                 <div class="service-inner">
                                     <div class="head">
-                                        <div class="icon"><img src="assets/images/service/service-2.png" alt=""></div>
+                                        <div class="icon"><img src="{{asset('assets/images/service/service-2.png')}}" alt=""></div>
                                         <h4>Property Letting</h4>
                                     </div>
                                     <div class="content">
@@ -91,7 +91,7 @@
                             <div class="service">
                                 <div class="service-inner">
                                     <div class="head">
-                                        <div class="icon"><img src="assets/images/service/service-3.png" alt=""></div>
+                                        <div class="icon"><img src="{{asset('assets/images/service/service-3.png')}}" alt=""></div>
                                         <h4>Property Development Consultancy</h4>
                                     </div>
                                     <div class="content">
@@ -109,7 +109,7 @@
                             <div class="service">
                                 <div class="service-inner">
                                     <div class="head">
-                                        <div class="icon"><img src="assets/images/service/service-4.png" alt=""></div>
+                                        <div class="icon"><img src="{{asset('assets/images/service/service-4.png')}}" alt=""></div>
                                         <h4>Rental Assessment</h4>
                                     </div>
                                     <div class="content">
