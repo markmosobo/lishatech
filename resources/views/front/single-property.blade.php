@@ -35,7 +35,7 @@
                                 </div>
 
                                 <div class="image mb-30">
-                                    <img src="{{asset('assets/images/property/prop.jpg')}}" alt="">
+                                    <img src="{{asset($property->image_path)}}" alt="">
                                 </div>
 
                                 <div class="content">
@@ -281,7 +281,7 @@
                             <div class="sidebar-property">
                                 <div class="image">
                                     <span class="type">For Rent</span>
-                                    <a href="{{url('single-property/'.$property->id)}}"><img src="{{asset('assets/images/property/prop.jpg')}}" alt=""></a>
+                                    <a href="{{url('single-property/'.$property->id)}}"><img src="{{asset($property->image_path)}}" alt=""></a>
                                 </div>
                                 <div class="content">
                                     <h5 class="title"><a href="{{url('single-property/'.$property->id)}}">{{$property->property_title}}</a></h5>

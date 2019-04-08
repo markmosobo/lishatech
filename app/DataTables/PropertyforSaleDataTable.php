@@ -18,7 +18,14 @@ class PropertyforSaleDataTable extends DataTable
     {
         $dataTable = new EloquentDataTable($query);
 
-        return $dataTable->addColumn('action', 'propertyfor_sales.datatables_actions');
+        return $dataTable
+//            ->editColumn('event_date',function($event){
+//                return Carbon::parse($event->event_date)->toFormattedDateString();
+//            })
+            ->editColumn('created_at',function ($property){
+                return '<a href="'.url('propertyforSaleFeatures/'.$property->id).'" class="btn btn-success btn-xs">view/add feature</a>';
+            })->rawColumns(['action','created_at'])
+            ->addColumn('action', 'propertyfor_sales.datatables_actions');
     }
 
     /**

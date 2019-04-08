@@ -187,3 +187,7 @@ Route::resource('propertyforSales', 'PropertyforSaleController');
 Route::resource('propertytoRents', 'PropertytoRentController');
 
 Route::resource('plots', 'PlotController');
+
+Route::resource('propertyforSaleFeatures', 'PropertyforSaleFeatureController');
+
+Route::resource('propertytoRentFeatures', 'PropertytoRentFeatureController');

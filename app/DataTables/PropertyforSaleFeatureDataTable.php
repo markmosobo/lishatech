@@ -2,11 +2,11 @@
 
 namespace App\DataTables;
 
-use App\Models\ManagementPortfolio;
+use App\Models\PropertyforSaleFeature;
 use Yajra\DataTables\Services\DataTable;
 use Yajra\DataTables\EloquentDataTable;
 
-class ManagementPortfolioDataTable extends DataTable
+class PropertyforSaleFeatureDataTable extends DataTable
 {
     /**
      * Build DataTable class.
@@ -18,7 +18,7 @@ class ManagementPortfolioDataTable extends DataTable
     {
         $dataTable = new EloquentDataTable($query);
 
-        return $dataTable->addColumn('action', 'management_portfolios.datatables_actions');
+        return $dataTable->addColumn('action', 'propertyfor_sale_features.datatables_actions');
     }
 
     /**
@@ -27,7 +27,7 @@ class ManagementPortfolioDataTable extends DataTable
      * @param \App\Models\Post $model
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    public function query(ManagementPortfolio $model)
+    public function query(PropertyforSaleFeature $model)
     {
         return $model->newQuery();
     }
@@ -64,9 +64,19 @@ class ManagementPortfolioDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            'property_title',
-//            'image_path',
-            'description'
+            'property_title_id',
+            'type',
+            'area',
+            'building_age',
+            'bedrooms',
+            'bathrooms',
+            'kitchen',
+            'garage',
+            'cooling',
+            'heating',
+            'sewer',
+            'water',
+            'other_features'
         ];
     }
 
@@ -77,6 +87,6 @@ class ManagementPortfolioDataTable extends DataTable
      */
     protected function filename()
     {
-        return 'management_portfoliosdatatable_' . time();
+        return 'propertyfor_sale_featuresdatatable_' . time();
     }
 }

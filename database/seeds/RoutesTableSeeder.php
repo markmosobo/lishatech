@@ -124,12 +124,12 @@ class RoutesTableSeeder extends Seeder
             'sequence'=>3
         ]);
 
-        $cChild = Route::create([
-            'route_name'=> 'All Properties',
-            'parent_route'=> $configurations->id,
-            'url'=>'properties',
-        ]);
-        $cChild->roles()->attach($admin);
+//        $cChild = Route::create([
+//            'route_name'=> 'All Properties',
+//            'parent_route'=> $configurations->id,
+//            'url'=>'properties',
+//        ]);
+//        $cChild->roles()->attach($admin);
 
         $cChild = Route::create([
             'route_name'=> 'Properties For Sale',

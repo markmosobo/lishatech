@@ -44,7 +44,7 @@ class BlogDataTable extends DataTable
             ->minifiedAjax()
             ->addAction(['width' => '80px'])
             ->parameters([
-                'dom'     => 'Bfrtip',
+//                'dom'     => 'Bfrtip',
                 'order'   => [[0, 'desc']],
                 'buttons' => [
                     'create',
@@ -66,7 +66,7 @@ class BlogDataTable extends DataTable
         return [
             'blog_title',
             'author',
-            'image_path',
+//            'image_path',
             'date',
             'body'
         ];
