@@ -24,9 +24,9 @@
                         @foreach($properties as $property)
                         <div class="property-2">
                             <div class="property-inner">
-                                <a href="{{url('single-property/'.$property->id)}}" class="image"><img src="{{asset('assets/images/property/prop.jpg')}}" alt=""></a>
+                                <a href="{{url('single-sale-property/'.$property->id)}}" class="image"><img src="{{asset($property->image_path)}}" alt=""></a>
                                 <div class="content">
-                                    <h4 class="title"><a href="{{url('single-property/'.$property->id)}}">{{$property->property_title}}</a></h4>
+                                    <h4 class="title"><a href="{{url('single-sale-property/'.$property->id)}}">{{$property->property_title}}</a></h4>
                                     <span class="location">{{$property->address}}</span>
                                     <h4 class="type">@if($property->status=='For Rent')
                                             Rent

@@ -274,35 +274,24 @@
                         <h4 class="sidebar-title"><span class="text">Feature Property</span><span class="shape"></span></h4>
 
                         <!--Sidebar Property start-->
-                        @foreach($properties as $property)
                             <div class="sidebar-property-list">
 
-                                @if($property->status=='For Rent')
-                                    <div class="sidebar-property">
-                                        <div class="image">
-                                            <span class="type">For Rent</span>
-                                            <a href="{{url('single-property/'.$property->id)}}"><img src="{{asset('assets/images/property/sidebar-prop.jpg')}}" alt=""></a>
-                                        </div>
-                                        <div class="content">
-                                            <h5 class="title"><a href="{{url('single-property/'.$property->id)}}">{{$property->property_title}}</a></h5>
-                                            <span class="location"><img src="{{asset('assets/images/icons/marker.png')}}" alt="">{{$property->address}}</span>
-                                            <span class="price">${{$property->price}} <span>Month</span></span>
-                                        </div>
-                                    </div>
-                                @else
+
+
+                                @foreach($properties as $property)
 
                                     <div class="sidebar-property">
                                         <div class="image">
                                             <span class="type">For Sale</span>
-                                            <a href="{{url('single-property/'.$property->id)}}"><img src="{{asset('assets/images/property/prop.jpg')}}" alt=""></a>
+                                            <a href="{{url('single-sale-property/'.$property->id)}}"><img src="{{asset($property->image_path)}}" alt=""></a>
                                         </div>
                                         <div class="content">
-                                            <h5 class="title"><a href="{{url('single-property/'.$property->id)}}">{{$property->property_title}}</a></h5>
+                                            <h5 class="title"><a href="{{url('single-sale-property/'.$property->id)}}">{{$property->property_title}}</a></h5>
                                             <span class="location"><img src="{{asset('assets/images/icons/marker.png')}}" alt="">{{$property->address}}</span>
                                             <span class="price">Ksh.{{$property->price}}M</span>
                                         </div>
                                     </div>
-                                @endif
+
 
                                 @endforeach
 

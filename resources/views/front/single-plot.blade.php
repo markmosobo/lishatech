@@ -272,11 +272,11 @@
                         <!--Sidebar Property start-->
                         <div class="sidebar-property-list">
 
-                          @foreach($featplots as $plots)
+                          @foreach($featplots as $plot)
                             <div class="sidebar-property">
                                 <div class="image">
                                     <span class="type">For Sale</span>
-                                    <a href="{{url('single-plot/'.$plot->id)}}"><img src="{{asset('assets/images/property/land.jpg')}}" alt=""></a>
+                                    <a href="{{url('single-plot/'.$plot->id)}}"><img src="{{asset($plot->image_path)}}" alt=""></a>
                                 </div>
                                 <div class="content">
                                     <h5 class="title"><a href="{{url('single-plot/'.$plot->id)}}">{{$plot->plot_title}}</a></h5>

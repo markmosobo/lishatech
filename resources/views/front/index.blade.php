@@ -117,7 +117,7 @@
                                         <!--Hero Content start-->
                                         <div class="hero-property-content text-center">
 
-                                            <h1 class="title"><a href="{{url('/properties-for-sale-commercial')}}">Commercial Properties To Rent</a></h1>
+                                            <h1 class="title"><a href="{{url('/properties-to-rent-commercial')}}">Commercial Properties To Rent</a></h1>
                                             <span class="location"><img src="{{asset('assets/images/icons/hero-marker.png')}}" alt=""> {{$property->address}}</span>
                                             <div class="type-wrap">
                                                 <a href="{{url('single-rental-property/'.$property->id)}}">
@@ -162,7 +162,7 @@
                                         <!--Hero Content start-->
                                         <div class="hero-property-content text-center">
 
-                                            <h1 class="title"><a href="{{url('/properties-for-sale-residential')}}">Residential Properties To Rent</a></h1>
+                                            <h1 class="title"><a href="{{url('/properties-to-rent-residential')}}">Residential Properties To Rent</a></h1>
                                             <span class="location"><img src="assets/images/icons/marker.png" alt=""><img src="assets/images/icons/hero-marker.png" alt=""> {{$property->address}}</span>
                                             <div class="type-wrap">
                                                 <a href="{{url('single-rental-property/'.$property->id)}}">

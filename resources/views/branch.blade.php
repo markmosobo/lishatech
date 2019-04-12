@@ -46,7 +46,9 @@
  @yield('content')
 
 <!--Footer section start-->
-@include('front.partials.footer')
+    <footer class="footer-section section" style="background-image: url(assets/images/bg/footer-bg.jpg)">
+        @include('front.partials.footer')
+    </footer>
 <!--Footer section end-->
 </div>
 

@@ -1,5 +1,5 @@
 @foreach($contacts as $contact)
-<footer class="footer-section section" style="background-image: url(assets/images/bg/footer-bg.jpg)">
+
 
     <!--Footer Top start-->
     <div class="footer-top section pt-100 pt-lg-80 pt-md-70 pt-sm-60 pt-xs-50 pb-60 pb-lg-40 pb-md-30 pb-sm-20 pb-xs-10">
@@ -83,5 +83,4 @@
     </div>
     <!--Footer bottom end-->
 
-</footer>
 @endforeach

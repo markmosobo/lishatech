@@ -53,7 +53,7 @@ class FrontEndController extends Controller
 
     public function singlePlot($id){
         $plot=Plot::find($id);
-        return view('front.single-plot',['contacts'=>Contact::all(),'featplots'=>Plot::all()])->withPlot($plot);
+        return view('front.single-plot',['contacts'=>Contact::all(),'featplots'=>Plot::orderByRaw("RAND()")->take(10)->get()])->withPlot($plot);
     }
 
     public function saleCommercial(){
@@ -87,7 +87,7 @@ class FrontEndController extends Controller
     public function services(){
         return view('front.our-services',[
             'contacts'=>Contact::orderByDesc('id')->take(1)->get(),
-            'properties'=>Property::all()
+            'properties'=>PropertyforSale::orderByRaw("RAND()")->take(3)->get()
         ]);
     }
 
@@ -105,7 +105,8 @@ class FrontEndController extends Controller
 
     public function allProperties(){
         return view('front.all-properties',[
-            'properties'=>Property::all(),
+            'saleproperties'=>PropertyforSale::all(),
+            'rentproperties'=>PropertytoRent::all(),
             'contacts'=>Contact::orderByDesc('id')->take(1)->get(),
         ]);
     }
@@ -117,11 +118,12 @@ class FrontEndController extends Controller
 
     public function rentProperty($id){
         $property=PropertytoRent::find($id);
-        return view('front.single-rental-property',['contacts'=>Contact::all(),'properties'=>Property::all()])->withProperty($property);
+        return view('front.single-rental-property',['contacts'=>Contact::all(),'properties'=>PropertytoRent::orderByRaw("RAND()")->take(10)->get()])->withProperty($property);
     }
 
     public function saleProperty($id){
         $property=PropertyforSale::find($id);
-        return view('front.single-sale-property',['contacts'=>Contact::all(),'properties'=>Property::all()])->withProperty($property);
+        return view('front.single-sale-property',[
+            'contacts'=>Contact::all(),'properties'=>PropertyforSale::orderByRaw("RAND()")->take(10)->get()])->withProperty($property);
     }
 }

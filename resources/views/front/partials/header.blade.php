@@ -94,7 +94,7 @@
                             {{--<li><a href="gallery-2-column.html">Gallery 2 Column</a></li>--}}
                             {{--<li><a href="gallery-3-column.html">Gallery 3 Column</a></li>--}}
                             {{--<li><a href="gallery-4-column.html">Gallery 4 Column</a></li>--}}
-                            {{--<li><a href="login-register.html">Login & Register</a></li>--}}
+                            {{--<li><a href="#">Login</a></li>--}}
                             {{--<li><a href="my-account.html">My Account</a></li>--}}
                             {{--</ul>--}}
                             {{--</li>--}}
@@ -105,9 +105,9 @@
 
                 <!--User start-->
                 <div class="col mr-sm-50 mr-xs-50">
-                    {{--<div class="header-user">--}}
-                    {{--<a href="login-register.html" class="user-toggle"><i class="pe-7s-user"></i><span>Login or Register</span></a>--}}
-                    {{--</div>--}}
+                    <div class="header-user">
+                    <a href="{{url('/login')}}" class="user-toggle"><i class="pe-7s-user"></i><span>Login</span></a>
+                    </div>
                 </div>
                 <!--User end-->
             </div>
