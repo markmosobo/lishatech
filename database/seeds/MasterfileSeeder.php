@@ -12,11 +12,11 @@ class MasterfileSeeder extends Seeder
     public function run()
     {
         \App\Models\Masterfile::create([
-            'full_name' =>'Admin Admin',
+            'full_name' =>'Admin Lishatech',
             'national_id'=> 10000000,
             'gender'=> 'Male',
-            'email'=>'admin@localhost.com',
-            'phone_number'=> '072151582',
+            'email'=>'info@lishatech.co.ke',
+            'phone_number'=> '0721517582',
             'created_by'=> 1,
             'tenant_id'=>1,
         ]);

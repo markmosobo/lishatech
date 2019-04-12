@@ -56,7 +56,7 @@
                         <div class="property-inner">
                             <div class="image">
                                 <span class="label">{{$property->status}}</span>
-                                <a href="{{url('single-sale-property/'.$property->id)}}"><img src="{{asset('assets/images/property/prop.jpg')}}" alt=""></a>
+                                <a href="{{url('single-sale-property/'.$property->id)}}"><img src="{{asset($property->image_path)}}" alt=""></a>
                                 {{--<ul class="property-feature">--}}
                                     {{--<li>--}}
                                         {{--<span class="area"><img src="assets/images/icons/area.png" alt="">550 SqFt</span>--}}

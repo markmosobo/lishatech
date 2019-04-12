@@ -63,6 +63,7 @@ class PropertyController extends AppBaseController
 //            var_dump($request->file('document_path')->getClientOriginalName());die();
             $path = $request->file('image_path')->store('public');
             $input['image_path'] = asset('storage/'.$path);
+
         }
 
         $property = $this->propertyRepository->create($input);

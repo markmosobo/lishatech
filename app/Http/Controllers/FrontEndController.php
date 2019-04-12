@@ -16,9 +16,11 @@ class FrontEndController extends Controller
 {
     public function index(){
         return view('front.index',[
-            'properties'=>Property::all(),
+            'featureproperties'=>PropertyforSale::orderByDesc('id')->take(2)->get(),
+            'rentproperties'=>PropertytoRent::orderByDesc('id')->take(2)->get(),
             'contacts'=>Contact::orderByDesc('id')->take(1)->get(),
             'aboutus'=>AboutUs::all(),
+            'properties'=>PropertyforSale::all()
         ]);
     }
 

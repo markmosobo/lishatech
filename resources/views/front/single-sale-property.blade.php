@@ -35,7 +35,7 @@
                                 </div>
 
                                 <div class="image mb-30">
-                                    <img src="{{asset('assets/images/property/prop.jpg')}}" alt="">
+                                    <img src="{{asset($property->image_path)}}" alt="">
                                 </div>
 
                                 <div class="content">

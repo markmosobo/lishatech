@@ -202,7 +202,7 @@
                         <div class="property-inner">
                             <div class="image">
                                 <span class="label">Commercial</span>
-                                <a href="{{url('single-rental-property/'.$property->id)}}"><img src="assets/images/property/property-6.jpg" alt=""></a>
+                                <a href="{{url('single-rental-property/'.$property->id)}}"><img src="{{asset($property->image_path)}}" alt=""></a>
                                 {{--<ul class="property-feature">--}}
                                     {{--<li>--}}
                                         {{--<span class="area"><img src="assets/images/icons/area.png" alt="">550 SqFt</span>--}}

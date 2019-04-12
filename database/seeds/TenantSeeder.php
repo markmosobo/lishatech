@@ -12,10 +12,10 @@ class TenantSeeder extends Seeder
     public function run()
     {
         \App\Models\Tenant::create([
-            'name'=>'OpenPath Solutions',
-            'email'=>'info@openpathsolutions.co.ke',
-            'phone_number'=>'0715862938',
-            'location'=>'Westlands'
+            'name'=>'Mickmart Computers',
+            'email'=>'info@lishatech.co.ke',
+            'phone_number'=>'0721517582',
+            'location'=>'Nairobi'
         ]);
     }
 }

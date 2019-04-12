@@ -10,12 +10,13 @@
         <!--Hero Section start-->
 
         <div class="hero-section section position-relative">
+
             <!--Hero Slider start-->
             <div class="hero-slider section">
 
-                <!--Hero Item start-->
-                @foreach($properties as $property)
-                    @if($property->status=='For Sale')
+                <!--Commercial Properties For Sale-->
+                @foreach($featureproperties as $property)
+                    @if($property->status=='Commercial')
                 <div class="hero-item" style="background-image: url(assets/images/hero/hero-1.jpg)">
                     <div class="container">
                         <div class="row">
@@ -27,8 +28,54 @@
                                     <h1 class="title"><a href="{{url('/properties-for-sale-commercial')}}">Commercial Properties For Sale</a></h1>
                                     <span class="location"><img src="{{asset('assets/images/icons/hero-marker.png')}}" alt=""> {{$property->address}}</span>
                                     <div class="type-wrap">
-                                        <a href="{{url('single-property/'.$property->id)}}">
+                                        <a href="{{url('single-sale-property/'.$property->id)}}">
                                         <span class="type">{{$property->property_title}}</span>
+                                        </a>
+                                        <span class="price">Ksh. {{$property->price}}M </span>
+                                    </div>
+                                    {{--<ul class="property-feature">--}}
+                                        {{--<li>--}}
+                                            {{--<img src="assets/images/icons/hero-area.png" alt=""><span>550 SqFt</span>--}}
+                                        {{--</li>--}}
+                                        {{--<li>--}}
+                                            {{--<img src="assets/images/icons/hero-bed.png" alt=""><span>6 Bed</span>--}}
+                                        {{--</li>--}}
+                                        {{--<li>--}}
+                                            {{--<img src="assets/images/icons/hero-bath.png" alt=""><span>4 Bath</span>--}}
+                                        {{--</li>--}}
+                                        {{--<li>--}}
+                                            {{--<img src="assets/images/icons/hero-parking.png" alt=""><span>3 Garage</span>--}}
+                                        {{--</li>--}}
+                                    {{--</ul>--}}
+
+
+                                </div>
+                                <!--Hero Content end-->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--end of commercial properties for sale-->
+
+                <!--Residential Properties for Sale-->
+
+                    @elseif($property->status=='Residential')
+                <div class="hero-item" style="background-image: url(assets/images/hero/hero-3.jpg)">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+
+                                <!--Hero Content start-->
+                                <div class="hero-property-content text-center">
+
+                                    <h1 class="title"><a href="{{url('/properties-for-sale-residential')}}">Residential Properties For Sale</a></h1>
+                                    <span class="location"><img src="assets/images/icons/marker.png" alt=""><img src="assets/images/icons/hero-marker.png" alt=""> {{$property->address}}</span>
+                                    <div class="type-wrap">
+                                        <a href="{{url('single-sale-property/'.$property->id)}}">
+                                            <span class="type">{{$property->property_title}}</span>
                                         </a>
                                         <span class="price">Ksh. {{$property->price}}M </span>
                                     </div>
@@ -57,51 +104,100 @@
                 </div>
                     @endif
                 @endforeach
-                <!--Hero Item end-->
+                <!--end of residential properties for sale-->
 
-                <!--Hero Item start-->
-                @foreach($properties as $property)
-                    @if($property->status=='For Rent')
-                <div class="hero-item" style="background-image: url(assets/images/hero/hero-3.jpg)">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12">
+                <!--Commercial Properties To Rent-->
+                @foreach($rentproperties as $property)
+                    @if($property->status=='Commercial')
+                        <div class="hero-item" style="background-image: url(assets/images/hero/hero-1.jpg)">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
 
-                                <!--Hero Content start-->
-                                <div class="hero-property-content text-center">
+                                        <!--Hero Content start-->
+                                        <div class="hero-property-content text-center">
 
-                                    <h1 class="title"><a href="{{url('/properties-for-sale-residential')}}">Residential Properties For Sale</a></h1>
-                                    <span class="location"><img src="assets/images/icons/marker.png" alt=""><img src="assets/images/icons/hero-marker.png" alt=""> {{$property->address}}</span>
-                                    <div class="type-wrap">
-                                        <span class="type">For Rent</span>
-                                        <span class="price">Ksh. {{$property->rent}} </span>
-                                    </div>
-                                    {{--<ul class="property-feature">--}}
-                                        {{--<li>--}}
+                                            <h1 class="title"><a href="{{url('/properties-for-sale-commercial')}}">Commercial Properties To Rent</a></h1>
+                                            <span class="location"><img src="{{asset('assets/images/icons/hero-marker.png')}}" alt=""> {{$property->address}}</span>
+                                            <div class="type-wrap">
+                                                <a href="{{url('single-rental-property/'.$property->id)}}">
+                                                    <span class="type">{{$property->property_title}}</span>
+                                                </a>
+                                                <span class="price">Ksh. {{$property->rent}}<span></span>M </span>
+                                            </div>
+                                            {{--<ul class="property-feature">--}}
+                                            {{--<li>--}}
                                             {{--<img src="assets/images/icons/hero-area.png" alt=""><span>550 SqFt</span>--}}
-                                        {{--</li>--}}
-                                        {{--<li>--}}
+                                            {{--</li>--}}
+                                            {{--<li>--}}
                                             {{--<img src="assets/images/icons/hero-bed.png" alt=""><span>6 Bed</span>--}}
-                                        {{--</li>--}}
-                                        {{--<li>--}}
+                                            {{--</li>--}}
+                                            {{--<li>--}}
                                             {{--<img src="assets/images/icons/hero-bath.png" alt=""><span>4 Bath</span>--}}
-                                        {{--</li>--}}
-                                        {{--<li>--}}
+                                            {{--</li>--}}
+                                            {{--<li>--}}
                                             {{--<img src="assets/images/icons/hero-parking.png" alt=""><span>3 Garage</span>--}}
-                                        {{--</li>--}}
-                                    {{--</ul>--}}
+                                            {{--</li>--}}
+                                            {{--</ul>--}}
 
 
+                                        </div>
+                                        <!--Hero Content end-->
+
+                                    </div>
                                 </div>
-                                <!--Hero Content end-->
-
                             </div>
                         </div>
-                    </div>
-                </div>
+
+                        <!--end of commercial properties to rent-->
+
+                        <!--Residential Properties To Rent-->
+
+                    @elseif($property->status=='Residential')
+                        <div class="hero-item" style="background-image: url(assets/images/hero/hero-3.jpg)">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+
+                                        <!--Hero Content start-->
+                                        <div class="hero-property-content text-center">
+
+                                            <h1 class="title"><a href="{{url('/properties-for-sale-residential')}}">Residential Properties To Rent</a></h1>
+                                            <span class="location"><img src="assets/images/icons/marker.png" alt=""><img src="assets/images/icons/hero-marker.png" alt=""> {{$property->address}}</span>
+                                            <div class="type-wrap">
+                                                <a href="{{url('single-rental-property/'.$property->id)}}">
+                                                    <span class="type">{{$property->property_title}}</span>
+                                                </a>
+                                                <span class="price">Ksh. {{$property->rent}}<span></span>M </span>
+                                            </div>
+                                            {{--<ul class="property-feature">--}}
+                                            {{--<li>--}}
+                                            {{--<img src="assets/images/icons/hero-area.png" alt=""><span>550 SqFt</span>--}}
+                                            {{--</li>--}}
+                                            {{--<li>--}}
+                                            {{--<img src="assets/images/icons/hero-bed.png" alt=""><span>6 Bed</span>--}}
+                                            {{--</li>--}}
+                                            {{--<li>--}}
+                                            {{--<img src="assets/images/icons/hero-bath.png" alt=""><span>4 Bath</span>--}}
+                                            {{--</li>--}}
+                                            {{--<li>--}}
+                                            {{--<img src="assets/images/icons/hero-parking.png" alt=""><span>3 Garage</span>--}}
+                                            {{--</li>--}}
+                                            {{--</ul>--}}
+
+
+                                        </div>
+                                        <!--Hero Content end-->
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     @endif
                 @endforeach
-                <!--Hero Item end-->
+
+
+                        <!--Hero Item end-->
 
             </div>
             <!--Hero Slider end-->

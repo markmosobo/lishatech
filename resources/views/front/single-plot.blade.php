@@ -30,7 +30,7 @@
                                 </div>
 
                                 <div class="image mb-30">
-                                    <img src="{{asset('assets/images/property/land.jpg')}}" alt="">
+                                    <img src="{{asset($plot->image_path)}}" alt="">
                                 </div>
 
                                 <div class="content">

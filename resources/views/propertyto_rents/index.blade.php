@@ -29,7 +29,7 @@
 
 @section('modals')
     <div class="modal fade" id="create-modal" role="dialog">
-            {!! Form::open(['route' => 'propertytoRents.store']) !!}
+            {!! Form::open(['route' => 'propertytoRents.store','files'=>true]) !!}
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">

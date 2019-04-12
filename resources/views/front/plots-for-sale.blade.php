@@ -17,7 +17,7 @@
                     <div class="property-item col">
                         <div class="property-inner">
                             <div class="image">
-                                <a href="{{url('single-plot/'.$plot->id)}}"><img src="assets/images/property/land.jpg" alt=""></a>
+                                <a href="{{url('single-plot/'.$plot->id)}}"><img src="{{asset($plot->image_path)}}" alt=""></a>
                                 <ul class="property-feature">
                                     <li>
                                         <span class="area"><img src="assets/images/icons/area.png" alt="">{{$plot->description}}</span>

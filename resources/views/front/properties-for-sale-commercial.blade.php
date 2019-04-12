@@ -56,21 +56,21 @@
                                 <div class="property-inner">
                                     <div class="image">
                                         <span class="label">{{$property->status}}</span>
-                                        <a href="{{url('single-sale-property/'.$property->id)}}"><img src="assets/images/property/property-2.jpg" alt=""></a>
-                                        <ul class="property-feature">
-                                            <li>
-                                                <span class="area"><img src="assets/images/icons/area.png" alt="">550 SqFt</span>
-                                            </li>
-                                            <li>
-                                                <span class="bed"><img src="assets/images/icons/bed.png" alt="">6</span>
-                                            </li>
-                                            <li>
-                                                <span class="bath"><img src="assets/images/icons/bath.png" alt="">4</span>
-                                            </li>
-                                            <li>
-                                                <span class="parking"><img src="assets/images/icons/parking.png" alt="">3</span>
-                                            </li>
-                                        </ul>
+                                        <a href="{{url('single-sale-property/'.$property->id)}}"><img src="{{asset($property->image_path)}}" alt=""></a>
+                                        {{--<ul class="property-feature">--}}
+                                            {{--<li>--}}
+                                                {{--<span class="area"><img src="assets/images/icons/area.png" alt="">550 SqFt</span>--}}
+                                            {{--</li>--}}
+                                            {{--<li>--}}
+                                                {{--<span class="bed"><img src="assets/images/icons/bed.png" alt="">6</span>--}}
+                                            {{--</li>--}}
+                                            {{--<li>--}}
+                                                {{--<span class="bath"><img src="assets/images/icons/bath.png" alt="">4</span>--}}
+                                            {{--</li>--}}
+                                            {{--<li>--}}
+                                                {{--<span class="parking"><img src="assets/images/icons/parking.png" alt="">3</span>--}}
+                                            {{--</li>--}}
+                                        {{--</ul>--}}
                                     </div>
                                     <div class="content">
                                         <div class="left">
@@ -79,7 +79,7 @@
                                         </div>
                                         <div class="right">
                                             <div class="type-wrap">
-                                                <span class="price">Ksh. {{$property->price}}</span>
+                                                <span class="price">{{$property->price}}M</span>
                                                 <span class="type">For Sale</span>
                                             </div>
                                         </div>
