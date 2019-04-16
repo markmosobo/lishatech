@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePropertiesToRentTable extends Migration
+class CreateManagementPortfolioTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class CreatePropertiesToRentTable extends Migration
      */
     public function up()
     {
-        Schema::create('properties_to_rent', function (Blueprint $table) {
+        Schema::create('management_portfolio', function (Blueprint $table) {
             $table->increments('id');
             $table->softDeletes();
-            $table->string('property_title')->nullable();
-            $table->string('status')->nullable();
-            $table->string('address')->nullable();
-            $table->bigInteger('rent')->nullable();
+            $table->integer('property_title_id')->unsigned();
+            $table->foreign('property_title_id')->references('id')->on('properties_to_rent')
+                    ->onUpdate('cascade')->onDelete('no action');
             $table->string('image_path')->nullable();
             $table->longText('description')->nullable();
             $table->timestamps();
@@ -33,6 +32,6 @@ class CreatePropertiesToRentTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('properties_to_rent');
+        Schema::dropIfExists('management_portfolio');
     }
 }

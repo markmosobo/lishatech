@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class PropertyforSale
  * @package App\Models
- * @version April 2, 2019, 5:50 pm EAT
+ * @version April 15, 2019, 1:05 pm EAT
  *
  * @property \Illuminate\Database\Eloquent\Collection roleRoute
  * @property \Illuminate\Database\Eloquent\Collection roleUser
@@ -16,7 +16,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property string property_title
  * @property string status
  * @property string address
- * @property bigInteger price
+ * @property string amount
  * @property string image_path
  * @property string description
  */
@@ -37,7 +37,7 @@ class PropertyforSale extends Model
         'property_title',
         'status',
         'address',
-        'price',
+        'amount',
         'image_path',
         'description'
     ];
@@ -52,6 +52,7 @@ class PropertyforSale extends Model
         'property_title' => 'string',
         'status' => 'string',
         'address' => 'string',
+        'amount' => 'string',
         'image_path' => 'string',
         'description' => 'string'
     ];

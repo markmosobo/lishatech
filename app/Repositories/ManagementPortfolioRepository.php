@@ -8,7 +8,7 @@ use InfyOm\Generator\Common\BaseRepository;
 /**
  * Class ManagementPortfolioRepository
  * @package App\Repositories
- * @version March 13, 2019, 3:12 pm EAT
+ * @version April 16, 2019, 7:41 am EAT
  *
  * @method ManagementPortfolio findWithoutFail($id, $columns = ['*'])
  * @method ManagementPortfolio find($id, $columns = ['*'])
@@ -20,7 +20,7 @@ class ManagementPortfolioRepository extends BaseRepository
      * @var array
      */
     protected $fieldSearchable = [
-        'property_title',
+        'property_title_id',
         'image_path',
         'description'
     ];

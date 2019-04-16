@@ -19,14 +19,16 @@
                             <h2 class="title">{{$blog->blog_title}}</h2>
                             <ul class="news-meta">
                                 <li>By - <a href="#">{{$blog->author}}</a></li>
-                                <li>September 30, 2018</li>
+                                <li>{{date('M',strtotime($blog->created_at))}}
+                                    {{\Carbon\Carbon::parse($blog->created_at)->day}},
+                                    {{date('Y',strtotime($blog->created_at))}}</li>
                             </ul>
                             <div class="desc">
-                                <p>{{$blog->body}} </p>
+                                <p>{{$blog->introduction}} </p>
                                 <blockquote class="blockquote">
                                     <p>We are the  of our customer say’s that they trust us and buy our product without any gitation because they can Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia quuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur</p>
                                 </blockquote>
-                                {{--<p>Some of our customer say’s that they trust us and buy our product without any gitation because they can Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur</p>--}}
+                                <p>{{$blog->body}} </p>
                             </div>
                             {{--<div class="news-footer">--}}
                                 {{--<div class="tags"><span>Tags:</span> <a href="#">Oil</a><a href="#">Beard Oil</a><a href="#">Beard</a></div>--}}
@@ -162,9 +164,9 @@
                                 </div>
                                 <div class="content">
                                     <h5 class="title"><a href="{{url('single-blog/'.$blog->id)}}">{{$blog->blog_title}}</a></h5>
-                                    <span class="date">{{date('M',strtotime($blog->date))}}
-                                        {{\Carbon\Carbon::parse($blog->date)->day}},
-                                        {{date('Y',strtotime($blog->date))}}</span>
+                                    <span class="date">{{date('M',strtotime($blog->created_at))}}
+                                        {{\Carbon\Carbon::parse($blog->created_at)->day}},
+                                        {{date('Y',strtotime($blog->created_at))}}</span>
                                 </div>
                             </div>
 

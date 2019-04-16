@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
 //            $this->call(UserTableSeeder::class);
 //             $this->call(ContactSeeder::class);
 //             $this->call(AboutUsSeeder::class);
+//            $this->call(SocialMediaSeeder::class);
              $this->call(RoutesTableSeeder::class);
         });
 

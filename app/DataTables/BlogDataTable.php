@@ -67,7 +67,8 @@ class BlogDataTable extends DataTable
             'blog_title',
             'author',
 //            'image_path',
-            'date',
+//            'date',
+            'introduction',
             'body'
         ];
     }

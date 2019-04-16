@@ -8,7 +8,7 @@ use InfyOm\Generator\Common\BaseRepository;
 /**
  * Class PropertyforSaleRepository
  * @package App\Repositories
- * @version April 2, 2019, 5:50 pm EAT
+ * @version April 15, 2019, 1:05 pm EAT
  *
  * @method PropertyforSale findWithoutFail($id, $columns = ['*'])
  * @method PropertyforSale find($id, $columns = ['*'])
@@ -23,7 +23,7 @@ class PropertyforSaleRepository extends BaseRepository
         'property_title',
         'status',
         'address',
-        'price',
+        'amount',
         'image_path',
         'description'
     ];

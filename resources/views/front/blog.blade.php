@@ -19,15 +19,15 @@
                                 <div class="meta-wrap">
                                     <ul class="meta">
                                         <li>By <a href="#">{{$blog->author}}</a></li>
-                                        <li>{{date('M',strtotime($blog->date))}}
-                                            {{\Carbon\Carbon::parse($blog->date)->day}},
-                                            {{date('Y',strtotime($blog->date))}}</li>
+                                        <li>{{date('M',strtotime($blog->created_at))}}
+                                            {{\Carbon\Carbon::parse($blog->created_at)->day}},
+                                            {{date('Y',strtotime($blog->created_at))}}</li>
                                     </ul>
                                     <ul class="meta back">
                                         <li>By <a href="#">{{$blog->author}}</a></li>
-                                        <li>{{date('M',strtotime($blog->date))}}
-                                            {{\Carbon\Carbon::parse($blog->date)->day}},
-                                            {{date('Y',strtotime($blog->date))}}</li>
+                                        <li>{{date('M',strtotime($blog->created_at))}}
+                                            {{\Carbon\Carbon::parse($blog->created_at)->day}},
+                                            {{date('Y',strtotime($blog->created_at))}}</li>
                                     </ul>
                                 </div>
                             </div>

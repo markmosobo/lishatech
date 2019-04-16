@@ -1,8 +1,8 @@
 @extends('layouts.app')
- @section("pageTitle",'Plots')
- @section("pageSubtitle",'create, edit, delete Plots')
+ @section("pageTitle",'Slides')
+ @section("pageSubtitle",'create, edit, delete Slides')
   @section("breadcrumbs")
-         <li>Home</li> <li>Plots</li>
+         <li>Home</li> <li>Slides</li>
          @endsection
 @section('content')
     <section class="content-header">
@@ -18,7 +18,7 @@
         <div class="clearfix"></div>
         <div class="box box-primary">
             <div class="box-body">
-                    @include('plots.table')
+                    @include('slides.table')
             </div>
         </div>
         <div class="text-center">
@@ -29,18 +29,18 @@
 
 @section('modals')
     <div class="modal fade" id="create-modal" role="dialog">
-            {!! Form::open(['route' => 'plots.store','files'=>true]) !!}
+            {!! Form::open(['route' => 'slides.store']) !!}
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                        <h4 class="modal-title">Create Plot</h4>
+                        <h4 class="modal-title">Create Slide</h4>
                     </div>
                     <div class="modal-body">
                         <div class="row">
-                            @include('plots.fields')
+                            @include('slides.fields')
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -64,15 +64,15 @@
                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                            <span aria-hidden="true">&times;</span>
                        </button>
-                       <h4 class="modal-title">Edit Plot</h4>
+                       <h4 class="modal-title">Edit Slide</h4>
                    </div>
                    <div class="modal-body">
                         <div class="row">
-                           @include('plots.fields')
+                           @include('slides.fields')
                         </div>
                    </div>
                    <div class="modal-footer">
-                       <input type="hidden" id="editDetails" value="{{ url("/plots") }}">
+                       <input type="hidden" id="editDetails" value="{{ url("/slides") }}">
                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
                        <button type="submit" class="btn btn-primary">Save</button>
                    </div>
@@ -93,14 +93,14 @@
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
-                            <h4 class="modal-title">Delete Plot</h4>
+                            <h4 class="modal-title">Delete Slide</h4>
                         </div>
                         <div class="modal-body">
-                            <p>Are you sure you want to delete this Plot?</p>
+                            <p>Are you sure you want to delete this Slide?</p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default pull-left" data-dismiss="modal">No</button>
-                            <button type="submit" class="btn btn-primary">Yes</button>
+                            <button type="submit" class="btn btn-primary">Save</button>
                         </div>
                     </div>
                 </div>

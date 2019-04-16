@@ -18,11 +18,7 @@ class PropertytoRentDataTable extends DataTable
     {
         $dataTable = new EloquentDataTable($query);
 
-        return $dataTable
-            ->editColumn('created_at',function ($property){
-                return '<a href="'.url('propertytoRentFeatures/'.$property->id).'" class="btn btn-success btn-xs">view/add feature</a>';
-            })->rawColumns(['action','created_at'])
-            ->addColumn('action', 'propertyto_rents.datatables_actions');
+        return $dataTable->addColumn('action', 'propertyto_rents.datatables_actions');
     }
 
     /**
@@ -73,10 +69,7 @@ class PropertytoRentDataTable extends DataTable
             'address',
             'rent',
 //            'image_path',
-            'description',
-            'created_at'=>[
-                'title'=>'Features'
-            ]
+            'description'
         ];
     }
 

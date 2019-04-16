@@ -20,14 +20,14 @@
 </div>
 
 <!-- Rent Field -->
-<div class="form-group col-sm-12">
+<div class="form-group col-sm-6">
     {!! Form::label('rent', 'Rent:') !!}
-    {!! Form::number('rent', null, ['class' => 'form-control']) !!}
+    {!! Form::text('rent', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Image Path Field -->
-<div class="form-group col-sm-12">
-    {!! Form::label('image_path', 'Upload Image:') !!}
+<div class="form-group col-sm-6">
+    {!! Form::label('image_path', 'Upload Property Image:') !!}
     {!! Form::file('image_path', null, ['class' => 'form-control']) !!}
 </div>
 

@@ -6,25 +6,23 @@ use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
- * Class PropertytoRent
+ * Class Slide
  * @package App\Models
- * @version April 16, 2019, 7:29 am EAT
+ * @version April 13, 2019, 1:51 pm EAT
  *
  * @property \Illuminate\Database\Eloquent\Collection roleRoute
  * @property \Illuminate\Database\Eloquent\Collection roleUser
  * @property \Illuminate\Database\Eloquent\Collection roles
- * @property string property_title
- * @property string status
- * @property string address
- * @property string rent
- * @property string image_path
- * @property string description
+ * @property string commercial_properties_for_sale_image
+ * @property string residential_properties_for sale_image
+ * @property string commercial_properties_to rent_image
+ * @property string residential_properties_to rent_image
  */
-class PropertytoRent extends Model
+class Slide extends Model
 {
     use SoftDeletes;
 
-    public $table = 'properties_to_rent';
+    public $table = 'slides';
     
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
@@ -34,12 +32,10 @@ class PropertytoRent extends Model
 
 
     public $fillable = [
-        'property_title',
-        'status',
-        'address',
-        'rent',
-        'image_path',
-        'description'
+        'commercial_properties_for_sale_image',
+        'residential_properties_for sale_image',
+        'commercial_properties_to rent_image',
+        'residential_properties_to rent_image'
     ];
 
     /**
@@ -49,12 +45,10 @@ class PropertytoRent extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'property_title' => 'string',
-        'status' => 'string',
-        'address' => 'string',
-        'rent' => 'string',
-        'image_path' => 'string',
-        'description' => 'string'
+        'commercial_properties_for_sale_image' => 'string',
+        'residential_properties_for sale_image' => 'string',
+        'commercial_properties_to rent_image' => 'string',
+        'residential_properties_to rent_image' => 'string'
     ];
 
     /**

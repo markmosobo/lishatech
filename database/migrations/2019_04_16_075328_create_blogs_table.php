@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePropertiesForSaleTable extends Migration
+class CreateBlogsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,15 @@ class CreatePropertiesForSaleTable extends Migration
      */
     public function up()
     {
-        Schema::create('properties_for_sale', function (Blueprint $table) {
+        Schema::create('blogs', function (Blueprint $table) {
             $table->increments('id');
-            $table->softDeletes();
-            $table->string('property_title')->nullable();
-            $table->string('status')->nullable();
-            $table->string('address')->nullable();
-            $table->bigInteger('price')->nullable();
+            $table->string('blog_title')->nullable();
+            $table->string('author')->nullable();
             $table->string('image_path')->nullable();
-            $table->longText('description')->nullable();
+            $table->dateTime('date')->nullable();
+            $table->longText('introduction')->nullable();
+            $table->longText('body')->nullbale();
+            $table->softDeletes();
             $table->timestamps();
         });
     }
@@ -33,6 +33,6 @@ class CreatePropertiesForSaleTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('properties_for_sale');
+        Schema::dropIfExists('blogs');
     }
 }

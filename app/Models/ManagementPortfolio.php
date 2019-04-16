@@ -8,12 +8,13 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class ManagementPortfolio
  * @package App\Models
- * @version March 13, 2019, 3:12 pm EAT
+ * @version April 16, 2019, 7:41 am EAT
  *
+ * @property \App\Models\PropertiesToRent propertiesToRent
  * @property \Illuminate\Database\Eloquent\Collection roleRoute
  * @property \Illuminate\Database\Eloquent\Collection roleUser
  * @property \Illuminate\Database\Eloquent\Collection roles
- * @property string property_title
+ * @property integer property_title_id
  * @property string image_path
  * @property string description
  */
@@ -31,7 +32,7 @@ class ManagementPortfolio extends Model
 
 
     public $fillable = [
-        'property_title',
+        'property_title_id',
         'image_path',
         'description'
     ];
@@ -43,7 +44,7 @@ class ManagementPortfolio extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'property_title' => 'string',
+        'property_title_id' => 'integer',
         'image_path' => 'string',
         'description' => 'string'
     ];
@@ -57,5 +58,11 @@ class ManagementPortfolio extends Model
         
     ];
 
-    
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     **/
+    public function propertiesToRent()
+    {
+        return $this->belongsTo(\App\Models\PropertiesToRent::class);
+    }
 }

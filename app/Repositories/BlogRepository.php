@@ -8,7 +8,7 @@ use InfyOm\Generator\Common\BaseRepository;
 /**
  * Class BlogRepository
  * @package App\Repositories
- * @version March 13, 2019, 3:06 pm EAT
+ * @version April 16, 2019, 7:54 am EAT
  *
  * @method Blog findWithoutFail($id, $columns = ['*'])
  * @method Blog find($id, $columns = ['*'])
@@ -24,6 +24,7 @@ class BlogRepository extends BaseRepository
         'author',
         'image_path',
         'date',
+        'introduction',
         'body'
     ];
 

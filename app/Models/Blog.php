@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class Blog
  * @package App\Models
- * @version March 13, 2019, 3:06 pm EAT
+ * @version April 16, 2019, 7:54 am EAT
  *
  * @property \Illuminate\Database\Eloquent\Collection roleRoute
  * @property \Illuminate\Database\Eloquent\Collection roleUser
@@ -17,6 +17,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property string author
  * @property string image_path
  * @property string|\Carbon\Carbon date
+ * @property string introduction
  * @property string body
  */
 class Blog extends Model
@@ -37,6 +38,7 @@ class Blog extends Model
         'author',
         'image_path',
         'date',
+        'introduction',
         'body'
     ];
 
@@ -50,6 +52,7 @@ class Blog extends Model
         'blog_title' => 'string',
         'author' => 'string',
         'image_path' => 'string',
+        'introduction' => 'string',
         'body' => 'string'
     ];
 

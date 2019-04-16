@@ -144,7 +144,7 @@ Route::resource('blogs', 'BlogController');
 
 Route::resource('blogs', 'BlogController');
 
-Route::resource('managementPortfolios', 'ManagementPortfolioController');
+
 
 
 
@@ -182,12 +182,28 @@ Route::resource('propertyforRents', 'PropertyforRentController');
 
 
 
-Route::resource('propertyforSales', 'PropertyforSaleController');
 
-Route::resource('propertytoRents', 'PropertytoRentController');
+
+
 
 Route::resource('plots', 'PlotController');
 
 Route::resource('propertyforSaleFeatures', 'PropertyforSaleFeatureController');
 
 Route::resource('propertytoRentFeatures', 'PropertytoRentFeatureController');
+
+Route::resource('slides', 'SlideController');
+
+Route::resource('managementPortfolios', 'ManagementPortfolioController');
+
+Route::resource('managementPortfolios', 'ManagementPortfolioController');
+
+Route::resource('propertyforSales', 'PropertyforSaleController');
+
+
+
+Route::resource('propertytoRents', 'PropertytoRentController');
+
+Route::resource('managementPortfolios', 'ManagementPortfolioController');
+
+Route::resource('blogs', 'BlogController');

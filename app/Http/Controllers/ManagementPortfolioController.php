@@ -6,6 +6,7 @@ use App\DataTables\ManagementPortfolioDataTable;
 use App\Http\Requests;
 use App\Http\Requests\CreateManagementPortfolioRequest;
 use App\Http\Requests\UpdateManagementPortfolioRequest;
+use App\Models\PropertytoRent;
 use App\Repositories\ManagementPortfolioRepository;
 use Flash;
 use App\Http\Controllers\AppBaseController;
@@ -29,7 +30,7 @@ class ManagementPortfolioController extends AppBaseController
      */
     public function index(ManagementPortfolioDataTable $managementPortfolioDataTable)
     {
-        return $managementPortfolioDataTable->render('management_portfolios.index');
+        return $managementPortfolioDataTable->render('management_portfolios.index',['properties'=>PropertytoRent::all()]);
     }
 
     /**
@@ -52,6 +53,18 @@ class ManagementPortfolioController extends AppBaseController
     public function store(CreateManagementPortfolioRequest $request)
     {
         $input = $request->all();
+
+        if($request->hasFile('image_path')){
+            $ext = $request->image_path->getClientOriginalExtension();
+//            var_dump($ext)
+            $input['extension'] = $ext;
+            $input['image_path'] = $request->file('image_path')->getClientOriginalName();
+//            $path = $request->file('image_path')->storeAs('public',$string = str_replace(' ', '-', Carbon::today()->toDateString()).'-'.Carbon::now()->timestamp.'.'.$ext);
+//            var_dump($request->file('document_path')->getClientOriginalName());die();
+            $path = $request->file('image_path')->store('public');
+            $input['image_path'] = asset('storage/'.$path);
+
+        }
 
         $managementPortfolio = $this->managementPortfolioRepository->create($input);
 

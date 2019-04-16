@@ -53,7 +53,7 @@ class PropertyforSaleController extends AppBaseController
     {
         $input = $request->all();
 
-        if($request->hasFile('image_path')) {
+        if($request->hasFile('image_path')){
             $ext = $request->image_path->getClientOriginalExtension();
 //            var_dump($ext)
             $input['extension'] = $ext;
@@ -61,7 +61,8 @@ class PropertyforSaleController extends AppBaseController
 //            $path = $request->file('image_path')->storeAs('public',$string = str_replace(' ', '-', Carbon::today()->toDateString()).'-'.Carbon::now()->timestamp.'.'.$ext);
 //            var_dump($request->file('document_path')->getClientOriginalName());die();
             $path = $request->file('image_path')->store('public');
-            $input['image_path'] = asset('storage/' . $path);
+            $input['image_path'] = asset('storage/'.$path);
+
         }
 
         $propertyforSale = $this->propertyforSaleRepository->create($input);

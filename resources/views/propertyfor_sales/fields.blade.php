@@ -19,15 +19,15 @@
     {!! Form::text('address', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Price Field -->
-<div class="form-group col-sm-12">
-    {!! Form::label('price', 'Price:') !!}
-    {!! Form::number('price', null, ['class' => 'form-control']) !!}
+<!-- Amount Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('amount', 'Amount:') !!}
+    {!! Form::text('amount', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Image Path Field -->
-<div class="form-group col-sm-12">
-    {!! Form::label('image_path', 'Upload Image:') !!}
+<div class="form-group col-sm-6">
+    {!! Form::label('image_path', 'Upload Property Image:') !!}
     {!! Form::file('image_path', null, ['class' => 'form-control']) !!}
 </div>
 

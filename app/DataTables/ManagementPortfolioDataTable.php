@@ -64,7 +64,7 @@ class ManagementPortfolioDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            'property_title',
+            'property_title_id',
 //            'image_path',
             'description'
         ];

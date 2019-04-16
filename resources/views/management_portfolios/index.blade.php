@@ -29,7 +29,7 @@
 
 @section('modals')
     <div class="modal fade" id="create-modal" role="dialog">
-            {!! Form::open(['route' => 'managementPortfolios.store']) !!}
+            {!! Form::open(['route' => 'managementPortfolios.store','files'=>true]) !!}
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -100,7 +100,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default pull-left" data-dismiss="modal">No</button>
-                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button type="submit" class="btn btn-primary">Yes</button>
                         </div>
                     </div>
                 </div>

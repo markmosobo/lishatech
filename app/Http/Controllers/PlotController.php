@@ -89,7 +89,7 @@ class PlotController extends AppBaseController
             return redirect(route('plots.index'));
         }
 
-        return view('plots.show')->with('plot', $plot);
+        return response()->json($plot);
     }
 
     /**

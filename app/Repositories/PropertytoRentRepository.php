@@ -8,7 +8,7 @@ use InfyOm\Generator\Common\BaseRepository;
 /**
  * Class PropertytoRentRepository
  * @package App\Repositories
- * @version April 2, 2019, 6:00 pm EAT
+ * @version April 16, 2019, 7:29 am EAT
  *
  * @method PropertytoRent findWithoutFail($id, $columns = ['*'])
  * @method PropertytoRent find($id, $columns = ['*'])

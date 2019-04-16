@@ -44,7 +44,7 @@ class SlideDataTable extends DataTable
             ->minifiedAjax()
             ->addAction(['width' => '80px'])
             ->parameters([
-                'dom'     => 'Bfrtip',
+//                'dom'     => 'Bfrtip',
                 'order'   => [[0, 'desc']],
                 'buttons' => [
                     'create',
@@ -64,10 +64,10 @@ class SlideDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            'title',
-            'body',
-            'sequence',
-            'image'
+            'commercial_properties_for_sale_image',
+            'residential_properties_for sale_image',
+            'commercial_properties_to rent_image',
+            'residential_properties_to rent_image'
         ];
     }
 

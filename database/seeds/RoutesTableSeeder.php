@@ -42,7 +42,7 @@ class RoutesTableSeeder extends Seeder
         $configurations = Route::create([
             'route_name'=>"Configurations",
             'url'=> '#',
-            'icon'=> 'fa-volume-up',
+            'icon'=> 'fa-cogs',
             'sequence'=>3
         ]);
 
@@ -120,7 +120,7 @@ class RoutesTableSeeder extends Seeder
         $configurations = Route::create([
             'route_name'=>"Manage Properties",
             'url'=> '#',
-            'icon'=> 'fa-calendar',
+            'icon'=> 'fa-home',
             'sequence'=>3
         ]);
 
@@ -149,7 +149,7 @@ class RoutesTableSeeder extends Seeder
         $parent = Route::create([
             'route_name'=>"Plots",
             'url'=> '#',
-                'icon'=> 'fa-book',
+                'icon'=> 'fa-map-marker',
             'sequence'=>3
         ]);
 
@@ -187,7 +187,7 @@ class RoutesTableSeeder extends Seeder
         $parent = Route::create([
             'route_name'=>"Manage Blogs",
             'url'=> '#',
-            'icon'=> 'fa-bold',
+            'icon'=> 'fa-comments',
             'sequence'=>3
         ]);
 

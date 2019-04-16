@@ -15,7 +15,7 @@
                 <div class="col-lg-4 col-md-6 col-12 mb-30">
                     <div class="news">
                         <div class="image">
-                            <a href="#"><img src="assets/images/news/news-1.jpg" alt=""></a>
+                            <a href="#"><img src="{{asset($port->image_path)}}" alt=""></a>
                             <div class="meta-wrap">
                                 {{--<ul class="meta">--}}
                                     {{--<li>By <a href="#">Donald</a></li>--}}
