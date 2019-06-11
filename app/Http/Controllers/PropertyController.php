@@ -62,7 +62,7 @@ class PropertyController extends AppBaseController
 //            $path = $request->file('image_path')->storeAs('public',$string = str_replace(' ', '-', Carbon::today()->toDateString()).'-'.Carbon::now()->timestamp.'.'.$ext);
 //            var_dump($request->file('document_path')->getClientOriginalName());die();
             $path = $request->file('image_path')->store('public');
-            $input['image_path'] = asset('storage/'.$path);
+            $input['image_path'] = asset('public/storage/'.$path);
 
         }
 

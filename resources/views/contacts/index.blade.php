@@ -100,7 +100,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default pull-left" data-dismiss="modal">No</button>
-                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button type="submit" class="btn btn-primary">Yes</button>
                         </div>
                     </div>
                 </div>
